@@ -6,7 +6,7 @@ This file file serves as your book's preface, a great place to describe your boo
 
 本書內容適合小獨立遊戲開發環境使用，
 
-# 內容大綱
+# 大綱介紹
 
 sdf
 

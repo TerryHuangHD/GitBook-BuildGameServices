@@ -6,6 +6,12 @@
 
 # 作者簡介
 
+Terry Huang
+
+kmshiori
+
+David Lin
+
 # 適合對象
 
 本書內容適合小獨立遊戲開發環境使用，

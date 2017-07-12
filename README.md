@@ -20,3 +20,7 @@ David Lin
 
 
 
+> 本書內容適合獨立遊戲環境使用，因此可能不包含 Scaling, HA 環節，也不包含 DevOps, CI/CD 相關內容
+
+
+

@@ -3,8 +3,6 @@
 * 以 Parse 服務作為主要資料儲存以及各式伺服器邏輯實現
 * 以 Firebase 作為即時性需求提供服務
 
-Parse + Firebase
-
 ### 為什麼要使用雙後端服務？
 
 Blablabla

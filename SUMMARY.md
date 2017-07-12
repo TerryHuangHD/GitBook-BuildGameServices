@@ -7,9 +7,9 @@
 ## Infrastructure
 
 * [Overview](infrastructure/overview.md)
-* [IAAS Solution](infrastructure/iaas-solution.md)
-* [SAAS Solution](infrastructure/saas-solution.md)
-* Add To Game
+* [Parse IAAS Solution](infrastructure/iaas-solution.md)
+* [Parse SAAS Solution](infrastructure/saas-solution.md)
+* Add Service To Game
 
 ## Game Service
 

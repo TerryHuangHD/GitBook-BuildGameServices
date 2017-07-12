@@ -16,6 +16,8 @@ Terry Huang
 
 David Lin
 
+攔路中中路無敵歡迎單挑
+
 LiRise is Hiring
 
 # 適合對象

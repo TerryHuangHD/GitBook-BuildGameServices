@@ -2,7 +2,7 @@
 
 ## Overview
 
-* [簡介](README.md)
+* [Introduction](README.md)
 
 ## Setup
 

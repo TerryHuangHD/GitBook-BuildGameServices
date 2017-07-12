@@ -2,7 +2,7 @@
 
 ## Overview
 
-* [Introduction](README.md)
+* [Introduction - To Be Modified](README.md)
 
 ## Infrastructure
 
@@ -11,7 +11,7 @@
 * [IAAS Solution](infrastructure/iaas-solution.md)
 * [SAAS Solution](infrastructure/saas-solution.md)
 
-## Game Services
+## Game Service
 
 * [Account](game-services/account.md)
 * Invitation
@@ -22,7 +22,7 @@
 * Events, Quests, Challenges
 * Saved Games
 
-## Universal System
+## General System
 
 * [Security Tunnel](infrastructure/security.md)
 * Counter System

@@ -4,9 +4,7 @@ This file file serves as your book's preface, a great place to describe your boo
 
 適合對象
 
-
+本書內容適合小獨立遊戲開發環境使用
 
 內容大綱
-
-
 

@@ -10,7 +10,6 @@
 * [Infrastructure](infrastructure/selection.md)
 * [IAAS Solution](infrastructure/iaas-solution.md)
 * [SAAS Solution](infrastructure/saas-solution.md)
-* [Security](infrastructure/security.md)
 
 ## Game Services
 
@@ -21,4 +20,5 @@
 * Real-time Multiplayer
 * Events and Quests
 * Saved Games
+* [Security Tunnel](infrastructure/security.md)
 

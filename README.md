@@ -14,6 +14,8 @@ Terry Huang
 
 David Lin
 
+LiRise is Hiring
+
 # 適合對象
 
 * 獨立遊戲開發者

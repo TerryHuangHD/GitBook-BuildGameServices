@@ -7,9 +7,8 @@
 ## Infrastructure
 
 * [Overview](infrastructure/overview.md)
-* [Parse Solution](infrastructure/iaas-solution.md)
-* [Firebase Solution](infrastructure/saas-solution.md)
-* [Add Service To Game](infrastructure/add-service-to-game.md)
+* [Parse Setup](infrastructure/iaas-solution.md)
+* [Firebase Setup](infrastructure/saas-solution.md)
 
 ## Game Service
 

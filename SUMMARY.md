@@ -2,7 +2,7 @@
 
 ## Overview
 
-* [Introduction - To Be Modified](README.md)
+* [Introduction](README.md)
 
 ## Infrastructure
 

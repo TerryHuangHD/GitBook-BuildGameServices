@@ -15,6 +15,10 @@
 
 # 服務架設
 
+1. 架設/註冊 Parse 服務
+2. 註冊 Firebase 服務
+3. 將架構加到遊戲中
+
 IAAS Solution
 
 SAAS Solution

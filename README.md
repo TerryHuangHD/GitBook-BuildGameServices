@@ -1,6 +1,8 @@
 # 簡介
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+本書名為「Indie Game Backend 錦囊妙計：自建即時遊戲服務」，裡面將在 Indie Game 的規模下，以自建即時遊戲服務為目的，介紹各式的後端服務設計與心得分享。
+
+這是一本以
 
 # 適合對象
 

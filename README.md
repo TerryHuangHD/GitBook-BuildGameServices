@@ -18,15 +18,9 @@
 
 # 作者簡介
 
-Terry Huang \(kmshiori\)
+Terry Huang \(@kmshiori\) 目前任職 LiRise Games，業餘電動玩家，Overwatch 打不上 3000 分求大神帶。
 
-@kmshiori
-
-David Lin
-
-攔路中中路無敵歡迎單挑
-
-LiRise is Hiring
+LiRise Games 是位於台南的 Indie Game Studio，隨時都在徵人，歡迎對於遊戲開發有興趣的人來聊聊，或是與我們聯繫。
 
 # 本書目前不包含
 

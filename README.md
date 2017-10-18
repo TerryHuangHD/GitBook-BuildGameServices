@@ -4,11 +4,9 @@
 
 後續內容將使用 Parse + Firebase 服務為基底，從最基礎的「Infrastructure 架構」進行介紹與「Step by Step 架設教學」，接著會介紹在此架構下，各種常見的「遊戲後端」服務設計與心得分享。希望能夠為 Indie Gamer 帶來更多的元素。
 
-> 獨立遊戲（英語：Independent Game或Indie Game）開發者沒有遊戲公司或遊戲發行商提供的薪資，必須獨力負擔開發過程中的所有花費。相對地，開發者可以決定遊戲的走向，做自己想做的遊戲，往往可以推出嶄新觀點的作品，而不用受制於遊戲公司或市場。 - wikipedia
-
 # 大綱介紹
 
-* Infrastructure: 依照步驟簡單的建立與設定的伺服器
+* Infrastructure: 依照步驟簡單的建立所需要的基礎服務，包含 Domain Name, SSL, Database, Parse-Server, Parse-Dashboard,  Firebase 服務
 * Game Service: 介紹
 
 # 適合對象

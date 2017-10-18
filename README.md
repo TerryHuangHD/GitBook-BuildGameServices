@@ -7,20 +7,20 @@
 # 大綱介紹
 
 * Infrastructure: 依照步驟簡單的建立所需要的基礎服務，包含 Domain Name, SSL, Database, Parse Server/Dashboard,  Firebase 服務
-* Game Service: 將介紹常見的遊戲服務，實作上遇到的各種挑戰或考量
-* General System: 將介紹一些通用的基礎系統設計，可以方便用來開發成各種想要的遊戲服務
+* Game Service: 介紹常見的遊戲服務，實作上遇到的各種挑戰或考量
+* General System: 介紹一些通用的基礎系統設計，可以方便用來開發成各種想要的遊戲服務
 
 # 適合對象
 
 * 獨立遊戲開發者
-* Parse 服務關閉的受害者（淚
-* 時間太多的人（被毆 ~
+* 前 Parse 服務關閉的受害者（淚
+* ~~時間太多的人~~
 
 # 作者簡介
 
-Terry Huang \(@kmshiori\) 目前任職 LiRise Games，業餘電動玩家，Overwatch 打不上 3000 分求大神帶。
+Terry Huang \(@kmshiori\) 目前任職 LiRise Games，業餘電動玩家，Overwatch 打不上 3000 分求大神帶 \(kmshiori\#3943\)
 
-LiRise Games 是位於台南的 Indie Game Studio，隨時都在徵人，歡迎對於遊戲開發有興趣的人來聊聊，或是與我們聯繫。
+LiRise Games 是位於台南的 Indie Game Studio，隨時都在徵人，歡迎對於遊戲開發有興趣的人來聊聊，或是與我們聯繫
 
 # 本書目前不包含
 

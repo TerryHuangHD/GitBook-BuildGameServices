@@ -32,7 +32,7 @@ LiRise is Hiring
 
 * SQL Sharding
 * Database/Server HA
-* 黃金屋，顏如玉
+* ~~黃金屋，顏如玉~~
 
 
 

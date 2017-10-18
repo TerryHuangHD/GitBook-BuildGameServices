@@ -26,7 +26,7 @@ LiRise is Hiring
 
 # 大綱介紹
 
-# 授權說明
+# 其他
 
 > 本系列內容面向獨立遊戲環境使用，因此不包含 Scaling, HA 環節，亦不包含 DevOps, CI/CD 相關內容
 

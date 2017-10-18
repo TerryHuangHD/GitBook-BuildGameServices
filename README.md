@@ -8,7 +8,7 @@
 
 # 大綱介紹
 
-* Infrastructure: 依照步驟建立起自擁的資料伺服器
+* Infrastructure: 依照步驟簡單的建立起自擁的資料伺服器
 
 # 適合對象
 

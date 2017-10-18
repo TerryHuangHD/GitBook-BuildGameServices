@@ -8,7 +8,8 @@
 
 # 大綱介紹
 
-* Infrastructure: 依照步驟簡單的建立起自擁的資料伺服器
+* Infrastructure: 依照步驟簡單的建立與設定的伺服器
+* Game Service: 介紹
 
 # 適合對象
 

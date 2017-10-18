@@ -28,7 +28,7 @@ David Lin
 
 LiRise is Hiring
 
-# 為什麼是
+# 本書不包含
 
 * 本系列文章以
 

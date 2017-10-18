@@ -28,9 +28,11 @@ David Lin
 
 LiRise is Hiring
 
-# 本書不包含
+# 本書目前不包含
 
-* 本系列文章以
+* SQL Sharding
+* Database/Server HA
+* 黃金屋，顏如玉
 
 
 

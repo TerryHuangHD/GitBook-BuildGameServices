@@ -26,7 +26,7 @@ LiRise Games 是位於台南的 Indie Game Studio，隨時都在徵人，歡迎�
 
 * SQL Sharding
 * Database/Server HA
-* Docker/K8s
+* Docker/k8s
 * ~~黃金屋，顏如玉~~
 
 

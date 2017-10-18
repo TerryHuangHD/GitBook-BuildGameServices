@@ -8,7 +8,7 @@
 
 # 作者簡介
 
-Terry Huang
+Terry Huang \(kmshiori\)
 
 @kmshiori
 

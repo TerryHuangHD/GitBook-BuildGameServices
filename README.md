@@ -7,7 +7,7 @@
 # 大綱介紹
 
 * Infrastructure
-  * 依照步驟簡單的建立所需要的基礎服務，包含 Parse Service\(Domain, SSL, Database, Parse Server/Dashboard\) 以及  Firebase 服務
+  * 依照步驟簡單的建立所需要的基礎服務，包含 Parse Service\(Domain, SSL, Database, Parse Server/Dashboard\) 以及  Firebase 服務設定
 * Game Service
   * 介紹常見的遊戲服務，實作上遇到的各種挑戰或考量
 * General System

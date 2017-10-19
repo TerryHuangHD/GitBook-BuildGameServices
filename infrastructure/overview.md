@@ -5,7 +5,7 @@
 
 「圖：架構」
 
-### 為什麼要自架遊戲服務？
+### 為什麼選擇自架遊戲服務？
 
 * 跨平台
   * iOS Game Center / Google Play Game Services 都已經沒有跨平台支援了

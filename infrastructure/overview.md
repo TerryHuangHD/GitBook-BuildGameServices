@@ -8,7 +8,7 @@
 ### 為什麼要自架遊戲服務？
 
 * 跨平台
-  * 現實的雙平台\(iOS/android\) Game Center 都已經沒有跨平台支援了。
+  * iOS Game Center / Google Play Game Services 都已經沒有跨平台支援了
 * 擁有資料伺服器
   * 自行擁有資料庫伺服器，可簡易的在全球各服務區提供較優質的服務
   * 部分國家，對於服務資料位置有限制

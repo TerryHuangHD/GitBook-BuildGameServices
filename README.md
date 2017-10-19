@@ -23,7 +23,7 @@
 
 Terry Huang \(@kmshiori\) 目前任職 LiRise Games，業餘電動玩家，Overwatch 打不上 3000 分求大神帶 \(kmshiori\#3943\)
 
-LiRise Games 是位於台南的 Indie Game Studio，隨時都在徵人~~\(歡迎入坑\)~~，歡迎對於遊戲開發有興趣的人來聊聊，或是與我們聯繫
+LiRise Games 是位於台南的 Indie Game Studio，隨時都在徵人，歡迎~~\(入坑\)~~對於遊戲開發有興趣的人來聊聊，或是與我們聯繫
 
 # 本書目前不包含
 

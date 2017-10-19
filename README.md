@@ -25,7 +25,7 @@ Terry Huang \(@kmshiori\) 目前任職 LiRise Games，業餘電動玩家，Overw
 
 LiRise Games 是位於台南的 Indie Game Studio，隨時都在徵人，歡迎~~\(入坑\)~~對於遊戲開發有興趣的人來聊聊，或是與我們聯繫
 
-# 本書目前不包含
+# 目前尚不包含的內容
 
 * SQL Sharding
 * Database/Server HA

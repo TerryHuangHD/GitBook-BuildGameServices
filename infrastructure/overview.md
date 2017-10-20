@@ -9,7 +9,7 @@
 
 * 跨平台
   * iOS Game Center / Google Play Game Services 目前都沒有跨平台支援\(Play Game Services for iOS is deprecated\)
-* 擁有資料伺服器
+* 資料伺服器自主性
   * 自行擁有資料庫伺服器，可簡易的在全球各服務區提供較優質的服務
   * 部分國家，對於服務資料位置有限制
 * 彈性較高可客製化較多樣的遊戲服務
@@ -17,7 +17,8 @@
 
 ### 為什麼選擇使用 Parse 作為後端服務？
 
-這樣的選擇有其歷史原因，早期 Parse 服務提供了非常完整的後端服務，而 Firebase 則是純粹的即時資料庫服務；時至今日，Parse 能夠 Self-Hosted，反而更能支援資料自主性。
+* Parse: 這樣的選擇有其歷史原因，早期 Parse 服務提供了非常完整的後端服務，完整滿足了 Indie Game 開發者在後端需求，
+* Firebase而 Firebase 則是純粹的即時資料庫服務；時至今日，Parse 能夠 Self-Hosted，反而更能支援資料自主性。
 
 、多樣化取用、便於管理與呈現資料、更彈性的權限管控考量下，將資料儲存與伺服器邏輯實踐於 Parse 平台；而為了取用更完整的即時通訊能力、更完整支援的交易處理能力，將即時服務實踐在 Firebase 平台
 

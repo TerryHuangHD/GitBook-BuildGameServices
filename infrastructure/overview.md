@@ -20,8 +20,10 @@
 * Parse
   * 這樣的選擇有其歷史原因，早期 Parse 服務提供了非常完整的後端服務，完整滿足了 Indie Game 開發者在後端以及其他伺服器服務的需求。時至今日，Parse 雖然轉移成了 Self-Hosted，卻也剛好能達到資料自主性的需求。除此之外 Parse 在資料多樣化取用、管理與呈現資料、彈性的權限管控都有很好的表現
 * Firebase
-  * Firebase 早期是純粹的即時資料庫服務 Realtime Database，可在遊戲的互動環節中，扮演重要的角色
+  * Firebase 早期是純粹的即時資料庫服務 Realtime Database，可在遊戲的互動環節中，扮演重要的角色。
   * 目前 Firebase 已擴充成完整的 BAAS 平台
+* AWS SES
+  * 作為簡易的註冊訊息，以 AWS SES 是可以應付得來的。如果還有更大量或是更進階的需求，也可考慮現成的電郵服務，比如 mailgun
 
 # 服務架設
 

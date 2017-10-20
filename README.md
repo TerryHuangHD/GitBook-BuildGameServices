@@ -1,3 +1,7 @@
+# This Book Is Under Construction
+
+---
+
 # 簡介
 
 這個系列的名字為「Backend of Indie Game: 自建獨立遊戲服務」，是敝團隊這次開發遊戲『呆呆戰學校』的心得筆記，和其他 Indie Game 開發者一樣，我們這次開發過程中，嘗試在資源有限的狀況下，用簡易的方法來『自建遊戲服務』。希望能對其他 Indie Game  開發者能有所幫助，為 Indie Game 帶來更多的元素。

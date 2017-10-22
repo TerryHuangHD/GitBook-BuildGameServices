@@ -27,7 +27,7 @@ p.s. 作者懶癌末期，所以可能很多內容會~~\(偷工減料\)~~以簡�
 
 # 作者簡介
 
-Terry Huang \(@kmshiori\) 目前任職 LiRise Games，業餘電動玩家，Overwatch 打不上 3000 分求大神帶 \(kmshiori\#3943\)
+Terry Huang \(@kmshiori\) ，業餘電動玩家，Overwatch 打不上 3000 分求大神帶 \(kmshiori\#3943\)
 
 LiRise Games 是位於台南的 Indie Game Studio，隨時都在徵人，歡迎對於遊戲開發有興趣的人來~~\(入坑\)~~聊聊，或是與我們聯繫 \([service@lirise.com](mailto:service@lirise.com)\)
 

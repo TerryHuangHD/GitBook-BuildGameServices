@@ -19,7 +19,7 @@
 * “即時性”服務
   * Firebase 早期變是純粹的即時資料庫服務 Realtime Database，可在遊戲中提供即時互動、即時對弈、即時同步...功能
   * 目前 Firebase 已擴充成完整的 BAAS 平台
-* Push Notification 服務
+* Notification 服務
   * 如果作為簡易、零星的通知使用，使用 Parse Server 伺服器直接進行推送即可。若有進階的需求，也可選用其他較專業的推送平台，如：OneSignal
 * Job 服務
   * 依照任務複雜度，可能會有不同的選擇性，較簡易的任務，可透過伺服器 Cron 來達成。如果有進階的需求，像是 priority, queue ...等，可選用 kue 來做

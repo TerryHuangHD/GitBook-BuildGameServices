@@ -5,10 +5,10 @@
 ### 為什麼選擇自架遊戲服務？
 
 * 跨平台
-  * iOS Game Center / Google Play Game Services 目前都沒有跨平台支援\(Play Game Services for iOS is deprecated\)
+  * iOS Game Center / Google Play Game Services 目前都沒有跨平台支援\(Play Game Services for iOS is deprecated\)，只能選用外部遊戲服務，如：Photon, AppWarp
 * 資料伺服器自主性
-  * 自行擁有資料庫伺服器，可簡易的在全球各服務區提供較優質的服務
-  * 部分國家，對於服務資料位置有限制
+  * 自行擁有資料庫伺服器，可有較高的使用彈性
+  * 可簡易的在全球各服務區提供較優質的服務；再某些國家，對於資料伺服器位置有所限制
 * 彈性較高可客製化較多樣的遊戲服務
   * 相比於其他第三方 Game Service，自行架設遊戲服務，可以~~\(耍任性\)~~支援多樣性的伺服器邏輯
 

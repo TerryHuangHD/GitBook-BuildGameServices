@@ -16,8 +16,10 @@
 
 * 資料伺服器
   * 選用：Self-Hosted Parse
-  * 早期 Parse BAAS 服務提供了非常完整的後端服務，甚至包含了管理者介面、伺服器雲端程式、伺服器任務....等支援，完整滿足了 Indie Game 的需求，讓開發者能更專注在遊戲的開發。時至今日，Parse 雖然轉移成了 Self-Hosted 服務，但是透過許多外部服務的串接，大部分的功能還是得以實現。
+  * 早期 Parse BAAS 服務提供了非常完整的後端服務，甚至包含了管理者介面、雲端程式、伺服器任務....等支援，完整滿足了 Indie Game 的需求，讓開發者能更專注在遊戲的開發。時至今日，Parse 雖然轉移成了 Self-Hosted 服務，但是透過許多外部服務的串接，大部分的功能還是得以實現。
 * 應用程式介面
+  * 選用：Cloud Code on Parse
+  * Cloud Code 在 Self-Hosted Parse 也被完整的支援了，以 Collection 為基底的 Trigger 也繼承下來，可簡易的實作出遊戲中所需的伺服器 API，也便於串接各種 Node.js package。
 * “即時性”服務
   * Firebase 早期變是純粹的即時資料庫服務 Realtime Database，可在遊戲中提供即時互動、即時對弈、即時同步...功能
   * 目前 Firebase 已擴充成完整的 BAAS 平台

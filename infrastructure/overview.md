@@ -21,6 +21,7 @@
   * 選用：Cloud Code on Parse
   * Cloud Code 在 Self-Hosted Parse 也被完整的支援了，以 Collection 為基底的 Trigger 也繼承下來，可簡易的實作出遊戲中所需的伺服器 API，也便於串接各種 Node.js package。
 * “即時性”服務
+  * 選用：Firebase Realtime Database
   * Firebase 早期變是純粹的即時資料庫服務 Realtime Database，可在遊戲中提供即時互動、即時對弈、即時同步...功能
   * 目前 Firebase 已擴充成完整的 BAAS 平台
 * Notification 服務

@@ -22,14 +22,18 @@
   * Cloud Code 在 Self-Hosted Parse 也被完整的支援了，以 Collection 為基底的 Trigger 也繼承下來，可簡易的實作出遊戲中所需的伺服器 API，也便於串接各種 Node.js package。
 * “即時性”服務
   * 選用：Firebase Realtime Database
-  * Firebase 早期變是純粹的即時資料庫服務 Realtime Database，可在遊戲中提供即時互動、即時對弈、即時同步...功能
-  * 目前 Firebase 已擴充成完整的 BAAS 平台
+  * Firebase 早期變是純粹的即時資料庫服務，目前已擴充成完整的 BAAS 平台。能夠即時監聽資料的變化，可在遊戲中扮演關鍵的角色，提供遊戲更多互動性。
+  * 除此之外，Firebase 更支援以 Node 為基礎的原子性操作，能讓即時遊戲服務更豐富，如：即時對弈、處理競爭條件...
 * Notification 服務
+  * 選用：Parse Server 嫁接 Android GCM/FCM, iOS APN push notification
   * 如果作為簡易、零星的通知使用，使用 Parse Server 伺服器直接進行推送即可。若有進階的需求，也可選用其他較專業的推送平台，如：OneSignal
 * Job 服務
+  * 選用：Parse Server Cloud Job 嫁接伺服器 Cron
   * 依照任務複雜度，可能會有不同的選擇性，較簡易的任務，可透過伺服器 Cron 來達成。如果有進階的需求，像是 priority, queue ...等，可選用 kue 來做
 * Email 服務
-  * 如果僅僅作為 Game Services 中註冊相關環節的使用，以 AWS SES 是足以應付得來的。如果還有更大量或是更進階的需求，也可考慮現成的電郵服務，比如 mailgun
+  * 選用：AWS SES
+  * 如果僅僅作為 Game Services 中註冊相關環節的使用，以 AWS SES 是足以應付得來的。如果還有更大量的批次寄送或是更進階的需求，也可考慮現成的電郵服務，比如 mailgun
+
 * SMS 服務
   * 這類型服務大同小異，可依照開發者習慣~~\(價格\)~~進行選擇
 * Hosting 服務

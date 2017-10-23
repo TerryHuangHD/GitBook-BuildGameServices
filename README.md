@@ -28,7 +28,7 @@ p.s. 作者懶癌末期，所以可能很多內容會~~\(偷工減料\)~~以簡�
 
 Terry Huang \(@kmshiori\) ，業餘電動玩家，Overwatch 打不上 3000 分求大神帶 \(kmshiori\#3943\)
 
-LiRise Games 是位於台南的 Indie Game Studio，~~\(隨時都在\)~~徵人中，歡迎對於遊戲開發、企劃有興趣的人來~~\(入坑\)~~聊聊，或是與我們聯繫 \([service@lirise.com](mailto:service@lirise.com)\)
+LiRise Games 是位於台南的 Indie Game Studio，隨時都在徵人中，歡迎對於遊戲開發、企劃、行銷有興趣的人來~~\(入坑\)~~聊聊，實習亦可，或是直接與我們聯繫 \([service@lirise.com](mailto:service@lirise.com)\)
 
 # 書中目前尚不包含的內容
 
@@ -36,5 +36,5 @@ LiRise Games 是位於台南的 Indie Game Studio，~~\(隨時都在\)~~徵人�
 * Database/Server HA
 * ~~黃金屋，顏如玉~~
 
-p.s. 本系列文中 BAAS 係指 Back end as a Service
+
 

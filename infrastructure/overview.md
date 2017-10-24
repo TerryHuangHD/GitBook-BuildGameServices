@@ -27,7 +27,7 @@
 * Notification 服務
   * Android 選用：Parse Server 嫁接 Android GCM/FCM
   * iOS 選用：Parse Server 嫁接 APN push notification
-  * Game Service 中，推送服務通常是簡易、零星，使用 Parse Server 伺服器直接進行推送即可。若有進階的需求，也可選用其他較專業的推送平台，如：OneSignal
+  * Game Service 中，推送服務通常是簡易、分散式的使用方式，Parse Server 伺服器直接進行推送即可。若有進階的需求，也可選用其他較專業的推送平台，如：OneSignal
 * Job 服務
   * 選用：Parse Server Cloud Job 嫁接伺服器 Cron
   * 依照任務複雜度，可能會有不同的選擇性，較簡易的任務，可透過伺服器 Cron 來達成。如果有進階的需求，像是 priority, queue ...等，可選用 kue 來做

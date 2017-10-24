@@ -36,9 +36,9 @@
   * 在 Game Services 中，Email 服務通常扮演輔助角色，可能用在帳號系統的相關環節，以 AWS SES 變足以應付得來的。如果還有更大量的批次寄送或是更進階的行銷需求，也可考慮更專業、便於管理的電郵服務，比如 mailgun
 * SMS 服務
   * 選用：AWS SNS, Twilio
-
   * 這類型服務大同小異，大部分都是透過 REST API 來傳送，有在地服務商，也有可送全球的服務，可依照需求、開發習慣~~、\(價格\)~~進行選擇。
 * Hosting 服務
+  * 選用：Parse Server 嫁接 Google Cloud Storage
 
 # 服務架設
 

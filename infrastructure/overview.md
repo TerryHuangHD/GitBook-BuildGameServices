@@ -32,7 +32,7 @@
   * 選用：Parse Cloud Job 嫁接伺服器 Cron
   * 依照所需要的任務複雜度，可能會有不同的選擇性，以常見的 Game Services，通常用來做定時的伺服器資料更新，比如：每日排行榜...，透過伺服器 Cron 便可簡單達成。如果有進階的需求，像是 priority, queue ...等，可選用 kue 來做
 * Email 服務
-  * 選用：mailgun
+  * 選用：Parse Server 嫁接 mailgun
   * 在 Game Services 中，Email 服務通常扮演輔助角色，可能用在帳號系統的相關環節，以 AWS SES 便足以應付得來的。如果還有更大量的批次寄送或是更進階的行銷需求，也可考慮更專業、便於管理的電郵服務，比如 mailgun
 * SMS 服務
   * 選用：AWS SNS, Twilio

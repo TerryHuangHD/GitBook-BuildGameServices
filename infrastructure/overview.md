@@ -12,7 +12,7 @@
 * 滿足遊戲邏輯多樣性
   * 與第三方遊戲服務比較，自行架設遊戲服務，較能實現更多客製化需求的配對機制、遊戲模式、互動方式
 
-### Game Service 使用哪些後端基礎服務？
+### Game Services 使用哪些後端基礎服務？
 
 * 資料伺服器
   * 選用：Self-Hosted Parse
@@ -27,9 +27,9 @@
 * Notification 服務
   * Android 選用：Parse Server 嫁接 Android GCM/FCM
   * iOS 選用：Parse Server 嫁接 APN push notification
-  * Game Service 中，推送服務通常是簡易、分散式的使用方式，Parse Server 伺服器直接進行推送即可。若有進階的需求，也可選用其他較專業的推送平台，如：OneSignal
+  * Game Services 中，雲端推送服務通常是分散式的使用方式（規律性的通知會透過本地端推送）。若是以這樣的需求為前提，可直接透過 Parse Server 伺服器直接進行推送即可。若有進階的需求，比如：大量、批次、定時、追蹤...等，也可選用其他較專業的推送平台，如：OneSignal
 * Job 服務
-  * 選用：Parse Server Cloud Job 嫁接伺服器 Cron
+  * 選用：Parse Cloud Job 嫁接伺服器 Cron
   * 依照任務複雜度，可能會有不同的選擇性，較簡易的任務，可透過伺服器 Cron 來達成。如果有進階的需求，像是 priority, queue ...等，可選用 kue 來做
 * Email 服務
 

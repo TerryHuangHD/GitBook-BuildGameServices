@@ -19,14 +19,15 @@
   * 早期 Parse BAAS 服務提供了非常完整的後端服務，甚至包含了管理者介面、雲端程式、伺服器任務....等支援，完整滿足了 Indie Game 的需求，讓開發者能更專注在遊戲的開發。時至今日，Parse 雖然轉移成了 Self-Hosted 服務，但是透過許多外部服務的串接，大部分的功能還是得以實現。
 * 應用程式介面
   * 選用：Cloud Code on Parse
-  * Cloud Code 在 Self-Hosted Parse 也被完整的支援了，以 Collection 為基底的 Trigger 也繼承下來，可簡易的實作出遊戲中所需的伺服器 API，也便於串接各種 Node.js package。
+  * Cloud Code 在 Self-Hosted Parse 也被完整的支援了，Trigger, Webhook 也繼承了下來，可簡易的實作出遊戲中所需的伺服器 API，也便於串接各種 Node.js package。
 * “即時性”服務
   * 選用：Firebase Realtime Database
-  * Firebase 早期變是純粹的即時資料庫服務，目前已擴充成完整的 BAAS 平台。能夠即時監聽資料的變化，可在遊戲中扮演關鍵的角色，提供遊戲更多互動性。
+  * Firebase 早期變是純粹的即時資料庫服務，目前已擴充成完整的 BAAS 平台。能夠即時監聽雲端資料的變化，可在遊戲中扮演關鍵的角色，提供遊戲更多互動性。
   * 除此之外，Firebase 更支援以 Node 為基礎的原子性操作，能讓即時遊戲服務更豐富，如：即時對弈、處理競爭條件...
 * Notification 服務
-  * 選用：Parse Server 嫁接 Android GCM/FCM, iOS APN push notification
-  * 如果作為簡易、零星的通知使用，使用 Parse Server 伺服器直接進行推送即可。若有進階的需求，也可選用其他較專業的推送平台，如：OneSignal
+  * Android 選用：Parse Server 嫁接 Android GCM/FCM
+  * iOS 選用：Parse Server 嫁接 APN push notification
+  * Game Service 中，推送服務通常是簡易、零星，使用 Parse Server 伺服器直接進行推送即可。若有進階的需求，也可選用其他較專業的推送平台，如：OneSignal
 * Job 服務
   * 選用：Parse Server Cloud Job 嫁接伺服器 Cron
   * 依照任務複雜度，可能會有不同的選擇性，較簡易的任務，可透過伺服器 Cron 來達成。如果有進階的需求，像是 priority, queue ...等，可選用 kue 來做

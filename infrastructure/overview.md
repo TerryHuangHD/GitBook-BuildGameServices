@@ -40,7 +40,7 @@
 * Hosting 服務
   * 選用：Parse Server 嫁接 GridStore
   * 如果是遊戲中輕度使用，比如存放個人圖示，可選擇與 Parse Sever 透過 Adapter 直接嫁接 GridFS。
-  * 如果是開放型、大型靜態資料，建議可以做獨立的檔案伺服架構，最簡單就是直接選用 GCS/S3 + CDN。
+  * 如果是開放型、大型靜態資料，建議可以做獨立的檔案伺服架構，最簡單就是直接用 GCS/S3 + CDN。
 
 # 服務架設
 

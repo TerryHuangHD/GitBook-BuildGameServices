@@ -38,7 +38,10 @@
   * 選用：AWS SNS, Twilio
   * 這類型服務大同小異，大部分都是透過 REST API 來傳送，有在地服務商，也有可送全球的服務，可依照需求、開發習慣~~、\(價格\)~~進行選擇。
 * Hosting 服務
-  * 選用：Parse Server 嫁接 Google Cloud Storage
+  * Parse Server 嫁接 GridStore
+
+  * 如果是遊戲中輕度使用，比如存放個人圖示，可選擇與 Parse Sever 透過 Adapter 直接嫁接 GridFS。
+  * 如果是開放型、大型靜態資料，建議可以做獨立的檔案伺服架構，最簡單就是直接選用 GCS/S3 + CDN。
 
 # 服務架設
 

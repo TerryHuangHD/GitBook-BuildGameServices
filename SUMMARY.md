@@ -16,14 +16,16 @@
 * Invitation
 * [Achievement](game-services/achievement.md)
 * [Leaderboard](game-services/leaderboard.md)
+* [Queue & Pairing](queue.md)
 * [Turn-based Multiplayer](game-services/turn-based-multiplayer.md)
 * Real-time Multiplayer
 * Saved Games
-* Events, Quests, Challenges
+* Events & Quests & Challenges
 
 ## General System
 
 * [Security Tunnel](infrastructure/security.md)
 * Counter System
 * Tag System
+* Storage System
 

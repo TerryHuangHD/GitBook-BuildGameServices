@@ -6,18 +6,18 @@
 
 這個系列的名字為「Backend of Indie Game: 自建獨立遊戲服務」，是 Lirise Games 團隊這次開發遊戲『呆呆戰學校』的心得筆記；和其他 Indie Game 開發者一樣，我們這次的開發過程中，嘗試在資源有限的狀況下，用簡易的方法來建立跨平台的「線上遊戲服務」。希望我們的經驗能對其他 Indie Game 開發者有所幫助。
 
-後續內容將使用 Parse 服務為基底，進階整合其他網路服務\(Firebase, FCM, SES...\)，從最基礎的「Infrastructure 架構」進行介紹與「Step by Step 架設教學」，接著會介紹在此架構下，各種常見的「遊戲後端」服務設計與心得分享。
+後續內容將使用 Parse 服務為中心，進階整合其他服務\(Notification, Realtime, SMS...\)作為最基礎，接著會在此基礎架構下，介紹各種常見的 Game Services 的設計與心得。
 
-p.s. 作者懶癌末期，所以可能很多內容會~~\(偷工減料\)~~以簡單的問答來呈現，如果需要詳細說明，請告訴我
+p.s. 作者患有嚴重的懶癌，所以可能很多內容會以~~\(偷工減料\)~~簡單的的方式來呈現，如果需要詳細說明，請告訴我
 
 # 大綱介紹
 
 * Infrastructure
-  * 依照步驟簡單的建立所需要的基礎服務，包含 Parse Service\(Domain, SSL, Database, Parse Server/Dashboard\) 架設以及其他相關的服務設定
+  * 依照步驟簡單的建立所需要的基礎服務，包含 Parse Service 架設，以及其他服務的設定，如：API, Realtime, Notification, Job, Email, SMS, Hosting
 * Game Service
-  * 介紹常見的遊戲服務，實作上遇到的各種挑戰或考量
+  * 介紹常見的遊戲服務，實作上遇到的各種挑戰或考量。包含：Account, Invitation, Achievement, Leaderboard, Turned-Based Multiplayer, Real-time Multiplayer, Saved Games, Event & Quest & Challenges
 * General System
-  * 介紹一些泛用的基礎系統設計，可以方便用來開發成各種想要的遊戲服務
+  * 介紹一些泛用的基礎系統設計，可以方便用來開發成各種想要的遊戲服務：如：Counter System, Tag System, Storage System
 
 # 適合對象
 

@@ -7,8 +7,9 @@
 ## Infrastructure
 
 * [Overview](infrastructure/overview.md)
-* [Parse Setup](infrastructure/iaas-solution.md)
-* [Firebase Setup](infrastructure/saas-solution.md)
+* [Parse Service Creation](infrastructure/iaas-solution.md)
+* [Parse Setting](infrastructure/cloud-code.md)
+* External Service Setting
 
 ## Game Service
 

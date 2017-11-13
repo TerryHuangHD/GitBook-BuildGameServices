@@ -2,7 +2,7 @@
 
 ![](/assets/Infrustructure.jpg)
 
-### 為什麼選擇自架遊戲服務？
+### 自架遊戲服務有什麼優點？
 
 * 跨平台
   * iOS Game Center / Google Play Game Services 目前都沒有跨平台支援。只能透過第三方遊戲服務來達成，如：Photon, AppWarp
@@ -14,6 +14,14 @@
   * 與第三方遊戲服務比較，自行架設遊戲服務，較能實現更多客製化需求的配對機制、遊戲模式、互動方式
 
 ### Game Services 可能需要哪些基礎服務？
+
+#### 資料伺服器
+
+* 選用：Self-Hosted Parse
+
+* 早期 Parse BAAS 服務提供了非常完整的後端服務，甚至包含了管理者介面、雲端程式、伺服器任務....等支援，完整滿足了 Indie Game 的需求，讓開發者能更專注在遊戲的開發。時至今日，Parse 雖然轉移成了 Self-Hosted 服務，但是透過許多外部服務的串接，大部分的功能還是得以實現。
+
+
 
 * 資料伺服器
   * 選用：Self-Hosted Parse
@@ -42,14 +50,6 @@
   * 選用：Parse Server 嫁接 GridStore
   * 如果是遊戲輕度使用，比如存放個人圖示，可選擇與 Parse Sever 透過 Adapter 直接嫁接 GridFS。
   * 如果是開放型、大型靜態資料，建議可以做獨立的檔案伺服架構，如：簡單選用 GCS/S3 + CDN。
-
-# 服務架設
-
-1. 架設/註冊 Parse 服務
-   1. IAAS Solution
-   2. SAAS Solution
-2. 註冊 Firebase 服務
-3. 將架構加到遊戲中
 
 
 

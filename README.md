@@ -10,11 +10,15 @@
 
 p.s. 作者患有嚴重的懶癌，所以可能很多內容會以~~\(偷工減料\)~~簡單的的方式來呈現，如果需要詳細說明，請告訴我
 
+<p align="center">
+<img src="/assets/simple_layer.jpg">
+</p>
+
 # 大綱介紹
 
 * Infrastructure
   * 依照步驟簡單的建立所需要的基礎服務，包含 Parse Service 架設，以及其他服務的設定，如：API, Realtime, Notification, Job, Email, SMS, Hosting
-* Game Service
+* Game Services
   * 介紹常見的遊戲服務，實作上遇到的各種挑戰或考量。包含：Account, Invitation, Achievement, Leaderboard, Queue & Pairing, Turned-Based Multiplayer, Real-time Multiplayer, Saved Games, Event & Quest & Challenges
 * General System
   * 介紹一些泛用的基礎系統設計，可以方便用來開發成各種想要的遊戲服務：如：Security Tunnel, Counter System, Tag System, Storage System

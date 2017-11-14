@@ -8,8 +8,13 @@
 
 * [Overview](infrastructure/overview.md)
 * [Parse Service Creation](infrastructure/iaas-solution.md)
-* [Parse Setting](infrastructure/cloud-code.md)
-* External Service Setting
+* [Setup: Cloud Code](infrastructure/cloud-code.md)
+* [Setup: Notification](infrastructure/external-service-setting.md)
+* [Setup: Job](infrastructure/setup-job.md)
+* Setup: Email
+* Setup: SMS
+* Setup: Hosting
+* [Setup: Real-time](infrastructure/setup-realtime-system.md)
 
 ## Game Service
 
@@ -25,6 +30,7 @@
 
 ## General System
 
+* Time System
 * [Security Tunnel](infrastructure/security.md)
 * Counter System
 * Tag System

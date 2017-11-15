@@ -1,4 +1,1 @@
-.image-wrapper {
-    text-align: center;
-    padding: 15px 0px;
-}
+img[alt=simple_layer] { float: right; }

@@ -1,3 +1,9 @@
 {
-    "plugins": ["image-div"]
+    "styles": {
+        "website": "website.css",
+        "ebook": "ebook.css",
+        "pdf": "pdf.css",
+        "mobi": "mobi.css",
+        "epub": "epub.css"
+    }
 }

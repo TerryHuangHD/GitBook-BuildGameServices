@@ -1,1 +1,4 @@
-img[alt=simple_layer] { float: right; }
+div.image {
+    text-align: center;
+    padding: 15px 0px;
+}

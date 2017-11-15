@@ -10,9 +10,7 @@
 
 p.s. 作者患有嚴重的懶癌，所以可能很多內容會以~~\(偷工減料\)~~簡單的的方式來呈現，如果需要詳細說明，請告訴我
 
-<div class="image-wrapper">
-  <img src="/assets/simple_layer.jpg" />
-</div>
+![](/assets/simple_layer.jpg){.callout}
 
 # 大綱介紹
 

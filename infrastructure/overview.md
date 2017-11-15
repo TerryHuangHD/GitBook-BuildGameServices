@@ -1,6 +1,6 @@
 # 基礎服務架構介紹
 
-![](/assets/Infrustructure.jpg)
+![](/assets/Infrustructure.jpg "Infrustructure")
 
 ### 自架遊戲服務有什麼優點？
 

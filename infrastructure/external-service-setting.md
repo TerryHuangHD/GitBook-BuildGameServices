@@ -5,7 +5,7 @@
 * Parse Installation Data
 * Android FCM Setup
 * iOS APN Setup
-* Tool: Dashboard Test
+* Hint: Dashboard Test
 * Advanced: Target Segmemtation
 
 

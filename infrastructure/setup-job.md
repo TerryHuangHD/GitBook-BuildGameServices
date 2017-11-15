@@ -3,7 +3,7 @@
 ### Menu
 
 * Job Function
-* Tool: Dashboard Runner & Logger
+* Hint: Dashboard Runner & Logger
 * Advanced: Job Worker
 
 

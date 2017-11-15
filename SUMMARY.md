@@ -13,7 +13,7 @@
 * [Setup: Job](infrastructure/setup-job.md)
 * [Setup: Email](infrastructure/setup-email.md)
 * [Setup: SMS](infrastructure/setup-sms.md)
-* Setup: Hosting
+* [Setup: Hosting](infrastructure/setup-hosting.md)
 * [Setup: Real-time](infrastructure/setup-realtime-system.md)
 
 ## Game Service

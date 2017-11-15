@@ -11,8 +11,8 @@
 * [Setup: Cloud Code](infrastructure/cloud-code.md)
 * [Setup: Notification](infrastructure/external-service-setting.md)
 * [Setup: Job](infrastructure/setup-job.md)
-* Setup: Email
-* Setup: SMS
+* [Setup: Email](infrastructure/setup-email.md)
+* [Setup: SMS](infrastructure/setup-sms.md)
 * Setup: Hosting
 * [Setup: Real-time](infrastructure/setup-realtime-system.md)
 

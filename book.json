@@ -1,6 +1,11 @@
 {
-    "plugins": ["image-class"],
+    "plugins": ["image-class", "fancybox"],
     "pluginsConfig": {
+        "fancybox": {
+            "helpers": {
+                "buttons": {}
+            }
+        }
     },
     "styles": {
         "website": "styles/website.css",

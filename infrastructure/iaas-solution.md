@@ -9,7 +9,7 @@
 * 建立 Parse 伺服器
 * 建立 Parse Dashboard 伺服器
 
-### 概述 {#haha}
+### 概述 {#test-me}
 
 * Parse 服務在基礎上，架構在一個「資料庫服務」與一台「Parse 伺服器」上。
 * \[待補\]
@@ -27,5 +27,3 @@
 * 建立完成後便可透過網頁直接開啟 SSH 模擬器來登入主機
 
 ![](/assets/Compute Engine Instance Crate.png)
-
-# Test HTML Anchored Heading {#test-me}

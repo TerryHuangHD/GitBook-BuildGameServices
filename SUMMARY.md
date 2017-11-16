@@ -4,10 +4,10 @@
 
 * [Introduction](README.md)
 
-## Infrastructure
+## 基礎架構
 
 * [Overview](infrastructure/overview.md)
-* [Parse Service Creation](infrastructure/iaas-solution.md)
+* [建立 Parse 服務](infrastructure/iaas-solution.md)
 * [Setup: Cloud Code](infrastructure/cloud-code.md)
 * [Setup: Notification](infrastructure/external-service-setting.md)
 * [Setup: Job](infrastructure/setup-job.md)
@@ -16,7 +16,7 @@
 * [Setup: Hosting](infrastructure/setup-hosting.md)
 * [Setup: Real-time](infrastructure/setup-realtime-system.md)
 
-## Game Service
+## 遊戲服務
 
 * [Account](game-services/account.md)
 * [Invitation](game-services/invitation.md)
@@ -28,7 +28,7 @@
 * Saved Games
 * Events & Quests & Challenges
 
-## General System
+## 通用系統
 
 * Time System
 * [Security Tunnel](infrastructure/security.md)

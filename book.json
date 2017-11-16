@@ -1,9 +1,6 @@
 {
-    "plugins": ["disqus"],
+    "plugins": [],
     "pluginsConfig": {
-        "disqus": {
-            "shortName": "XXXXXXX"
-        }
     },
     "styles": {
         "website": "website.css",

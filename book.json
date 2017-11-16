@@ -1,11 +1,8 @@
 {
-    "plugins": ["anchorjs"],
+    "plugins": ["disqus"],
     "pluginsConfig": {
-        "anchorjs": {
-          "icon": "#",
-          "placement": "left",
-          "visible": "always",
-          "class": "custom-class another-one"
+        "disqus": {
+            "shortName": "XXXXXXX"
         }
     },
     "styles": {

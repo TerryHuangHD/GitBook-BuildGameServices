@@ -1,4 +1,5 @@
 {
+    "plugins": ["anchorjs"],
     "styles": {
         "website": "website.css",
         "ebook": "ebook.css",

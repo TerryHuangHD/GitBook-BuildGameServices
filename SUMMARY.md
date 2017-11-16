@@ -19,7 +19,7 @@
 ## Game Service
 
 * [Account](game-services/account.md)
-* Invitation
+* [Invitation](game-services/invitation.md)
 * [Achievement](game-services/achievement.md)
 * [Leaderboard](game-services/leaderboard.md)
 * [Queue & Pairing](queue.md)

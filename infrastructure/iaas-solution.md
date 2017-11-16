@@ -1,6 +1,6 @@
 # Parse Service Creation
 
-### Menu
+### 目錄
 
 * 建立資料庫伺服器
 * 建立並設定 Parse 伺服器的資料庫

@@ -6,6 +6,9 @@
 * [建立資料庫伺服器虛擬機](#db-instance)
 * [建立資料庫服務](#db-service)
 * [建立並設定 Parse 資料庫](#db-parse)
+* [建立 Parse 伺服器虛擬機](#parse-instance)
+* [建立並設定 Parse Server 服務](#parse-server)
+* [建立並設定 Parse Dashboard 服務](#parse-dashboard)
 * [補充說明](#supply)
 
 ### 概述說明 {#intro}
@@ -37,6 +40,12 @@ Parse 服務在常用的配置上，會包含「資料庫服務」存放資料�
 ### 建立資料庫服務 {#db-service}
 
 ### 建立並設定 Parse 資料庫 {#db-parse}
+
+### 建立 Parse 伺服器虛擬機 {#parse-instance}
+
+### 建立並設定 Parse Server 服務 {#parse-server}
+
+### 建立並設定 Parse Dashboard 服務 {#parse-dashboard}
 
 ### 補充說明 {#supply}
 

@@ -27,3 +27,4 @@
 * 建立完成後便可透過網頁直接開啟 SSH 模擬器來登入主機
 
 ![](/assets/Compute Engine Instance Crate.png)
+

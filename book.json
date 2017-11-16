@@ -1,5 +1,13 @@
 {
     "plugins": ["anchorjs"],
+    "pluginsConfig": {
+        "anchorjs": {
+          "icon": "#",
+          "placement": "left",
+          "visible": "always",
+          "class": "custom-class another-one"
+        }
+    },
     "styles": {
         "website": "website.css",
         "ebook": "ebook.css",

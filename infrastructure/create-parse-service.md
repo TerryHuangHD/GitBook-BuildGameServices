@@ -2,19 +2,19 @@
 
 ### 目錄
 
-* [概述](#overview)
-* 建立資料庫伺服器虛擬機
+* [說明](#intro)
+* [建立資料庫伺服器虛擬機](#instance-db)
 * 建立資料庫服務
 * 建立並設定 Parse 伺服器的資料庫
 * 建立 Parse 伺服器
 * 建立 Parse Dashboard 伺服器
 
-### 概述 {#overview}
+### 說明 {#intro}
 
 * Parse 服務在基礎上，架構在一個「資料庫服務」與一台「Parse 伺服器」上。
 * \[待補\]
 
-### 建立伺服器虛擬機
+### 建立資料庫伺服器虛擬機 {#instance-db}
 
 * 在 [GCP 的 Compute Engine](https://console.cloud.google.com/compute/) 建立資料庫伺服器 VM Instance
 
@@ -27,3 +27,5 @@
 * 建立完成後便可透過網頁直接開啟 SSH 模擬器來登入主機
 
 ![](/assets/Compute Engine Instance Crate.png)
+![](/assets/Compute Engine SSH.png)
+

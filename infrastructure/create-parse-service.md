@@ -9,8 +9,10 @@
 
 ### 概述說明 {#intro}
 
-* Parse 服務在常用的配置上，會包含「資料庫服務」存放資料，「Parse 伺服器」作為服務端口，「Parse Dashboard」用於簡單的管理之用。
-* 在這次的範例中，將會演示建立以 Google Cloud Platform(下稱 GCP) 的 Compute Engine「虛擬機」為基礎的架設方式。可以需求，選用合適的 IAAS 服務商，或考慮現成的 DB 服務，甚至是直接選用 Parse Service Provider
+* Parse 服務在常用的配置上，會包含「資料庫服務」存放資料，「Parse 伺服器」作為服務端口，「Parse Dashboard」提供簡單的管理之用。在這次的範例中，將會演示建立以 [Google Cloud Platform（下稱 GCP）](https://cloud.google.com/)的 Compute Engine「虛擬機」為基礎的架設方式。
+* IAAS 服務可依需求、價格選用合適的服務，如：[AWS](https://aws.amazon.com/), [Linode](https://www.linode.com/)
+* 資料庫的部分，目前 Parse 已支援 MongoDB & PostgreSQL。也可考慮現成的 DB 服務，如：[mLab](https://mlab.com/)
+* 求方便的話，可直接選用 Parse Service Provider，如：[SashiDo](https://www.sashido.io/), [Back4App](https://www.back4app.com/)
 
 ### 建立資料庫伺服器虛擬機 {#db-instance}
 

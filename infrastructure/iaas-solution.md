@@ -7,5 +7,9 @@
 * 建立 Parse 伺服器
 * 建立 Parse Dashboard 伺服器
 
+### 建立資料庫伺服器
+
+
+
 
 

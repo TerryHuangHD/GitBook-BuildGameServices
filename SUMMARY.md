@@ -7,14 +7,14 @@
 ## 基礎架構
 
 * [Overview](infrastructure/overview.md)
-* [建立 Parse 服務](infrastructure/iaas-solution.md)
-* [Setup: Cloud Code](infrastructure/cloud-code.md)
-* [Setup: Notification](infrastructure/external-service-setting.md)
+* [建立 Parse 服務](infrastructure/create-parse-service.md)
+* [Setup: Cloud Code](infrastructure/setup-cloud-code.md)
+* [Setup: Notification](infrastructure/setup-notification.md)
 * [Setup: Job](infrastructure/setup-job.md)
 * [Setup: Email](infrastructure/setup-email.md)
 * [Setup: SMS](infrastructure/setup-sms.md)
 * [Setup: Hosting](infrastructure/setup-hosting.md)
-* [Setup: Real-time](infrastructure/setup-realtime-system.md)
+* [Setup: Real-time](infrastructure/setup-realtime.md)
 
 ## 遊戲服務
 
@@ -22,7 +22,7 @@
 * [Invitation](game-services/invitation.md)
 * [Achievement](game-services/achievement.md)
 * [Leaderboard](game-services/leaderboard.md)
-* [Queue & Pairing](queue.md)
+* [Queue & Pairing](game-services/queue.md)
 * [Turn-based Multiplayer](game-services/turn-based-multiplayer.md)
 * Real-time Multiplayer
 * Saved Games
@@ -31,7 +31,7 @@
 ## 通用系統
 
 * Time System
-* [Security Tunnel](infrastructure/security.md)
+* [Security Tunnel](general-system/security.md)
 * Counter System
 * Tag System
 * Storage System

@@ -1,5 +1,5 @@
 {
-    "plugins": [],
+    "plugins": ["unic-chapters"],
     "pluginsConfig": {
     },
     "styles": {

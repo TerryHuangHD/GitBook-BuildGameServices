@@ -13,10 +13,11 @@
 
 ### 概述說明 {#intro}
 
-Parse 服務在常用的配置上，會包含「資料庫服務」存放資料，「Parse 伺服器」作為服務端口，「Parse Dashboard」提供簡單的管理之用。在這次的範例中，將會演示建立以 [Google Cloud Platform（下稱 GCP）](https://cloud.google.com/)的 Compute Engine「虛擬機」為基礎的架設方式。
+Parse 服務在常用的配置上，會包含「資料庫服務」存放資料，「Parse 伺服器」作為服務端口，「Parse Dashboard」提供簡單的管理之用。在這次的範例中，將會演示建立以 [Google Cloud Platform（下稱 GCP）](https://cloud.google.com/)的 Compute Engine「虛擬機」為基礎的方式，架設完整的服務。當然，您也可以選擇您喜好的架設服務方式：
 * IAAS 服務可依需求、價格選用合適的服務，如：[AWS](https://aws.amazon.com/), [Linode](https://www.linode.com/)
-* 資料庫的部分，目前 Parse 已支援 MongoDB & PostgreSQL。也可考慮現成的 DB 服務，如：[mLab](https://mlab.com/)
-* 求方便的話，可直接選用 Parse Service Provider，如：[SashiDo](https://www.sashido.io/), [Back4App](https://www.back4app.com/)
+* 資料庫的部分，目前 Parse 已支援 MongoDB & PostgreSQL。也可考慮現成的 DB 服務，如：[mLab](https://mlab.com/), [Amazon RDS](https://aws.amazon.com/tw/rds/postgresql/)
+* 目前也有服務商直供 Parse 服務，如：[SashiDo](https://www.sashido.io/), [Back4App](https://www.back4app.com/)
+* [MongoDB](https://github.com/docker-library/mongo) 與 [Parse](https://hub.docker.com/r/parseplatform/parse-server/) 目前也都有 Docker Image 供選用
 
 ### 建立資料庫伺服器虛擬機 {#db-instance}
 
@@ -26,9 +27,10 @@ Parse 服務在常用的配置上，會包含「資料庫服務」存放資料�
 
 * 設定 Instance 相關資訊
  * 名稱：自行命名
- * 區域：可參考 Google 提供的[服務地點說明](https://cloud.google.com/about/locations/)來決定，亞太地區有：新加坡(asia-southeast1)	、台灣(asia-east1)、東京(asia-northeast1)、雪梨(australia-southeast1)
- * 機器類型：依需求決定
- * 開機磁碟：可更改作業系統映像檔案，範例選用 Ubuntu 14.04 LTS
+ * 區域：可參考 Google 提供的[服務地點說明](https://cloud.google.com/about/locations/)來決定，亞太地區 Cloud Compute 可選擇：新加坡(asia-southeast1)	、台灣(asia-east1)、東京(asia-northeast1)、雪梨(australia-southeast1)
+ * 機器類型：依需求決定，範例選用微型機器
+ * 開機磁碟：依需求決定，範例使用預設磁碟大小
+ * 作業系統：範例選用 Ubuntu 14.04 LTS
 
 ![](/assets/Compute Engine VM Setup.png)
 

@@ -1,5 +1,5 @@
 {
-    "plugins": ["image-class", "fancybox"],
+    "plugins": ["image-class", "fancybox", "codetabs"],
     "pluginsConfig": {
         "fancybox": {
             "helpers": {

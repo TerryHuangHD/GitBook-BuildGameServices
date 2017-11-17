@@ -41,6 +41,22 @@ Parse 服務在常用的配置上，會包含「資料庫服務」存放資料�
 
 ### 建立資料庫服務 {#db-service}
 
+> 目前 Parse Server [支援 MongoDB 2.6.X, 3.0.X or 3.2.X](http://docs.parseplatform.org/parse-server/guide/#prerequisites)，這次選用 3.2.7 版來安裝。
+
+> MongoDB 針對 LTS 版本的 Ubuntu 有長期的支援，如: 12.04 LTS (precise), 14.04 LTS (trusty), 16.04 LTS (xenial)
+
+* Import MongoDB public GPG Key
+
+{% codetabs -%}
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
+{%- endcodetabs %}
+
+* Create a list file for MongoDB
+
+{% codetabs -%}
+echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
+{%- endcodetabs %}
+
 ### 建立並設定 Parse 資料庫 {#db-parse}
 
 ### 建立 Parse 伺服器虛擬機 {#parse-instance}

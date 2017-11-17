@@ -43,12 +43,9 @@ Parse 服務在常用的配置上，會包含「資料庫服務」存放資料�
 
 > **[info] For info**
 >
-> 目前 Parse Server [支援 MongoDB 2.6.X, 3.0.X or 3.2.X](http://docs.parseplatform.org/parse-server/guide/#prerequisites)，這次選用 3.2.7 版來安裝。
-
-
-> **[info] For info**
->
-> MongoDB 針對 LTS 版本的 Ubuntu 有長期的支援，如: 12.04 LTS (precise), 14.04 LTS (trusty), 16.04 LTS (xenial)
+> * 目前 Parse Server [支援 MongoDB 2.6.X, 3.0.X or 3.2.X](http://docs.parseplatform.org/parse-server/guide/#prerequisites)，這次選用 3.2.7 版來安裝。
+> 
+> * MongoDB 針對 LTS 版本的 Ubuntu 有長期的支援，如: 12.04 LTS (precise), 14.04 LTS (trusty), 16.04 LTS (xenial)
 
 * Import MongoDB public GPG Key
 

@@ -47,15 +47,15 @@ Parse 服務在常用的配置上，會包含「資料庫服務」存放資料�
 
 * Import MongoDB public GPG Key
 
-{% codetabs name="Python", type="py" -%}
+```
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
-{%- endcodetabs %}
+```
 
 * Create a list file for MongoDB
 
-{% codetabs name="Python", type="py" -%}
+```
 echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
-{%- endcodetabs %}
+```
 
 ### 建立並設定 Parse 資料庫 {#db-parse}
 

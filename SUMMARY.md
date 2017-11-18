@@ -7,6 +7,7 @@
 ## 基礎架構
 
 * [Overview](infrastructure/overview.md)
+* [建立資料庫服務](infrastructure/create-db-service.md)
 * [建立 Parse 服務](infrastructure/create-parse-service.md)
 * [Setup: Cloud Code](infrastructure/setup-cloud-code.md)
 * [Setup: Notification](infrastructure/setup-notification.md)

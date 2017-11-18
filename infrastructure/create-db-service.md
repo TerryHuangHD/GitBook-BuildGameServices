@@ -117,7 +117,7 @@ exit
 
 ```
 echo "security:" | sudo tee -a /etc/mongod.conf
-echo " authorization: \"enabled\"" | sudo tee -a /etc/mongod.conf
+echo "  authorization: \"enabled\"" | sudo tee -a /etc/mongod.conf
 ```
 
 * 重新啟動資料庫服務

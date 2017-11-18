@@ -116,7 +116,8 @@ exit
 * 編輯 MongoDB 設定檔案，將預設值設定為啟用身份驗證
 
 ```
-echo "security: authorization: \"enabled\"" | sudo tee -a /etc/mongod.conf
+echo "security:" | sudo tee -a /etc/mongod.conf
+echo " authorization: \"enabled\"" | sudo tee -a /etc/mongod.conf
 ```
 
 * 重新啟動資料庫服務
@@ -126,6 +127,12 @@ sudo service mongod restart
 ```
 
 ### 建立並設定 Parse 資料庫 {#db-parse}
+
+* 以建立的管理者登入資料庫服務
+
+```
+mongo 127.0.0.1 -u "test" -p "12345" --authenticationDatabase "admin"
+```
 
 ### 補充說明 {#other}
 

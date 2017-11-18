@@ -94,7 +94,7 @@ use admin
 ```
 db.createUser(
   {
-    user: "名稱",
+    user: "帳號",
     pwd: "密碼",
     roles: [ { role: "dbOwner", db: "admin" } ]
   }

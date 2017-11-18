@@ -5,6 +5,7 @@
 * [概述說明](#intro)
 * [建立資料庫伺服器虛擬機](#db-instance)
 * [建立資料庫服務](#db-service)
+* [啟用資料庫身份驗證](#db-service-enable-auth)
 * [建立並設定 Parse 資料庫](#db-parse)
 * [建立 Parse 伺服器虛擬機](#parse-instance)
 * [建立並設定 Parse Server 服務](#parse-server)
@@ -41,33 +42,33 @@ Parse 服務在常用的配置上，會包含「資料庫服務」存放資料�
 
 ### 建立資料庫服務 {#db-service}
 
-目前 Parse Server [支援 MongoDB 2.6.X, 3.0.X or 3.2.X](http://docs.parseplatform.org/parse-server/guide/#prerequisites)，這次演示選用 3.2 版來安裝。MongoDB 針對 LTS 版本的 Ubuntu 有長期的支援，如: 12.04 LTS (precise), 14.04 LTS (trusty), 16.04 LTS (xenial)
+目前 Parse Server [支援 MongoDB 2.6.X, 3.0.X or 3.2.X](http://docs.parseplatform.org/parse-server/guide/#prerequisites)，這次演示選用 3.2 版來安裝。MongoDB 針對 LTS 版本的 Ubuntu 有長期的支援，如: 12.04 LTS (precise), 14.04 LTS (trusty), 16.04 LTS (xenial)。接下來透過以下命令在 SSH 安裝 MongoDB
 
-* Import MongoDB public GPG Key
+* 匯入 MongoDB GPG 公開金鑰
 
 ```
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
 ```
 
-* Create a list file for MongoDB
+* 建立 MongoDB 檔案清單
 
 ```
 echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
 ```
 
-* Reload local package database
+* 更新本地端套件資料庫
 
 ```
 sudo apt-get update
 ```
 
-* Install the MongoDB packages
+* 安裝 MongoDB 套件
 
 ```
 sudo apt-get install -y mongodb-org=3.2.17 mongodb-org-server=3.2.17 mongodb-org-shell=3.2.17 mongodb-org-mongos=3.2.17 mongodb-org-tools=3.2.17
 ```
 
-* Pin a specific version of MongoDB
+* 將 MongoDB 鎖定目前版本
 
 ```
 echo "mongodb-org hold" | sudo dpkg --set-selections
@@ -76,6 +77,8 @@ echo "mongodb-org-shell hold" | sudo dpkg --set-selections
 echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
 echo "mongodb-org-tools hold" | sudo dpkg --set-selections
 ```
+
+### 啟用資料庫身份驗證 {#db-service-enable-auth}
 
 ### 建立並設定 Parse 資料庫 {#db-parse}
 

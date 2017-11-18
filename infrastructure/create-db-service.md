@@ -131,7 +131,7 @@ sudo service mongod restart
 * 以建立的管理者登入資料庫服務
 
 ```
-mongo 127.0.0.1 -u "test" -p "12345" --authenticationDatabase "admin"
+mongo 127.0.0.1 -u "帳號" -p "密碼" --authenticationDatabase "admin"
 ```
 
 ### 補充說明 {#other}

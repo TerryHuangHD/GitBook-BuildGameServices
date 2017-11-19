@@ -94,9 +94,9 @@ use admin
 ```
 db.createUser(
   {
-    user: "帳號",
-    pwd: "密碼",
-    roles: [ { role: "dbOwner", db: "admin" } ]
+    user: "ADMIN_USER",
+    pwd: "ADMIN_PASSWORD",
+    roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
   }
 )
 ```
@@ -104,7 +104,7 @@ db.createUser(
 * 將資料庫授權於此帳號
 
 ```
-db.auth("帳號", "密碼")
+db.auth("ADMIN_USER", "ADMIN_PASSWORD")
 ```
 
 * 離開資料庫連線，回到主機 SSH
@@ -131,7 +131,37 @@ sudo service mongod restart
 * 以建立的管理者登入資料庫服務
 
 ```
-mongo 127.0.0.1 -u "帳號" -p "密碼" --authenticationDatabase "admin"
+mongo 127.0.0.1 -u "ADMIN_USER" -p "ADMIN_PASSWORD" --authenticationDatabase "admin"
+```
+
+* 移動到欲使用的 Parse 資料庫，範例命名為 PARSE_DB
+
+```
+use PARSE_DB
+```
+
+* 新增此資料庫使用的帳號
+
+```
+db.createUser(
+  {
+    user: "PARSE_DB_USER",
+    pwd: "PARSE_DB_PASSWORD",
+    roles: [ { role: "readWrite", db: "PARSE_DB" } ]
+  }
+)
+```
+
+* 將資料庫授權於此帳號
+
+```
+db.auth("PARSE_DB_USER", "PARSE_DB_PASSWORD")
+```
+
+* 離開資料庫連線，回到主機 SSH
+
+```
+exit
 ```
 
 ### 補充說明 {#other}

@@ -79,7 +79,7 @@ echo "mongodb-org-tools hold" | sudo dpkg --set-selections
 
 ### 啟用資料庫身份驗證 {#db-service-enable-auth}
 
-剛建立起來的 MongoDB 服務，處於開放狀態，接下來將會演示，如何「建立管理者」並「啟用資料庫身份驗證」功能，來達到最基本的安全性。注意：請記得將範例中的 ADMIN_USER, ADMIN_PASSWORD 替換成您的設定值
+剛建立起來的 MongoDB 服務，處於開放狀態，接下來將會演示，如何建立「管理者」並啟用「資料庫身份驗證」功能，來達到最基本的安全性。注意：請記得將範例中的 ADMIN_USER, ADMIN_PASSWORD 替換成您的設定值
 
 * 登入本地端資料庫（登入後將會轉換成資料庫命令列）
 
@@ -117,11 +117,29 @@ db.auth("ADMIN_USER", "ADMIN_PASSWORD")
 exit
 ```
 
-* 編輯 MongoDB 設定檔案，在檔案中加入啟用身份驗證的設定
+* 編輯 MongoDB 設定檔案，在檔案中加入啟用身份驗證的設定。以下腳本將直接寫入一個預設可用的設定檔。更多的設定選項，可[參考此文件](https://docs.mongodb.com/v3.2/reference/configuration-options/)
 
 ```
+echo "storage:" | sudo tee /etc/mongod.conf
+echo "  dbPath: /var/lib/mongodb" | sudo tee -a /etc/mongod.conf
+echo "  journal:" | sudo tee -a /etc/mongod.conf
+echo "    enabled: true" | sudo tee -a /etc/mongod.conf
+
+echo "systemLog:" | sudo tee -a /etc/mongod.conf
+echo "  destination: file" | sudo tee -a /etc/mongod.conf
+echo "  logAppend: true" | sudo tee -a /etc/mongod.conf
+echo "  path: /var/log/mongodb/mongod.log" | sudo tee -a /etc/mongod.conf
+
+echo "net:" | sudo tee -a /etc/mongod.conf
+echo "  port: 27017" | sudo tee -a /etc/mongod.conf
+echo "  bindIp: 0.0.0.0" | sudo tee -a /etc/mongod.conf
+
 echo "security:" | sudo tee -a /etc/mongod.conf
-echo "  authorization: \"enabled\"" | sudo tee -a /etc/mongod.conf
+echo "  authorization: enabled" | sudo tee -a /etc/mongod.conf
+
+echo "setParameter:" | sudo tee -a /etc/mongod.conf
+echo "  failIndexKeyTooLong: false" | sudo tee -a /etc/mongod.conf
+
 ```
 
 * 重新啟動資料庫服務
@@ -130,7 +148,7 @@ echo "  authorization: \"enabled\"" | sudo tee -a /etc/mongod.conf
 sudo service mongod restart
 ```
 
-* 至此，資料庫服務擁有了最基本的安全性，更多的安全性設定，將會在後面介紹
+* 至此，資料庫服務擁有了最基本的安全性。對於正式上線產品的安全性通常會有更高的要求，將會在後面介紹
 
 ### 建立並設定 Parse 資料庫 {#db-parse}
 

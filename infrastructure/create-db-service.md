@@ -75,9 +75,13 @@ echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
 echo "mongodb-org-tools hold" | sudo dpkg --set-selections
 ```
 
+* 至此，基本的 MongoDB 服務已經開始運作
+
 ### 啟用資料庫身份驗證 {#db-service-enable-auth}
 
-* 登入本地端資料庫
+剛建立起來的 MongoDB 服務，處於開放狀態，接下來將會演示，如何「建立管理者」並「啟用資料庫身份驗證」功能，來達到最基本的安全性。注意：請記得將範例中的 ADMIN_USER, ADMIN_PASSWORD 替換成您的設定值
+
+* 登入本地端資料庫（登入後將會轉換成資料庫命令列）
 
 ```
 mongo 127.0.0.1
@@ -113,7 +117,7 @@ db.auth("ADMIN_USER", "ADMIN_PASSWORD")
 exit
 ```
 
-* 編輯 MongoDB 設定檔案，將預設值設定為啟用身份驗證
+* 編輯 MongoDB 設定檔案，在檔案中加入啟用身份驗證的設定
 
 ```
 echo "security:" | sudo tee -a /etc/mongod.conf
@@ -126,9 +130,14 @@ echo "  authorization: \"enabled\"" | sudo tee -a /etc/mongod.conf
 sudo service mongod restart
 ```
 
+* 至此，資料庫服務擁有了最基本的安全性，更多的安全性設定，將會在後面介紹
+
 ### 建立並設定 Parse 資料庫 {#db-parse}
 
-* 以建立的管理者登入資料庫服務
+接下來將會在資料庫服務中，建立一個資料庫作為 Parse 服務使用，並創建一個使用者
+用來存取此資料庫。注意：請記得將範例中的 PARSE_DB, PARSE_DB_USER, PARSE_DB_PASSWORD 替換成您的設定值
+
+* 以建立的管理者登入資料庫服務（登入後將會轉換成資料庫命令列）
 
 ```
 mongo 127.0.0.1 -u "ADMIN_USER" -p "ADMIN_PASSWORD" --authenticationDatabase "admin"

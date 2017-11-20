@@ -12,6 +12,15 @@ p.s. 作者患有嚴重的懶癌，所以可能很多內容會以~~（偷工減�
 
 ![](/assets/Simple Layer.jpg)
 
+# 大綱介紹
+
+* Infrastructure
+  * 依照步驟簡單的建立所需要的基礎服務，包含 Parse Service 架設，以及其他服務的設定，如：API, Realtime, Notification, Job, Email, SMS, Hosting
+* Game Services
+  * 介紹常見的遊戲服務，實作上遇到的各種挑戰或考量。包含：Account, Invitation, Achievement, Leaderboard, Queue & Pairing, Turned-Based Multiplayer, Real-time Multiplayer, Saved Games, Event & Quest & Challenges
+* General System
+  * 介紹一些泛用的基礎系統設計，可以方便用來開發成各種想要的遊戲服務：如：Security Tunnel, Counter System, Tag System, Storage System
+
 # 自架遊戲服務的優點
 
 * 跨平台
@@ -24,15 +33,6 @@ p.s. 作者患有嚴重的懶癌，所以可能很多內容會以~~（偷工減�
   * 與制式化的遊戲服務比較，能實現更多客製化的配對機制、遊戲模式、互動方式
   * 可簡易的在全球各服務區提供在地化的服務
 
-# 大綱介紹
-
-* Infrastructure
-  * 依照步驟簡單的建立所需要的基礎服務，包含 Parse Service 架設，以及其他服務的設定，如：API, Realtime, Notification, Job, Email, SMS, Hosting
-* Game Services
-  * 介紹常見的遊戲服務，實作上遇到的各種挑戰或考量。包含：Account, Invitation, Achievement, Leaderboard, Queue & Pairing, Turned-Based Multiplayer, Real-time Multiplayer, Saved Games, Event & Quest & Challenges
-* General System
-  * 介紹一些泛用的基礎系統設計，可以方便用來開發成各種想要的遊戲服務：如：Security Tunnel, Counter System, Tag System, Storage System
-
 # 適合對象
 
 * 小型獨立遊戲開發者
@@ -44,11 +44,11 @@ Terry Huang \(@kmshiori\) ，業餘電動玩家，Overwatch 打不上 3000 分�
 
 LiRise Games 是位於台南的 Indie Game Studio，隨時都在徵人中，歡迎對於遊戲開發、企劃、行銷有興趣的人來~~（入坑）~~聊聊，實習亦可，或是直接與我們聯繫 \([service@lirise.com](mailto:service@lirise.com)\)
 
-# 書中目前尚不包含的內容
+# 書中目前不包含的內容
 
+* ~~黃金屋，顏如玉~~
 * SQL Sharding
 * Database/Server HA
-* ~~黃金屋，顏如玉~~
 
 
 

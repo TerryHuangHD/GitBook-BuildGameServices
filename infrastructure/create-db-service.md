@@ -4,6 +4,7 @@
 
 * [概述說明](#intro)
 * [建立資料庫伺服器虛擬機](#db-instance)
+* [設定虛擬機網路](#db-instance-network)
 * [建立資料庫服務](#db-service)
 * [啟用資料庫身份驗證](#db-service-enable-auth)
 * [建立並設定 Parse 資料庫](#db-parse)

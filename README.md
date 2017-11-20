@@ -15,8 +15,8 @@ p.s. 作者患有嚴重的懶癌，所以可能很多內容會以~~（偷工減�
 # 自架遊戲服務的優點
 
 * 跨平台
-  * iOS Game Center: 目前僅支援旗下系統 macOS, iOS, watchOS, and tvOS
-  * Google Play Game Services: 目前支援 Android, Web, C++, Unity, (iOS deprecated)，各平台支援之服務內容也略有不同
+  * iOS Game Center: 目前僅支援 macOS, iOS, watchOS, and tvOS 系統
+  * Google Play Game Services: 目前僅支援 Android, Web, C++, Unity, (iOS deprecated)，各平台支援之服務內容也略有不同
 * 資料伺服器自主性
   * 自行擁有資料庫伺服器，可有較高的使用彈性，比如：跨產品設計，行銷用途
   * 在某些~~（強國）~~國家，對於資料伺服器位置有所限制

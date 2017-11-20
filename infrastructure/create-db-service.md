@@ -235,4 +235,4 @@ sudo update-rc.d disable-transparent-hugepages defaults
 
 ![](/assets/VPC Network.png)
 
-* MongoDB 在安全性上除了提供帳號授權功能外，也提供 TLS/SSL 模式，更能提高連接之間的資料安全性
+* MongoDB 在安全性上除了提供帳號授權功能外，也提供 TLS/SSL 模式，更能提連線的資料安全性

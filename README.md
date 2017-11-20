@@ -40,9 +40,9 @@ p.s. 作者患有嚴重的懶癌，所以可能很多內容會以~~（偷工減�
 
 # 作者簡介
 
-Terry Huang \(@kmshiori\) ，業餘電動玩家，Overwatch 打不上 3000 分求大神帶 \(kmshiori\#3943\)
+Terry Huang \(@kmshiori\) ，業餘電動玩家，Overwatch 打不上 3000，絕地求生還沒吃過雞，求大神帶 \(BattleNet: kmshiori\#3943, Steam: kmshiori@gmail.com)。
 
-LiRise Games 是位於台南的 Indie Game Studio，隨時都在徵人中，歡迎對於遊戲開發、企劃、行銷有興趣的人來~~（入坑）~~聊聊，實習亦可，或是直接與我們聯繫 \([service@lirise.com](mailto:service@lirise.com)\)
+LiRise Games 是位於台南的 Indie Game Studio，隨時都在徵人中，歡迎對於遊戲開發、企劃、行銷有興趣的人來~~（入坑）~~聊聊，或是直接與我們聯繫 \([service@lirise.com](mailto:service@lirise.com)\)
 
 # 書中目前不包含的內容
 

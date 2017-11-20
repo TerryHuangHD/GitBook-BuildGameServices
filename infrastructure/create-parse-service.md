@@ -4,7 +4,8 @@
 
 * [概述說明](#intro)
 * [建立虛擬機](#parse-vm)
-* [建立 Parse 伺服器虛擬機](#parse-instance)
+* [申請與設定網域對應](#parse-dns)
+* [申請與設定 SSL 憑證](#parse-ssl)
 * [建立並設定 Parse Server 服務](#parse-server)
 * [建立並設定 Parse Dashboard 服務](#parse-dashboard)
 * [補充說明](#supply)

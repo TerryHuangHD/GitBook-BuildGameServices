@@ -4,11 +4,11 @@
 
 * [概述說明](#intro)
 * [建立資料庫伺服器虛擬機](#db-instance)
-* [設定虛擬機網路](#db-instance-network)
 * [建立資料庫服務](#db-service)
 * [啟用資料庫身份驗證](#db-service-enable-auth)
 * [建立並設定 Parse 資料庫](#db-parse)
-* [其他事項](#other)
+* [其他設定](#other)
+* [補充說明](#supply)
 
 ### 概述說明 {#intro}
 
@@ -33,14 +33,21 @@ Parse Service 在常見的配置上，包含「資料庫服務」用以存放資
 
 ![](/assets/Compute Engine VM Setup.png)
 
-* 等待建立完成後，便可透過網頁直接開啟 SSH 模擬器來登入主機
+* 點開「管理、磁碟、網路、SSH 金鑰」，切換到「網路」頁籤，在「主要內部 IP」的選項中，點擊「預約靜態內部 IP 位址」，填入名稱進行預約，讓此主機在未來即使重新啟動，都能綁定至此內部 IP
+
+![](/assets/Compute Engine  Network Internal Ip.png)
+
+* 等待建立完成後，便完成了一台虛擬機的啟用。爾後可以在此畫面，管理所有建立的虛擬機。也可透過後方的按鈕，直接透過 SSH 登入到每一台虛擬機
 
 ![](/assets/Compute Engine Instance Crate.png)
-![](/assets/Compute Engine SSH.png)
 
 ### 建立資料庫服務 {#db-service}
 
 目前 Parse Server [支援 MongoDB 2.6.X, 3.0.X or 3.2.X](http://docs.parseplatform.org/parse-server/guide/#prerequisites)，這次演示選用 3.2 版來安裝。MongoDB 針對 LTS 版本的 Ubuntu 有長期的支援，如: 12.04 LTS (precise), 14.04 LTS (trusty), 16.04 LTS (xenial)。接下來透過以下命令在 SSH 安裝 MongoDB
+
+* 登入資料庫虛擬機
+
+![](/assets/Compute Engine SSH.png)
 
 * 匯入 MongoDB GPG 公開金鑰
 
@@ -192,8 +199,40 @@ db.auth("PARSE_DB_USER", "PARSE_DB_PASSWORD")
 exit
 ```
 
-### 補充說明 {#other}
+* 至此，Parse 所需使用的資料庫、使用者完成了基本的設定
 
-SQL Security
-transparent_hugepage
+### 其他設定（非必須） {#other}
 
+MongoDB 建議在虛擬機上關閉 transparent_hugepage 來提高機器效能，可在 init.d 中建立 script 讓每次虛擬機啟動時便關閉此功能
+
+* 切換目錄
+
+```
+cd /etc/init.d
+```
+
+* 下載腳本
+
+```
+sudo wget https://gist.githubusercontent.com/kmshiori/6fa7893590603ec456817d130077351f/raw/083260422f411a866ce28ba58ec812b675ea14a0/disable-transparent-hugepages
+```
+
+* 授權腳本執行權限
+
+```
+sudo chmod 755 disable-transparent-hugepages
+```
+
+* 讓此腳本設定為啟動時運行
+
+```
+sudo update-rc.d disable-transparent-hugepages defaults
+```
+
+### 補充說明 {#supply}
+
+* 在 Google Compute Engine 啟用的虛擬機，預設網路設定僅會開啟 ICMP, RDP, SSH 等基本的協定所需之端口，若需要 MongoDB(port 27017) 能夠公開透過外部連線，則需要特別新增防火牆設定
+
+![](/assets/VPC Network.png)
+
+* MongoDB 在安全性上除了提供帳號授權功能外，也提供 TLS/SSL 模式，更能提高連接之間的資料安全性

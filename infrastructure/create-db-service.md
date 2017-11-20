@@ -3,22 +3,22 @@
 ### 目錄
 
 * [概述說明](#intro)
-* [建立資料庫伺服器虛擬機](#db-instance)
+* [建立虛擬機](#db-vm)
 * [建立資料庫服務](#db-service)
 * [啟用資料庫身份驗證](#db-service-enable-auth)
-* [建立並設定 Parse 資料庫](#db-parse)
+* [建立並設定 Parse 資料庫](#db-instance)
 * [其他設定](#other)
 * [補充說明](#supply)
 
 ### 概述說明 {#intro}
 
-Parse Service 在常見的配置上，包含「資料庫服務」用以存放資料，「Parse 伺服器」作為服務端口，「Parse Dashboard」提供簡單的管理之用。在這次的範例中，將會演示建立以 [Google Cloud Platform（下稱 GCP）](https://cloud.google.com/)的 Compute Engine「虛擬機」為基礎的方式，逐步架設 Parse 所需的「資料庫服務」。當然，您也可以選擇喜好的其他選項：
+Parse Service 在常見的配置上，包含**「資料庫服務」**用以存放資料，**「Parse 伺服器」**作為服務端口，**「Parse Dashboard」**提供簡單的管理之用。在這次的範例中，將會演示建立以 [Google Cloud Platform（下稱 GCP）](https://cloud.google.com/)的 Compute Engine「虛擬機」為基礎的方式，逐步架設 Parse 所需的**「資料庫服務」**。當然，您也可以選擇喜好的其他選項：
 * IAAS 服務可依需求、價格選用合適的服務，如：[AWS](https://aws.amazon.com/), [Linode](https://www.linode.com/)
 * 資料庫選擇，除了 MongoDB 之外，Parse 也支援了 PostgreSQL
 * 市面上也有現成的 DB 服務提供商，如：[mLab](https://mlab.com/), [Amazon RDS](https://aws.amazon.com/tw/rds/postgresql/)
-* [MongoDB](https://github.com/docker-library/mongo) 有官方的 Docker Image 供選用
+* MongoDB 有官方的 [Docker Image](https://github.com/docker-library/mongo) 供選用
 
-### 建立資料庫伺服器虛擬機 {#db-instance}
+### 建立虛擬機 {#db-vm}
 
 * 在 [GCP 的 Compute Engine](https://console.cloud.google.com/compute) 控制介面中，點擊「建立」，新增 VM Instance
 
@@ -158,7 +158,7 @@ sudo service mongod restart
 
 * 至此，資料庫服務擁有了最基本的安全性。對於正式上線產品的安全性通常會有更高的要求，將會在後面介紹
 
-### 建立並設定 Parse 資料庫 {#db-parse}
+### 建立並設定 Parse 資料庫 {#db-instance}
 
 接下來將會在資料庫服務中，建立一個資料庫作為 Parse 服務使用，並創建一個使用者
 用來存取此資料庫。注意：請記得將範例中的 PARSE_DB, PARSE_DB_USER, PARSE_DB_PASSWORD 替換成您的設定值

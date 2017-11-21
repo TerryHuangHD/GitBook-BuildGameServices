@@ -2,11 +2,11 @@
 
 ## Overview
 
-* [Introduction](README.md)
+* [簡介](README.md)
 
-## 基礎架構
+## Infrastructure
 
-* [Overview](infrastructure/overview.md)
+* [架構介紹](infrastructure/overview.md)
 * [建立資料庫服務](infrastructure/create-db-service.md)
 * [建立 Parse 服務](infrastructure/create-parse-service.md)
 * [Setup: Cloud Code](infrastructure/setup-cloud-code.md)

@@ -30,11 +30,11 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
  * 開機磁碟：依需求決定，範例使用預設磁碟大小
  * 作業系統：範例選用 Ubuntu 14.04 LTS
 
+![](/assets/Parse Setup.png)
+
 * 防火牆設定，開啟允許 HTTP & HTTPS
 
 ![](/assets/Parse Firewall.png)
-
-![](/assets/Parse Setup.png)
 
 * 點開「管理、磁碟、網路、SSH 金鑰」，切換到「網路」頁籤，在「外部 IP」的選項中，點擊「建立 IP 位址」，填入名稱進行預約，讓此主機在未來即使重新啟動，都能綁定至此外部 IP
 

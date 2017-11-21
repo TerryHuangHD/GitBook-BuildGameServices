@@ -21,21 +21,27 @@ p.s. 作者患有嚴重的懶癌，所以可能很多內容會以~~（偷工減�
 * General System
   * 介紹一些泛用的基礎系統設計，可以方便用來開發成各種想要的遊戲服務：如：Security Tunnel, Counter System, Tag System, Storage System
 
-# 自架遊戲服務的優點
+# 自建遊戲服務的優點
 
-* 跨平台
-  * iOS Game Center: 目前僅支援 macOS, iOS, watchOS, and tvOS 系統
-  * Google Play Game Services: 目前僅支援 Android, Web, C++, Unity, (iOS deprecated)，各平台支援之服務內容也略有不同
+* 簡易的跨平台實現
+  * iOS Game Center 與 Google Play Game Services，由於帳號綁定的關係，大部分發力在各自的平台，支援的服務也略有不同。所以跨平台遊戲，通常是選用完整的第三方服務為主，再輔以各平台服務進行部分的優化
 * 資料伺服器自主性
   * 自行擁有資料庫伺服器，可有較高的使用彈性，比如：跨產品設計，行銷用途
   * 在某些~~（強國）~~國家，對於資料伺服器位置有所限制
-* 客製化遊戲邏輯
-  * 與制式化的遊戲服務比較，能實現更多客製化的配對機制、遊戲模式、互動方式
+* 便於客製化、優化
+  * 與泛用型的遊戲服務比較，自建的遊戲服務能實踐更多客製化功能，比如：配對機制、遊戲模式、互動方式
   * 可簡易的在全球各服務區提供在地化的服務
+  * 可簡易針對需求提供最優化的服務
+* ~~管理兩百台伺服器聽起來很強~~
+
+# 自建遊戲服務的缺點
+
+* 得自行管理機器，處理 Optimize, Scaling... 問題
+* ~~不能對前端工程師說，這服務沒有提供~~
 
 # 適合對象
 
-* 小型獨立遊戲開發者
+* 小型產品、獨立遊戲開發者
 * 前 Parse 服務關閉的受害者（淚
 
 # 作者簡介
@@ -44,11 +50,9 @@ Terry Huang \(@kmshiori\) ，業餘電動玩家，Overwatch 打不上 3000，絕
 
 LiRise Games 是位於台南的 Indie Game Studio，隨時都在徵人中，歡迎對於遊戲開發、企劃、行銷有興趣的人來~~（入坑）~~聊聊，或是直接與我們聯繫 \([service@lirise.com](mailto:service@lirise.com)\)
 
-# 書中目前不包含的內容
+# 書中尚不包含的內容
 
-* ~~黃金屋，顏如玉~~
-* SQL Sharding
+* Docker/k8s
+* SQL/AP Sharding
 * Database/Server HA
-
-
-
+* ~~黃金屋，顏如玉~~

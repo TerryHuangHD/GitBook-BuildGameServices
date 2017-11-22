@@ -95,4 +95,9 @@ echo "pidfile=/var/run/mini-httpd.pid" | sudo tee -a /etc/mini-httpd.conf
 sudo /etc/init.d/mini-httpd start
 ```
 
+* 此時可透過瀏覽器來測試 mini-httpd 是否正常運作
+
+![](/assets/Mini Httpd.png)
+
+
 ### TEST {#TEST}

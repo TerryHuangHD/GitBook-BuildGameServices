@@ -32,12 +32,12 @@ p.s. 作者患有嚴重的懶癌，所以可能很多內容會以~~（偷工減�
   * 與泛用型的遊戲服務比較，自建的遊戲服務能實踐更多客製化功能，比如：配對機制、遊戲模式、互動方式
   * 可簡易的在全球各服務區提供在地化的服務
   * 可簡易針對需求提供最優化的服務
-* ~~可以體驗 rm -rf 一鍵清空伺服器~~
+* ~~離職的時候可以體驗 rm -rf 一鍵清空伺服器的快感~~
 
 # 自建遊戲服務的缺點
 
 * 得自行管理機器，處理 Failover, Optimization, Scaling...等問題
-* ~~前端一直要，要到你想逃~~
+* ~~來來來，喝杯酒我告訴你~~
 
 # 適合對象
 
@@ -48,7 +48,7 @@ p.s. 作者患有嚴重的懶癌，所以可能很多內容會以~~（偷工減�
 
 Terry Huang \(@kmshiori\) ，業餘電動玩家，Overwatch 打不上 3000，絕地求生還沒吃過雞，求大神帶 \(BattleNet: kmshiori\#3943, Steam: kmshiori@gmail.com)。
 
-LiRise Games 是位於台南的 Indie Game Studio，隨時都在徵人中，歡迎對於遊戲開發、企劃、行銷有興趣的人來~~（入坑）~~聊聊，或是直接與我們聯繫 \([service@lirise.com](mailto:service@lirise.com)\)
+LiRise Games 是位於台南的 Indie Game Studio，隨時都在徵人中，歡迎對於遊戲開發、企劃、行銷有興趣的人來聊聊，或是直接與我們聯繫 \([service@lirise.com](mailto:service@lirise.com)\)
 
 # 書中尚不包含的內容
 

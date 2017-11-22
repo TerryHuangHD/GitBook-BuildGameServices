@@ -126,7 +126,9 @@ db.auth("ADMIN_USER", "ADMIN_PASSWORD")
 exit
 ```
 
-* 編輯 MongoDB 設定檔案，在檔案中加入啟用身份驗證的設定。以下腳本將直接寫入一個預設可用的設定檔。更多的設定選項，可[參考此文件](https://docs.mongodb.com/v3.2/reference/configuration-options/)
+* 編輯 MongoDB 設定檔案，在檔案中加入啟用身份驗證的設定。以下腳本將直接寫入一個預設可用的設定檔
+  
+  > 關於更多的資料庫設定檔說明，可[參考此文件](https://docs.mongodb.com/v3.2/reference/configuration-options/)
 
 ```
 echo "storage:" | sudo tee /etc/mongod.conf

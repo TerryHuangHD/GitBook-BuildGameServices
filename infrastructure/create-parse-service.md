@@ -65,4 +65,34 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
 
 * 至此，您已經完成了網域以及其 DNS 設定。接下只需靜待 DNS Record 更新，便可透過這個網域來連接設定好的 IP 位址
 
+### 申請與設定 SSL 憑證 {#parse-ssl}
+
+接下來將會演示，如何申請免費的 [Let's Encrypt](https://letsencrypt.org/) SSL 憑證，與設定自動更新的過程
+
+* 安裝 mini-httpd，用來驗證網域所有權
+
+```
+sudo apt-get install mini-httpd -y
+```
+
+* 寫入設定檔案
+
+```
+echo "START=1" | sudo tee /etc/default/mini-httpd
+echo "DAEMON_OPTS=\"-C /etc/mini-httpd.conf\"" | sudo tee -a /etc/default/mini-httpd
+
+echo "host=0.0.0.0" | sudo tee /etc/mini-httpd.conf
+echo "port=80" | sudo tee -a /etc/mini-httpd.conf
+echo "user=nobody" | sudo tee -a /etc/mini-httpd.conf
+echo "chroot" | sudo tee /etc/mini-httpd.conf
+echo "data_dir=/usr/share/mini-httpd/html" | sudo tee -a /etc/mini-httpd.conf
+echo "pidfile=/var/run/mini-httpd.pid" | sudo tee -a /etc/mini-httpd.conf
+```
+
+* 啟動 mini-httpd 服務
+
+```
+sudo /etc/init.d/mini-httpd start
+```
+
 ### TEST {#TEST}

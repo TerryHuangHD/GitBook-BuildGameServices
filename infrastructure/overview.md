@@ -25,6 +25,7 @@
 * #### Notification 服務
 
   > Android 選用：Parse Server 嫁接 Android GCM/FCM
+  
   > iOS 選用：Parse Server 嫁接 APN push notification
 
   Game Services 中，雲端推送服務通常是非集中型的使用方式（規律性的通知會透過本地端推送）。重要性、負荷較低的服務，可直接透過 Parse Server 伺服器直接進行推送即可。若有進階的需求，比如：大量、批次、定時、追蹤...等，也可選用其他較專業的推送平台，如：OneSignal
@@ -38,6 +39,7 @@
 * #### Email 服務
 
   > Parse Server 選用: mailgun
+  
   > Cloud Code 選用: AWS SES
   
   目前 Parse Server 將 Email 服務整合在帳號系統的認證環節中使用，可選用簡易的 AWS SES 服務。如果還有更大量的批次寄送或是更進階的行銷需求，也可考慮更專業、便於管理的電郵服務，比如 mailgun
@@ -45,6 +47,7 @@
 * #### SMS 服務
 
   > 目前 Parse 附帶的 Account System 並沒有直接設計 SMS 認證環節
+  
   > Cloud Code 選用: Twilio
   
   這類型服務大同小異，大部分都是透過 REST API 來提供服務，可依照服務範圍、開發習慣~~、\(價格\)~~進行選擇。常見的服務提供者有：Twilio, AWS SNS

@@ -51,18 +51,18 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
 
 > noip 免費服務只能申請幾個限定網域的子網域，如果是要使用在正式產品，還是建議註冊一個漂亮的網域名稱吧
 
-* 到[官方網站](https://www.noip.com/)，註冊帳號與網域
+* 到[官方網站](https://www.noip.com/)，輸入網域並註冊帳號
 
 ![](/assets/No IP Create.png)
 
 * 完成確認信
 
-![](/assets/Confirm Your No IP Account   kmshiori gmail.com   Gmail.png)
+![](/assets/Confirm No IP Account.png)
 
 * 到[設定畫面](https://my.noip.com/#!/dynamic-dns)，將網域的 IP 位址設定為剛剛建立的 Parse 虛擬機預約的外部 IP
 
 ![](/assets/My No IP Hostnames.png)
 
-
+* 至此，您已經完成了網域以及其 DNS 設定。接下只需靜待 DNS Record 更新，便可透過這個網域來連接設定好的 IP 位址
 
 ### TEST {#TEST}

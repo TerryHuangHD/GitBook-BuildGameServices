@@ -149,3 +149,8 @@ sudo apt-get purge mini-httpd* -y
 ### 建立並設定 Parse Dashboard 服務 {#parse-dashboard}
 
 ### 補充說明 {#supply}
+
+* Auto Renew SSL Certificate
+
+> 0 3 * * 7 root /usr/bin/letsencrypt renew
+> 0 3 * * 7 root /bin/systemctl reload nginx

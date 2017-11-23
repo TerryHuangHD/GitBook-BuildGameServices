@@ -145,9 +145,11 @@ sudo apt-get purge mini-httpd* -y
 
 ### 補充說明 {#supply}
 
-* 自動更新 Let's Encrypt SSL 憑證
+* 自動更新 Let's Encrypt SSL 憑證，運用伺服器 cron 系統，在每週日淩晨三點進行憑證更新以及重新啟動 Parse 服務
+
+ > 請注意伺服器時區，預設是 Etc/UTC 時間
 
 ```
 echo "0 3 * * 7 root /usr/bin/letsencrypt renew" | sudo tee -a /etc/crontab
-echo "0 3 * * 7 root /bin/systemctl reload nginx" | sudo tee -a /etc/crontab
+echo "0 3 * * 7 root service parse restart" | sudo tee -a /etc/crontab
 ```

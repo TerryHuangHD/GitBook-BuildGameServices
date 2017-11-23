@@ -1,6 +1,4 @@
-# This Book Is Under Construction
-
----
+# 注意： 此書目前尚在編輯中
 
 # 簡介
 

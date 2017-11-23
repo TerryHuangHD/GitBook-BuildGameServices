@@ -132,7 +132,7 @@ sudo letsencrypt certonly -a webroot --agree-tos --webroot-path=/usr/share/mini-
 
 * 核發成功的話，便會顯示 SSL 存放的位置。至此，您已經擁有您網域 SSL 所需要使用的憑證
 
-> Your certificate and chain have been saved at:
+ > Your certificate and chain have been saved at:
 /etc/letsencrypt/live/parseserver.ddns.net/fullchain.pem
 Your key file has been saved at:
 /etc/letsencrypt/live/parseserver.ddns.net/privkey.pem

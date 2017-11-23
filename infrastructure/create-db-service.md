@@ -204,7 +204,7 @@ exit
 
 * 至此，Parse 所需使用的資料庫、使用者完成了基本的設定
 
-### 其他設定（非必須） {#other}
+### 其他設定（選用） {#other}
 
 MongoDB 建議在虛擬機上關閉 transparent_hugepage 來提高機器效能，可在 init.d 中建立 script 讓每次虛擬機啟動時便關閉此功能
 

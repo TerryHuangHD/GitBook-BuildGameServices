@@ -145,7 +145,9 @@ sudo apt-get purge mini-httpd* -y
 
 ### 補充說明 {#supply}
 
-* Auto Renew SSL Certificate
+* 自動更新 Let's Encrypt SSL 憑證
 
-> 0 3 * * 7 root /usr/bin/letsencrypt renew
-> 0 3 * * 7 root /bin/systemctl reload nginx
+```
+echo "0 3 * * 7 root /usr/bin/letsencrypt renew" | sudo tee -a /etc/crontab
+echo "0 3 * * 7 root /bin/systemctl reload nginx" | sudo tee -a /etc/crontab
+```

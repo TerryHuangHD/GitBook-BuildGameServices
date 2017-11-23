@@ -113,6 +113,12 @@ sudo /etc/init.d/mini-httpd start
 
 ![](/assets/Mini Httpd.png)
 
+* 增加 Ubuntu 套件來源，過程中需按下［Enter］來同意繼續
+
+```
+sudo add-apt-repository ppa:certbot/certbot
+```
+
 * 安裝 Let's Encrypt 服務
 
 ```
@@ -143,22 +149,24 @@ sudo apt-get purge mini-httpd* -y
 
 * 安裝 Node.js
 
-> curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-> sudo apt-get install -y nodejs
+```
+curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+sudo apt-get install nodejs -y
+```
 
 * 透過 npm 安裝 parse-server 的 package
 
-> sudo npm install parse-server -g
-> sudo npm install express -g
-> sudo npm install express-generator -g
-> sudo npm install forever -g
+```
+sudo npm install parse-server forever express express-generator -g
+```
 
 * 透過 express generator 建立基本的 express app
 
-> express parse
-> cd parse
-> sudo npm install
-
+```
+express parse
+cd parse
+sudo npm install
+```
 
 ### 建立並設定 Parse Dashboard 服務 {#parse-dashboard}
 

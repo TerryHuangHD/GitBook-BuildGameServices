@@ -47,7 +47,7 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
 
 ### 申請與設定網域對應 {#parse-dns}
 
-由於安全性的考量，Parse 服務端口建議使用 SSL 連線，因此，必須先申請所想要使用的網域，並設定其 DNS Resource Record。市售的網域註冊服務很多，除了較為特別的網域名稱會被抬高價格之外，大部分的費用都差異不大（一年 50 鎂以下，通常還有折扣，購買前記得搜尋優惠碼），建議可以挑選大型服務來購買，比如：[Google Domains](https://domains.google), [GoDaddy](https://godaddy.com)。以下將會演示，在 [noip](https://www.noip.com) 申請免費域名並設定 DNS 的過程
+由於安全性的考量，Parse 服務端口建議使用 SSL 連線，因此，必須先申請所想要使用的網域，並設定其 DNS Resource Record。市售的網域註冊服務很多，除了較為特別的網域名稱會被抬高價格之外，大部分的費用都差異不大（[按我查看 Google Domains 價格](https://support.google.com/domains/answer/6010092?hl=en)），建議可以挑選大型服務來購買，比如：[Google Domains](https://domains.google), [GoDaddy](https://godaddy.com)。以下將會演示，在 [noip](https://www.noip.com) 申請免費域名並設定 DNS 的過程
 
 > noip 免費服務只能申請幾個限定網域的子網域，如果是要使用在正式產品，還是建議註冊一個漂亮的網域名稱吧
 
@@ -126,7 +126,9 @@ sudo apt-get update
 sudo apt-get install letsencrypt -y
 ```
 
-* 輸入以下命令，來驗證網域所有權，並取得 SSL 憑證。請將 DOMAIN_NAME 替換成您申請的網域名稱，EMAIL 替換成您的聯絡用 Email
+* 輸入以下命令，來驗證網域所有權，並取得 SSL 憑證
+
+ > 請將 DOMAIN_NAME 替換成您申請的網域名稱，EMAIL 替換成您的聯絡用 Email
 
 ```
 sudo letsencrypt certonly -a webroot --agree-tos --webroot-path=/usr/share/mini-httpd/html -d DOMAIN_NAME -m EMAIL
@@ -154,18 +156,32 @@ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install nodejs -y
 ```
 
-* 透過 npm 安裝 parse-server 的 package
+* 透過 npm 安裝 express-generator 的 package
 
 ```
-sudo npm install parse-server forever express express-generator -g
+sudo npm install express-generator -g
 ```
 
-* 透過 express generator 建立基本的 express app
+* 透過 express generator 建立基本的 express app 到 PARSE 資料夾，然後進到該資料夾中完成 npm 安裝
+
+ > PARSE 可替換任意資料夾名稱
 
 ```
-express parse
-cd parse
+express PARSE
+cd PARSE
 sudo npm install
+```
+
+* 繼續在此資料夾中，透過 npm 安裝 parse-server 需要的 package
+
+```
+sudo npm install parse-server express
+```
+
+* 編寫 app.js 檔案，來完成 express 設定
+
+```
+(to be continued)
 ```
 
 ### 建立並設定 Parse Dashboard 服務 {#parse-dashboard}

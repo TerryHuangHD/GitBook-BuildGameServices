@@ -69,6 +69,8 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
   ```
 
 * 安裝 MongoDB 套件
+
+  > 範例使用 3.2.17 版
   
   ```
   sudo apt-get install -y mongodb-org=3.2.17 mongodb-org-server=3.2.17 mongodb-org-shell=3.2.17 mongodb-org-mongos=3.2.17 mongodb-org-tools=3.2.17

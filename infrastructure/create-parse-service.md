@@ -134,7 +134,7 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
  sudo letsencrypt certonly -a webroot --agree-tos --webroot-path=/usr/share/mini-httpd/html -d DOMAIN_NAME -m EMAIL
  ```
 
-* 驗證過程中，會詢問你是否願意分享 Email 給 [Electronic Frontier Foundation](https://zh.wikipedia.org/wiki/%E7%94%B5%E5%AD%90%E5%89%8D%E5%93%A8%E5%9F%BA%E9%87%91%E4%BC%9A)，等待核發程序，成功的話，便會顯示 SSL 存放的位置。至此，您已經擁有您網域 SSL 所需要使用的憑證
+* 驗證過程中，會詢問你是否願意分享 Email 給 [Electronic Frontier Foundation](https://zh.wikipedia.org/wiki/%E7%94%B5%E5%AD%90%E5%89%8D%E5%93%A8%E5%9F%BA%E9%87%91%E4%BC%9A)，您可以輸入 Y/N 來同意/不同意。接著便會進入核發程序，成功的話，便會顯示 SSL 存放的位置。至此，您已經擁有您網域 SSL 所需要使用的憑證
 
  > Let's Encrypt 核發的憑證都只有 3 個月的有效期，將會在[補充說明](#supply)中示範如何自動更新憑證
 

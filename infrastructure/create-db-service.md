@@ -51,38 +51,38 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
 ![](/assets/SQL SSH.png)
 
 * 匯入 MongoDB GPG 公開金鑰
-
-```
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
-```
+  
+  ```
+  sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
+  ```
 
 * 建立 MongoDB 檔案清單
 
-```
-echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
-```
-
+  ```
+  echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
+  ```
+  
 * 更新本地端套件資料庫
-
-```
-sudo apt-get update
-```
+  
+  ```
+  sudo apt-get update
+  ```
 
 * 安裝 MongoDB 套件
-
-```
-sudo apt-get install -y mongodb-org=3.2.17 mongodb-org-server=3.2.17 mongodb-org-shell=3.2.17 mongodb-org-mongos=3.2.17 mongodb-org-tools=3.2.17
-```
+  
+  ```
+  sudo apt-get install -y mongodb-org=3.2.17 mongodb-org-server=3.2.17 mongodb-org-shell=3.2.17 mongodb-org-mongos=3.2.17 mongodb-org-tools=3.2.17
+  ```
 
 * 將 MongoDB 鎖定目前版本
 
-```
-echo "mongodb-org hold" | sudo dpkg --set-selections
-echo "mongodb-org-server hold" | sudo dpkg --set-selections
-echo "mongodb-org-shell hold" | sudo dpkg --set-selections
-echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
-echo "mongodb-org-tools hold" | sudo dpkg --set-selections
-```
+  ```
+  echo "mongodb-org hold" | sudo dpkg --set-selections
+  echo "mongodb-org-server hold" | sudo dpkg --set-selections
+  echo "mongodb-org-shell hold" | sudo dpkg --set-selections
+  echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
+  echo "mongodb-org-tools hold" | sudo dpkg --set-selections
+  ```
 
 * 至此，基本的 MongoDB 服務已經開始運作
 
@@ -130,7 +130,7 @@ echo "mongodb-org-tools hold" | sudo dpkg --set-selections
   exit
   ```
 
-* 編輯 MongoDB 設定檔案，在檔案中加入啟用身份驗證的設定。以下腳本將直接寫入一個預設可用的設定檔
+* 編輯 MongoDB 設定檔案，在檔案中加入啟用身份驗證的設定。以下腳本將直接寫入一個 Parse 可用的基本設定檔
   
   > 關於更多的資料庫設定檔說明，可[參考此文件](https://docs.mongodb.com/v3.2/reference/configuration-options/)
 
@@ -173,46 +173,46 @@ echo "mongodb-org-tools hold" | sudo dpkg --set-selections
 * 以建立的管理者登入資料庫服務（登入後將會轉換成資料庫命令列）
 
   > 請記得將範例中的 ADMIN_USER, ADMIN_PASSWORD 替換成您的設定值
-
-```
-mongo 127.0.0.1 -u "ADMIN_USER" -p "ADMIN_PASSWORD" --authenticationDatabase "admin"
-```
+  
+  ```
+  mongo 127.0.0.1 -u "ADMIN_USER" -p "ADMIN_PASSWORD" --authenticationDatabase "admin"
+  ```
 
 * 移動到欲使用的 Parse 資料庫，範例命名為 PARSE_DB
 
   > PARSE_DB 可替換任意資料庫名稱
-
-```
-use PARSE_DB
-```
+  
+  ```
+  use PARSE_DB
+  ```
 
 * 新增此資料庫使用的帳號
 
   > 請記得將範例中的 PARSE_DB, PARSE_DB_USER, PARSE_DB_PASSWORD 替換成您的設定值
 
-```
-db.createUser(
-  {
-    user: "PARSE_DB_USER",
-    pwd: "PARSE_DB_PASSWORD",
-    roles: [ { role: "readWrite", db: "PARSE_DB" } ]
-  }
-)
-```
+  ```
+  db.createUser(
+    {
+      user: "PARSE_DB_USER",
+      pwd: "PARSE_DB_PASSWORD",
+      roles: [ { role: "readWrite", db: "PARSE_DB" } ]
+    }
+  )
+  ```
 
 * 將資料庫授權於此帳號
 
   > 請記得將範例中的 PARSE_DB_USER, PARSE_DB_PASSWORD 替換成您的設定值
-
-```
-db.auth("PARSE_DB_USER", "PARSE_DB_PASSWORD")
-```
+  
+  ```
+  db.auth("PARSE_DB_USER", "PARSE_DB_PASSWORD")
+  ```
 
 * 離開資料庫連線，回到主機 SSH
 
-```
-exit
-```
+  ```
+  exit
+  ```
 
 * 至此，Parse 所需使用的資料庫、使用者完成了基本的設定
 
@@ -222,27 +222,27 @@ MongoDB 建議在虛擬機上關閉 transparent_hugepage 來提高機器效能�
 
 * 切換目錄
 
-```
-cd /etc/init.d
-```
+  ```
+  cd /etc/init.d
+  ```
 
 * 下載腳本
 
-```
-sudo wget https://gist.githubusercontent.com/kmshiori/6fa7893590603ec456817d130077351f/raw/083260422f411a866ce28ba58ec812b675ea14a0/disable-transparent-hugepages
-```
+  ```
+  sudo wget https://gist.githubusercontent.com/kmshiori/6fa7893590603ec456817d130077351f/raw/083260422f411a866ce28ba58ec812b675ea14a0/disable-transparent-hugepages
+  ```
 
 * 授權腳本執行權限
 
-```
-sudo chmod 755 disable-transparent-hugepages
-```
+  ```
+  sudo chmod 755 disable-transparent-hugepages
+  ```
 
 * 讓此腳本設定為啟動時運行
 
-```
-sudo update-rc.d disable-transparent-hugepages defaults
-```
+  ```
+  sudo update-rc.d disable-transparent-hugepages defaults
+  ```
 
 ### 補充說明 {#supply}
 

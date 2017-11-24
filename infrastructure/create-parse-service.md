@@ -68,7 +68,7 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
 * （選用）您可以透過本機端的終端機命令列來確認目前的 DNS 轉址，請記得將命令中的  DOMAIN_NAME 替換成您申請的網址，比如：parseServer.ddns.net
 
  * Windows
- 
+  
  ```
  ping DOMAIN_NAME
  ```
@@ -84,55 +84,55 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
 接下來將會演示，如何申請免費的 [Let's Encrypt](https://letsencrypt.org/) SSL 憑證，與設定自動更新的過程。透過 SSH 登入 Parse 虛擬機，然後開始以下的步驟
 
 * 安裝 mini-httpd，用來進行網域所有權驗證
-
-```
-sudo apt-get install mini-httpd -y
-```
+ 
+ ```
+ sudo apt-get install mini-httpd -y
+ ```
 
 * 寫入設定檔案
 
-```
-echo "START=1" | sudo tee /etc/default/mini-httpd
-echo "DAEMON_OPTS=\"-C /etc/mini-httpd.conf\"" | sudo tee -a /etc/default/mini-httpd
-
-echo "host=0.0.0.0" | sudo tee /etc/mini-httpd.conf
-echo "port=80" | sudo tee -a /etc/mini-httpd.conf
-echo "user=nobody" | sudo tee -a /etc/mini-httpd.conf
-echo "chroot" | sudo tee /etc/mini-httpd.conf
-echo "data_dir=/usr/share/mini-httpd/html" | sudo tee -a /etc/mini-httpd.conf
-echo "pidfile=/var/run/mini-httpd.pid" | sudo tee -a /etc/mini-httpd.conf
-```
+ ```
+ echo "START=1" | sudo tee /etc/default/mini-httpd
+ echo "DAEMON_OPTS=\"-C /etc/mini-httpd.conf\"" | sudo tee -a /etc/default/mini-httpd
+ 
+ echo "host=0.0.0.0" | sudo tee /etc/mini-httpd.conf
+ echo "port=80" | sudo tee -a /etc/mini-httpd.conf
+ echo "user=nobody" | sudo tee -a /etc/mini-httpd.conf
+ echo "chroot" | sudo tee /etc/mini-httpd.conf
+ echo "data_dir=/usr/share/mini-httpd/html" | sudo tee -a /etc/mini-httpd.conf
+ echo "pidfile=/var/run/mini-httpd.pid" | sudo tee -a /etc/mini-httpd.conf
+ ```
 
 * 啟動 mini-httpd 服務
-
-```
-sudo /etc/init.d/mini-httpd start
-```
+ 
+ ```
+ sudo /etc/init.d/mini-httpd start
+ ```
 
 * 此時可透過瀏覽器來測試 mini-httpd 是否正常運作
 
 ![](/assets/Mini Httpd.png)
 
 * 增加 Ubuntu 套件來源，過程中需按下［Enter］來同意繼續
-
-```
-sudo add-apt-repository ppa:certbot/certbot
-```
+ 
+ ```
+ sudo add-apt-repository ppa:certbot/certbot
+ ```
 
 * 安裝 Let's Encrypt 服務
-
-```
-sudo apt-get update
-sudo apt-get install letsencrypt -y
-```
+ 
+ ```
+ sudo apt-get update
+ sudo apt-get install letsencrypt -y
+ ```
 
 * 輸入以下命令，來驗證網域所有權，並取得 SSL 憑證
 
  > 請將 DOMAIN_NAME 替換成您申請的網域名稱，EMAIL 替換成您的聯絡用 Email
-
-```
-sudo letsencrypt certonly -a webroot --agree-tos --webroot-path=/usr/share/mini-httpd/html -d DOMAIN_NAME -m EMAIL
-```
+ 
+ ```
+ sudo letsencrypt certonly -a webroot --agree-tos --webroot-path=/usr/share/mini-httpd/html -d DOMAIN_NAME -m EMAIL
+ ```
 
 * 驗證過程中，會詢問你是否願意分享 Email 給 [Electronic Frontier Foundation](https://zh.wikipedia.org/wiki/%E7%94%B5%E5%AD%90%E5%89%8D%E5%93%A8%E5%9F%BA%E9%87%91%E4%BC%9A)，等待核發程序，成功的話，便會顯示 SSL 存放的位置。至此，您已經擁有您網域 SSL 所需要使用的憑證
 
@@ -141,48 +141,48 @@ sudo letsencrypt certonly -a webroot --agree-tos --webroot-path=/usr/share/mini-
 ![](/assets/Parse SSL.png)
 
 * 關閉並刪除 mini-httpd 服務
-
-```
-sudo /etc/init.d/mini-httpd stop
-sudo apt-get purge mini-httpd* -y
-```
+ 
+ ```
+ sudo /etc/init.d/mini-httpd stop
+ sudo apt-get purge mini-httpd* -y
+ ```
 
 ### 建立並設定 Parse Server 服務 {#parse-server}
 
 * 安裝 Node.js
-
-```
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt-get install nodejs -y
-```
+ 
+ ```
+ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+ sudo apt-get install nodejs -y
+ ```
 
 * 透過 npm 安裝 express-generator 的 package
-
-```
-sudo npm install express-generator -g
-```
+ 
+ ```
+ sudo npm install express-generator -g
+ ```
 
 * 透過 express generator 建立基本的 express app 到 PARSE 資料夾，然後進到該資料夾中完成 npm 安裝
 
  > PARSE 可替換任意資料夾名稱
 
-```
-express PARSE
-cd PARSE
-sudo npm install
-```
+ ```
+ express PARSE
+ cd PARSE
+ sudo npm install
+ ```
 
 * 繼續在此資料夾中，透過 npm 安裝 parse-server 需要的 package
 
-```
-sudo npm install parse-server express
-```
+ ```
+ sudo npm install parse-server express
+ ```
 
 * 編寫 app.js 檔案，來完成 express 設定
 
-```
-(to be continued)
-```
+ ```
+ (to be continued)
+ ```
 
 ### 建立並設定 Parse Dashboard 服務 {#parse-dashboard}
 
@@ -192,7 +192,7 @@ sudo npm install parse-server express
 
  > 請注意伺服器時區，預設是 Etc/UTC 時間
 
-```
-echo "0 3 * * 7 root /usr/bin/letsencrypt renew" | sudo tee -a /etc/crontab
-echo "0 3 * * 7 root service parse restart" | sudo tee -a /etc/crontab
-```
+ ```
+ echo "0 3 * * 7 root /usr/bin/letsencrypt renew" | sudo tee -a /etc/crontab
+ echo "0 3 * * 7 root service parse restart" | sudo tee -a /etc/crontab
+ ```

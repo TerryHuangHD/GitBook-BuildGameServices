@@ -92,76 +92,76 @@ echo "mongodb-org-tools hold" | sudo dpkg --set-selections
 
 * 登入本地端資料庫（登入後將會轉換成資料庫命令列）
 
-```
-mongo 127.0.0.1
-```
+  ```
+  mongo 127.0.0.1
+  ```
 
 * 切換至 admin 資料庫
 
-```
-use admin
-```
+  ```
+  use admin
+  ```
 
 * 新增最高管理員帳號。如果想知道更多關於預設的資料庫角色，可[到此觀看](https://docs.mongodb.com/manual/reference/built-in-roles/)
 
   > 請記得將範例中的 ADMIN_USER, ADMIN_PASSWORD 替換成您的設定值
 
-```
-db.createUser(
-  {
-    user: "ADMIN_USER",
-    pwd: "ADMIN_PASSWORD",
-    roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
-  }
-)
-```
+  ```
+  db.createUser(
+    {
+      user: "ADMIN_USER",
+      pwd: "ADMIN_PASSWORD",
+      roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
+    }
+  )
+  ```
 
 * 將資料庫授權於此帳號
 
   > 請記得將範例中的 ADMIN_USER, ADMIN_PASSWORD 替換成您的設定值
 
-```
-db.auth("ADMIN_USER", "ADMIN_PASSWORD")
-```
+  ```
+  db.auth("ADMIN_USER", "ADMIN_PASSWORD")
+  ```
 
 * 離開資料庫連線，回到主機 SSH
 
-```
-exit
-```
+  ```
+  exit
+  ```
 
 * 編輯 MongoDB 設定檔案，在檔案中加入啟用身份驗證的設定。以下腳本將直接寫入一個預設可用的設定檔
   
   > 關於更多的資料庫設定檔說明，可[參考此文件](https://docs.mongodb.com/v3.2/reference/configuration-options/)
 
-```
-echo "storage:" | sudo tee /etc/mongod.conf
-echo "  dbPath: /var/lib/mongodb" | sudo tee -a /etc/mongod.conf
-echo "  journal:" | sudo tee -a /etc/mongod.conf
-echo "    enabled: true" | sudo tee -a /etc/mongod.conf
-
-echo "systemLog:" | sudo tee -a /etc/mongod.conf
-echo "  destination: file" | sudo tee -a /etc/mongod.conf
-echo "  logAppend: true" | sudo tee -a /etc/mongod.conf
-echo "  path: /var/log/mongodb/mongod.log" | sudo tee -a /etc/mongod.conf
-
-echo "net:" | sudo tee -a /etc/mongod.conf
-echo "  port: 27017" | sudo tee -a /etc/mongod.conf
-echo "  bindIp: 0.0.0.0" | sudo tee -a /etc/mongod.conf
-
-echo "security:" | sudo tee -a /etc/mongod.conf
-echo "  authorization: enabled" | sudo tee -a /etc/mongod.conf
-
-echo "setParameter:" | sudo tee -a /etc/mongod.conf
-echo "  failIndexKeyTooLong: false" | sudo tee -a /etc/mongod.conf
-
-```
+  ```
+  echo "storage:" | sudo tee /etc/mongod.conf
+  echo "  dbPath: /var/lib/mongodb" | sudo tee -a /etc/mongod.conf
+  echo "  journal:" | sudo tee -a /etc/mongod.conf
+  echo "    enabled: true" | sudo tee -a /etc/mongod.conf
+  
+  echo "systemLog:" | sudo tee -a /etc/mongod.conf
+  echo "  destination: file" | sudo tee -a /etc/mongod.conf
+  echo "  logAppend: true" | sudo tee -a /etc/mongod.conf
+  echo "  path: /var/log/mongodb/mongod.log" | sudo tee -a /etc/mongod.conf
+  
+  echo "net:" | sudo tee -a /etc/mongod.conf
+  echo "  port: 27017" | sudo tee -a /etc/mongod.conf
+  echo "  bindIp: 0.0.0.0" | sudo tee -a /etc/mongod.conf
+  
+  echo "security:" | sudo tee -a /etc/mongod.conf
+  echo "  authorization: enabled" | sudo tee -a /etc/mongod.conf
+  
+  echo "setParameter:" | sudo tee -a /etc/mongod.conf
+  echo "  failIndexKeyTooLong: false" | sudo tee -a /etc/mongod.conf
+  
+  ```
 
 * 重新啟動資料庫服務
 
-```
-sudo service mongod restart
-```
+  ```
+  sudo service mongod restart
+  ```
 
 * 至此，資料庫服務擁有了最基本的安全性。對於正式上線產品的安全性通常會有更高的要求，將會在後面介紹
 

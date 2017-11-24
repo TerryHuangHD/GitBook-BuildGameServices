@@ -88,7 +88,7 @@ echo "mongodb-org-tools hold" | sudo dpkg --set-selections
 
 ### 啟用資料庫身份驗證 {#db-service-enable-auth}
 
-剛建立起來的 MongoDB 服務，處於開放狀態，接下來將會演示，如何建立「管理者」並啟用「資料庫身份驗證」功能，來達到最基本的安全性。注意：請記得將範例中的 ADMIN_USER, ADMIN_PASSWORD 替換成您的設定值
+剛建立起來的 MongoDB 服務，處於開放狀態，接下來將會演示，如何建立「管理者」並啟用「資料庫身份驗證」功能，來達到最基本的安全性
 
 * 登入本地端資料庫（登入後將會轉換成資料庫命令列）
 
@@ -104,6 +104,8 @@ use admin
 
 * 新增最高管理員帳號。如果想知道更多關於預設的資料庫角色，可[到此觀看](https://docs.mongodb.com/manual/reference/built-in-roles/)
 
+  > 請記得將範例中的 ADMIN_USER, ADMIN_PASSWORD 替換成您的設定值
+
 ```
 db.createUser(
   {
@@ -115,6 +117,8 @@ db.createUser(
 ```
 
 * 將資料庫授權於此帳號
+
+  > 請記得將範例中的 ADMIN_USER, ADMIN_PASSWORD 替換成您的設定值
 
 ```
 db.auth("ADMIN_USER", "ADMIN_PASSWORD")
@@ -164,9 +168,11 @@ sudo service mongod restart
 ### 建立並設定 Parse 資料庫 {#db-instance}
 
 接下來將會在資料庫服務中，建立一個資料庫作為 Parse 服務使用，並創建一個使用者
-用來存取此資料庫。注意：請記得將範例中的 PARSE_DB, PARSE_DB_USER, PARSE_DB_PASSWORD 替換成您的設定值
+用來存取此資料庫。
 
 * 以建立的管理者登入資料庫服務（登入後將會轉換成資料庫命令列）
+
+  > 請記得將範例中的 ADMIN_USER, ADMIN_PASSWORD 替換成您的設定值
 
 ```
 mongo 127.0.0.1 -u "ADMIN_USER" -p "ADMIN_PASSWORD" --authenticationDatabase "admin"
@@ -174,11 +180,15 @@ mongo 127.0.0.1 -u "ADMIN_USER" -p "ADMIN_PASSWORD" --authenticationDatabase "ad
 
 * 移動到欲使用的 Parse 資料庫，範例命名為 PARSE_DB
 
+  > PARSE_DB 可替換任意資料庫名稱
+
 ```
 use PARSE_DB
 ```
 
 * 新增此資料庫使用的帳號
+
+  > 請記得將範例中的 PARSE_DB, PARSE_DB_USER, PARSE_DB_PASSWORD 替換成您的設定值
 
 ```
 db.createUser(
@@ -191,6 +201,8 @@ db.createUser(
 ```
 
 * 將資料庫授權於此帳號
+
+  > 請記得將範例中的 PARSE_DB_USER, PARSE_DB_PASSWORD 替換成您的設定值
 
 ```
 db.auth("PARSE_DB_USER", "PARSE_DB_PASSWORD")

@@ -50,6 +50,8 @@ LiRise Games 是位於台南的 Indie Game Studio，隨時都在徵人中，歡�
 
 # 書中尚不包含的內容
 
+* CI/CD
+* DevOps
 * Docker/k8s
 * SQL/AP Sharding
 * Database/Server HA

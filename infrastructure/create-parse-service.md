@@ -12,11 +12,10 @@
 
 ### 概述說明 {#intro}
 
-Parse Service 在常見的配置上，包含**「資料庫服務」**用以存放資料，**「Parse 伺服器」**作為服務端口，**「Parse Dashboard」**提供簡單的管理之用。在這次的範例中，將會演示建立以 [Google Cloud Platform（下稱 GCP）](https://cloud.google.com/)的 Compute Engine「虛擬機」為基礎的方式，逐步架設 Parse 所需的**「Parse 伺服器」**、**「Parse Dashboard」**。當然，您也可以選擇其他選項：
-* IAAS 服務可依需求、價格選用合適的服務，如：[AWS](https://aws.amazon.com/), [Linode](https://www.linode.com/)
-* **大部分的 IAAS 服務商，通常都有提供免費試用計畫**，比如：[GCP 免費項目](https://cloud.google.com/free/), [AWS 免費方案](https://aws.amazon.com/tw/free/)
-* 網路上直供 Parse 服務商，如：[SashiDo](https://www.sashido.io/), [Back4App](https://www.back4app.com/)
-* Parse 有官方的 [Docker Image](https://hub.docker.com/r/parseplatform/parse-server/) 供選用
+Parse Service 在常見的配置上，包含**「資料庫服務」**用以存放資料，**「Parse 伺服器」**作為服務端口，**「Parse Dashboard」**提供簡單的管理之用。在這次的範例中，將會演示建立以 [Google Cloud Platform（下稱 GCP）](https://cloud.google.com/)的 Compute Engine「虛擬機」為基礎的方式，逐步架設 Parse 所需的**「Parse 伺服器」**、**「Parse Dashboard」**
+ > IAAS 服務可依需求、價格選用合適的服務，如：[AWS](https://aws.amazon.com/), [Linode](https://www.linode.com/)
+ >
+ > **大部分的 IAAS 服務商，通常都有提供免費試用計畫**，比如：[GCP 免費項目](https://cloud.google.com/free/), [AWS 免費方案](https://aws.amazon.com/tw/free/)
 
 ### 建立虛擬機 {#parse-vm}
 
@@ -89,7 +88,7 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
  sudo apt-get install mini-httpd -y
  ```
 
-* 寫入設定檔案
+* 更改 mini-httpd 設定檔案
 
  ```
  echo "START=1" | sudo tee /etc/default/mini-httpd

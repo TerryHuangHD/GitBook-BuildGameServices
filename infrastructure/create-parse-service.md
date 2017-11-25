@@ -88,7 +88,9 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
  sudo apt-get install mini-httpd -y
  ```
 
-* 更改 mini-httpd 設定檔案
+* 設定 mini-httpd
+
+ * 您可以手動編輯設定檔案，將 /etc/default/mini-httpd 中改成 START=1，以及 /etc/mini-httpd.conf 中改成 host=0.0.0.0。或是透過以下的 script 來自動寫入設定檔案（測試於：mini-httpd_1.19）
 
  ```
  echo "START=1" | sudo tee /etc/default/mini-httpd
@@ -177,7 +179,7 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
  sudo npm install parse-server express
  ```
 
-* 編寫 app.js 檔案，來完成 express 設定
+* 編寫 app.js 檔案，來完成 Parse Server 服務架設在 express 上
 
  ```
  (to be continued)

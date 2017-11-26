@@ -135,7 +135,7 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
  sudo letsencrypt certonly -a webroot --agree-tos --webroot-path=/usr/share/mini-httpd/html -d DOMAIN_NAME -m EMAIL
  ```
 
-* 驗證過程中，會詢問你是否願意分享 Email 給 [Electronic Frontier Foundation](https://zh.wikipedia.org/wiki/%E7%94%B5%E5%AD%90%E5%89%8D%E5%93%A8%E5%9F%BA%E9%87%91%E4%BC%9A)，您可以輸入 Y/N 來同意/不同意。接著便會進入核發程序，成功的話，便會顯示 SSL 存放的位置。至此，您已經擁有您網域 SSL 所需要使用的憑證
+* 驗證過程中，會詢問你是否願意分享 Email 給 [Electronic Frontier Foundation](https://zh.wikipedia.org/wiki/%E7%94%B5%E5%AD%90%E5%89%8D%E5%93%A8%E5%9F%BA%E9%87%91%E4%BC%9A)，您可以輸入［Y/N］來［同意/不同意］。接著便會進入核發程序，成功的話，便會顯示 SSL 存放的位置。至此，您已經擁有您網域 SSL 所需要使用的憑證
 
  > Let's Encrypt 核發的憑證都只有 3 個月的有效期，將會在[補充說明](#supply)中示範如何自動更新憑證
 
@@ -181,8 +181,63 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
 
 * 編寫 app.js 檔案，來完成 Parse Server 服務架設在 express 上
 
+ * 先移除樣板 app.js 檔案
+ 
  ```
- (to be continued)
+ sudo rm app.js
+ ```
+ 
+ * 開始編輯 app.js，輸入以下指令進入編輯器
+ 
+ ```
+ sudo nano app.js
+ ```
+ 
+ * 將以下 Parse Server 設定樣板貼入
+
+ ```
+ var ParseServer = require('parse-server').ParseServer;
+ var api = new ParseServer({
+  databaseURI: 'mongodb://PARSE_DB_USER:PARSE_DB_PASSWORD@0.0.0.0/PARSE_DB',
+  appId: 'myAppId',
+  masterKey: 'myMasterKey',
+  serverURL: 'https://parseServer.ddns.net/parse'
+ });
+
+ var express = require('express');
+ var app = express();
+ app.use('/parse', api);
+
+ var privateKey  = require('fs').readFileSync('/etc/letsencrypt/live/parseserver.ddns.net/privkey.pem', 'utf8');
+ var certificate = require('fs').readFileSync('/etc/letsencrypt/live/parseserver.ddns.net/fullchain.pem', 'utf8');
+ var credentials = {key: privateKey, cert: certificate};
+
+ var httpsServer = require('https').createServer(credentials, app);
+ httpsServer.listen(443);
+
+ module.exports = app;
+ ```
+
+ > 將 databaseURI 中的 PARSE_DB_USER, PARSE_DB_PASSWORD, 0.0.0.0, PARSE_DB，改成您 Parse 資料庫的「帳號」、「密碼」、「資料庫內部 IP」、「資料庫名稱」
+ >
+ > 將 serverURL 改成您申請的網域
+ >
+ > 將 privateKey, certificate 改成申請的憑證位置
+
+ * 編輯結束後按下［control］+［X］離開，然後輸入［Y］確認存檔，再鍵入［Enter］確定寫入到 app.js
+
+* 將 Parse 封裝成 Service
+
+ ```
+ sudo npm install forever forever-service -g 
+ ```
+
+* 將 Parse 封裝成 Service
+
+ > 請將 PARSE 改成您希望的 service 名稱
+ 
+ ```
+ sudo forever-service install PARSE
  ```
 
 ### 建立並設定 Parse Dashboard 服務 {#parse-dashboard}

@@ -88,6 +88,28 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
  sudo apt-get install mini-httpd -y
  ```
 
+* 修改設定 /etc/default/mini-httpd
+
+ * 編輯檔案，進入編輯模式
+ 
+ ```
+ sudo nano /etc/default/mini-httpd
+ ```
+
+ * 將 START=0 修正成 START=1
+ * 編輯完成後按下［control］+［X］離開，然後輸入［Y］確認寫入，再鍵入［Enter］確定寫入到原檔案
+
+* 修改設定 /etc/mini-httpd.conf
+
+ * 編輯檔案，進入編輯模式
+ 
+ ```
+ sudo nano /etc/mini-httpd.conf
+ ```
+
+ * 將 host=127.0.0.1 修正成 host=0.0.0.0
+ * 編輯完成後按下［control］+［X］離開，然後輸入［Y］確認寫入，再鍵入［Enter］確定寫入到原檔案
+
 * 設定 mini-httpd
 
  * 您可以手動編輯設定檔案，將 /etc/default/mini-httpd 中改成 START=1，以及 /etc/mini-httpd.conf 中改成 host=0.0.0.0。或是透過以下的 script 來自動寫入設定檔案（測試於：mini-httpd_1.19）

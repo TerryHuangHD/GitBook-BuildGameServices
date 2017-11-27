@@ -206,8 +206,7 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
  var api = new ParseServer({
   databaseURI: 'mongodb://PARSE_DB_USER:PARSE_DB_PASSWORD@0.0.0.0/PARSE_DB',
   appId: 'myAppId',
-  masterKey: 'myMasterKey',
-  serverURL: 'https://parseServer.ddns.net/parse'
+  masterKey: 'myMasterKey'
  });
 
  var express = require('express');
@@ -226,8 +225,6 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
 
  > 將 databaseURI 中的 PARSE_DB_USER, PARSE_DB_PASSWORD, 0.0.0.0, PARSE_DB，改成您 Parse 資料庫的「帳號」、「密碼」、「資料庫內部 IP」、「資料庫名稱」
  >
- > 將 serverURL 改成您申請的網域
- >
  > 將 privateKey, certificate 改成申請的憑證位置
 
  * 編輯結束後按下［control］+［x］離開，然後輸入［y］再鍵入［enter］確定寫入到 app.js
@@ -245,6 +242,13 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
  ```
  sudo forever-service install PARSE
  ```
+
+* 至此，您已經完成了 Parse Server 的伺服器最基本設定。並已經封裝成服務，您可以透過以下指令來簡單的控制 Parse 服務
+
+ > 啟動      - "sudo service PARSE start"
+ > 停止      - "sudo service PARSE stop"
+ > 檢視狀態  - "sudo service PARSE status"
+ > 重新啟動  - "sudo service PARSE restart"
 
 ### 建立並設定 Parse Dashboard 服務 {#parse-dashboard}
 

@@ -97,7 +97,7 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
  ```
 
  * 將 START=0 修正成 START=1
- * 編輯完成後按下［control］+［X］離開，然後輸入［Y］再鍵入［Enter］確定寫入到原檔案
+ * 編輯完成後按下［control］+［x］離開，然後輸入［y］再鍵入［enter］確定寫入到原檔案
 
 * 修改設定 /etc/mini-httpd.conf
 
@@ -108,7 +108,7 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
  ```
 
  * 將 host=localhost 修正成 host=0.0.0.0
- * 編輯完成後按下［control］+［X］離開，然後輸入［Y］再鍵入［Enter］確定寫入到原檔案
+ * 編輯完成後按下［control］+［x］離開，然後輸入［y］再鍵入［enter］確定寫入到原檔案
 
 * 啟動 mini-httpd 服務
  
@@ -230,7 +230,7 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
  >
  > 將 privateKey, certificate 改成申請的憑證位置
 
- * 編輯結束後按下［control］+［X］離開，然後輸入［Y］再鍵入［Enter］確定寫入到 app.js
+ * 編輯結束後按下［control］+［x］離開，然後輸入［y］再鍵入［enter］確定寫入到 app.js
 
 * 將 Parse 封裝成 Service
 

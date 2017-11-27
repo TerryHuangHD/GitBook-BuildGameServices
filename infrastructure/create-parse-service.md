@@ -245,10 +245,13 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
 
 * 至此，您已經完成了 Parse Server 的伺服器最基本設定。並已經包裝成服務，您可以透過以下指令來簡單的控制 Parse 服務
 
- > 啟動      - "sudo service PARSE start"
- > 停止      - "sudo service PARSE stop"
- > 檢視狀態  - "sudo service PARSE status"
- > 重新啟動  - "sudo service PARSE restart"
+ > 啟動服務 - "sudo service PARSE start"
+ >
+ > 停止服務 - "sudo service PARSE stop"
+ >
+ > 檢視服務狀態 - "sudo service PARSE status"
+ >
+ > 重新啟動服務- -"sudo service PARSE restart"
 
 ### 建立並設定 Parse Dashboard 服務 {#parse-dashboard}
 

@@ -97,7 +97,7 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
  ```
 
  * 將 START=0 修正成 START=1
- * 編輯完成後按下［control］+［X］離開，然後輸入［Y］確認寫入，再鍵入［Enter］確定寫入到原檔案
+ * 編輯完成後按下［control］+［X］離開，然後輸入［Y］再鍵入［Enter］確定寫入到原檔案
 
 * 修改設定 /etc/mini-httpd.conf
 
@@ -107,24 +107,8 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
  sudo nano /etc/mini-httpd.conf
  ```
 
- * 將 host=127.0.0.1 修正成 host=0.0.0.0
- * 編輯完成後按下［control］+［X］離開，然後輸入［Y］確認寫入，再鍵入［Enter］確定寫入到原檔案
-
-* 設定 mini-httpd
-
- * 您可以手動編輯設定檔案，將 /etc/default/mini-httpd 中改成 START=1，以及 /etc/mini-httpd.conf 中改成 host=0.0.0.0。或是透過以下的 script 來自動寫入設定檔案（測試於：mini-httpd_1.19）
-
- ```
- echo "START=1" | sudo tee /etc/default/mini-httpd
- echo "DAEMON_OPTS=\"-C /etc/mini-httpd.conf\"" | sudo tee -a /etc/default/mini-httpd
- 
- echo "host=0.0.0.0" | sudo tee /etc/mini-httpd.conf
- echo "port=80" | sudo tee -a /etc/mini-httpd.conf
- echo "user=nobody" | sudo tee -a /etc/mini-httpd.conf
- echo "chroot" | sudo tee /etc/mini-httpd.conf
- echo "data_dir=/usr/share/mini-httpd/html" | sudo tee -a /etc/mini-httpd.conf
- echo "pidfile=/var/run/mini-httpd.pid" | sudo tee -a /etc/mini-httpd.conf
- ```
+ * 將 host=localhost 修正成 host=0.0.0.0
+ * 編輯完成後按下［control］+［X］離開，然後輸入［Y］再鍵入［Enter］確定寫入到原檔案
 
 * 啟動 mini-httpd 服務
  
@@ -246,7 +230,7 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
  >
  > 將 privateKey, certificate 改成申請的憑證位置
 
- * 編輯結束後按下［control］+［X］離開，然後輸入［Y］確認存檔，再鍵入［Enter］確定寫入到 app.js
+ * 編輯結束後按下［control］+［X］離開，然後輸入［Y］再鍵入［Enter］確定寫入到 app.js
 
 * 將 Parse 封裝成 Service
 

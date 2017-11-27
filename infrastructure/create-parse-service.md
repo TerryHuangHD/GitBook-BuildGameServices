@@ -260,5 +260,5 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
 
  ```
  echo "0 3 * * 7 root /usr/bin/letsencrypt renew" | sudo tee -a /etc/crontab
- echo "0 3 * * 7 root service parse restart" | sudo tee -a /etc/crontab
+ echo "0 3 * * 7 root service PARSE restart" | sudo tee -a /etc/crontab
  ```

@@ -7,8 +7,6 @@
 ## Infrastructure
 
 * [架構介紹](infrastructure/overview.md)
-* [建立 Parse 資料庫服務](infrastructure/create-db-service.md)
-* [建立 Parse 服務](infrastructure/create-parse-service.md)
 * [Setup: Cloud Code](infrastructure/setup-cloud-code.md)
 * [Setup: Notification](infrastructure/setup-notification.md)
 * [Setup: Job](infrastructure/setup-job.md)
@@ -19,7 +17,8 @@
 
 ## Self-Hosted Parse
 
-
+* [建立 Parse 資料庫服務](infrastructure/create-db-service.md)
+* [建立 Parse 服務](infrastructure/create-parse-service.md)
 
 ## 遊戲服務
 

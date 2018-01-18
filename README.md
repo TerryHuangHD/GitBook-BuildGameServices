@@ -2,9 +2,7 @@
 
 # 簡介
 
-這個系列的名字為「Backend of Indie Game: 自建獨立遊戲服務」，是 LiRise Games 開發『呆呆夥伴』系列遊戲的心得筆記；和其他 Indie Game 開發者一樣，我們這次的開發過程中，嘗試在資源有限的狀況下，用簡易的方法來建立跨平台的「線上遊戲服務」。希望我們的經驗能對其他 Indie Game 開發者有所幫助。
-
-後續內容將會介紹各式遊戲相關的 BaaS 和其他外部服務，如 Parse, Firebase, Notification, E-mail, SMS...作為最基礎，接著會在此基礎架構下，介紹各種常見的 Game Services 的設計與心得。
+這個系列的名字為「Backend of Indie Game: 自建獨立遊戲服務」，是 LiRise Games 開發『呆呆夥伴』系列遊戲的心得筆記；和其他 Indie Game 開發者一樣，我們這次的開發過程中，嘗試在資源有限的狀況下，用簡易的方法來建立跨平台的「線上遊戲服務」。希望我們的經驗能對其他 Indie Game 開發者有所幫助。後續內容將會依序介紹，各式遊戲相關的 BaaS 和其他外部服務，接著會在此基礎架構下，介紹各種常見的 Game Services 的設計與心得。
 
 p.s. 作者患有嚴重的懶癌，所以可能很多內容會以~~（偷工減料）~~簡單的的方式來呈現，如果需要詳細說明，請告訴我
 p.s. 最新作品『呆呆神射手』請大家多多支持
@@ -14,13 +12,13 @@ p.s. 最新作品『呆呆神射手』請大家多多支持
 # 大綱介紹
 
 * Infrastructure
-  * 依照步驟簡單的建立所需要的基礎服務，包含 Parse Service 架設, Firebase 以及其他服務的設定，比如：API, Realtime, Notification, Job, Email, SMS, Hosting
+  * 依照步驟簡單的建立所需要的基礎服務，包含 Database, Parse Service, Firebase 以及其他服務的設定，比如：API, Realtime, Notification, Task/Job, Email/SMS, Hosting
 * Game Services
   * 介紹常見的遊戲服務，實作上的各種形式，可能遇到的各種挑戰或考量。比如：Account, Invitation, Achievement, Leaderboard, Queue & Pairing, Turned-Based Multiplayer, Real-time Multiplayer, Saved Games, Event & Quest & Challenges
 
 # 自建遊戲服務的優點
 
-* 簡易的跨平台實現
+* 簡易的跨平台
   * iOS Game Center 與 Google Play Game Services，由於帳號綁定的關係，大部分發力在各自的平台，支援的服務也略有不同。所以跨平台遊戲，通常是選用完整的第三方服務為主，再輔以各平台服務進行部分的優化。自建遊戲服務便可脫離帳號綁定的約束，在輕量化的遊戲中實現更簡易的跨平台體驗
 * 靈活性
   * 資料可有較高的使用彈性，比如：跨產品設計，行銷用途
@@ -43,7 +41,7 @@ p.s. 最新作品『呆呆神射手』請大家多多支持
 
 # 作者簡介
 
-Terry Huang \(@kmshiori\) ，業餘電動玩家，Overwatch 打不上 3000，求大神帶 \(BattleNet: kmshiori\#3943)。絕地求生吃雞和吃豆腐一樣簡單，歡迎~~（加入戰隊）~~一起遊戲。\(Steam: kmshiori@gmail.com)。
+Terry Huang \(@kmshiori\) ，業餘電動玩家，Overwatch 打不上 3000，求大神帶 \(BattleNet: kmshiori\#3943)。絕地求生吃雞和喝水一樣簡單，歡迎~~（加入戰隊）~~一起遊戲。\(Steam: kmshiori@gmail.com)。
 
 LiRise Games 是位於台南的 Indie Game Studio，隨時都在徵人中，歡迎對於遊戲開發、企劃、行銷有興趣的人來聊聊，或是直接與我們聯繫 \([service@lirise.com](mailto:service@lirise.com)\)
 

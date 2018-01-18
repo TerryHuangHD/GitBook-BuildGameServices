@@ -21,6 +21,7 @@
 * [Parse 服務架設方法](infrastructure/self-hosted-parse.md)
 * [建立 Parse 資料庫服務](infrastructure/create-db-service.md)
 * [建立 Parse 服務](infrastructure/create-parse-service.md)
+* [Parse Server Configuration](infrastructure/parse-server-configuration.md)
 
 ## 遊戲服務
 

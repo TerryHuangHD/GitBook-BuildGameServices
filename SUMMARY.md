@@ -8,20 +8,20 @@
 
 * [架構介紹](infrastructure/overview.md)
 * [Setup: Database](infrastructure/setup-database.md)
-* [Setup: Cloud Code](infrastructure/setup-cloud-code.md)
+* [Setup: API](infrastructure/setup-cloud-code.md)
 * [Setup: Notification](infrastructure/setup-notification.md)
 * [Setup: Job](infrastructure/setup-job.md)
 * [Setup: Email](infrastructure/setup-email.md)
 * [Setup: SMS](infrastructure/setup-sms.md)
 * [Setup: Hosting](infrastructure/setup-hosting.md)
-* [Setup: Real-time](infrastructure/setup-realtime.md)
+* [Setup: Time](infrastructure/setup-time.md)
 
 ## Self-Hosted Parse
 
-* [Parse 服務架設方法](infrastructure/self-hosted-parse.md)
-* [建立 Parse 資料庫服務](infrastructure/create-db-service.md)
-* [建立 Parse 服務](infrastructure/create-parse-service.md)
-* [Parse Server Configuration](infrastructure/parse-server-configuration.md)
+* [Parse 服務架設方法](self-hosted-parse/self-hosted-parse.md)
+* [建立 Parse 資料庫服務](self-hosted-parse/create-db-service.md)
+* [建立 Parse 服務](self-hosted-parse/create-parse-service.md)
+* [Parse Server Configuration](self-hosted-parse/parse-server-configuration.md)
 
 ## 遊戲服務
 

@@ -12,7 +12,7 @@ p.s. 最新作品『呆呆神射手』請大家多多支持
 # 大綱介紹
 
 * Infrastructure
-  * 依照步驟簡單的建立所需要的基礎服務，包含 Database, Parse Service, Firebase 以及其他服務的設定，比如：API, Realtime, Notification, Task/Job, Email/SMS, Hosting
+  * 依照步驟簡單的建立所需要的基礎服務，包含 Database, Parse Service, Firebase 以及其他服務的設定，比如：API, Realtime, Notification, Job, Email, SMS, Hosting
 * Game Services
   * 介紹常見的遊戲服務，實作上的各種形式，可能遇到的各種挑戰或考量。比如：Account, Invitation, Achievement, Leaderboard, Queue & Pairing, Turned-Based Multiplayer, Real-time Multiplayer, Saved Games, Event & Quest & Challenges
 

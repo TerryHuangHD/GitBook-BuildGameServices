@@ -7,7 +7,7 @@
 ## Infrastructure
 
 * [架構介紹](infrastructure/overview.md)
-* Setup: Database
+* [Setup: Database](infrastructure/setup-database.md)
 * [Setup: Cloud Code](infrastructure/setup-cloud-code.md)
 * [Setup: Notification](infrastructure/setup-notification.md)
 * [Setup: Job](infrastructure/setup-job.md)

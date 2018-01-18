@@ -60,13 +60,13 @@
 
 ### Self-Hosted Parse 基礎服務架設法
 
-Parse 的服務架構中，基本上需包含「資料庫服務」、以及「Parse Server 服務」。Parse 架構支援了相當多樣的服務架設方法，以下列舉一些常見的方法
+Parse 的服務架構中，基礎上需包含「資料庫服務」、以及「Parse Server 服務」。Parse 架構支援了相當多樣的服務架設方法，以下列舉一些常見的方法
 
 * #### 本機端架設
   本機端架設法，提供了非常方便的方法來架設**「測試環境」**。Parse Server 透過簡易的 CLI 指令便可以在本機端開始服務。對應的資料庫，也提供了本機端的 mongodb runner，能直接架設本機端資料庫測試環境。當然也可以直接連接您的資料庫虛擬機，或是外部 Database as a Service（以下稱 DBaaS）服務
   
 * #### 全虛擬機架設
-  全虛擬機架設，是最完整的自架服務法，在 Infrastructure as a Service（以下稱 IaaS）供應商中以虛擬機架設服務，通常用於**「上線服務」**，各服務角色通常以 Dedicated Server 甚至是 Cluster 形式存在
+  全虛擬機架設，是最完整的自架服務作法，在 Infrastructure as a Service（以下稱 IaaS）供應商中以虛擬機架設服務，常見於**「上線服務」**，各服務角色通常以 Dedicated Server 甚至是 Cluster 形式存在
   
 * #### DBaaS 服務 + Parse 虛擬機
   除了全虛擬架設設法之外，也能將資料庫服務的部分連結外部資料庫服務提供商

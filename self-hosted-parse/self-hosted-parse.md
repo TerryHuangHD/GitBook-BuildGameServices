@@ -15,8 +15,8 @@ Parse 的服務架構中，基礎上需包含「資料庫服務」、以及「Pa
   * 資料庫選擇，除了 MongoDB 之外，Parse 也支援了 PostgreSQL
   * 常見的 DBaaS 服務提供商有：[mLab](https://mlab.com/), [Amazon RDS](https://aws.amazon.com/tw/rds/postgresql/)
   
-* ### 直接使用 Parse SaaS 服務
-  如果您使用在小型的專案中，也可以考慮提供完整 Parse 服務的供應商
+* ### 直接使用第三方 Parse BaaS 服務
+  如果您使用在小型的專案中，也可以考慮提供完整 Parse BaaS 的服務供應商
   * 常見的 Parse SaaS 服務商有：[SashiDo](https://www.sashido.io/), [Back4App](https://www.back4app.com/)
   
 * ### Docker

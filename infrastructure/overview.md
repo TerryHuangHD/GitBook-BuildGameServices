@@ -4,17 +4,13 @@
 
 ### Game Services 可能需要哪些基礎服務？
 
-* #### 資料伺服器
+* #### 資料儲存
 
-  > 範例選用：Self-Hosted Parse
-
-  在遊戲服務的範疇中，提供資料存放是最重要功能之一，比如：存放使用者資料、消費歷程...等等
+  在 Game Services 的範疇中，提供資料儲存是最重要功能之一，比如存放個人面向的使用者資料、消費歷程，或是存放公用面向的排行榜資料...等等。在實際的使用面上，各資料儲存系統都有其優缺點，比如：schemaless, security rule, indexing 能力, atomic operation 支援度...等等，也可能會同時使用多種資料儲存服務
   
 * #### 應用程式介面
-
-  > 範例選用：Cloud Code on Parse
   
-  除了資料的存放之外，伺服器往往也需要擁有邏輯操作的能力，並透過使用者或是排程來觸發，比如：排程統計每日的排行榜並給予獎勵...。面對這樣的需求，Cloud Code 在 Self-Hosted Parse 也被完整的支援了，Trigger, Webhook 也繼承了下來，可簡易的實作出遊戲中所需的伺服器 API，對於串接各種外部 Node.js package 也相當方便
+  應用程式介面除了提供基礎的資料存取介面之外，通常實作也需要擁有實現伺服器端邏輯的能力。在目前新興的服務中，更會包含了各種連動能力（如: Database Trigger, Schedule/Job, Web Hook）
 
 * #### Notification 服務
 
@@ -55,7 +51,7 @@
 * #### Time 服務
 
 
-* #### “即時性”服務
+* #### Realtime 服務
 
   > 範例選用：Firebase Realtime Database
 

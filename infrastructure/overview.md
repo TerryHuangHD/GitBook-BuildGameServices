@@ -33,10 +33,8 @@
   SMS 也是在小產品中是常見的 Account System 的驗證方式，這樣的驗證方法比 Email 更具有實名性質，在 Firebase 中整合了這樣的驗證方式
 
 * #### Hosting 服務
-
-  > 範例選用：Parse Server 嫁接 GridStore
-
-  如果是輕度使用，比如遊戲存放個人圖示，可選擇與 Parse Sever 透過 Adapter 直接嫁接 GridFS，或是透過伺服器直供。如果是開放型、大型靜態資料，建議可以做獨立的檔案伺服架構，或是簡單選用 GCS/S3 + CDN
+  
+  Hosting 提供了檔案形式的資源存取方式，在 Game Services 中最常見用途有：遊戲通用的資源，遊戲的更新檔案、使用者上傳的照片...等等。依照需求有各種實作和優化方式
 
 * #### Time 服務
 

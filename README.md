@@ -8,7 +8,7 @@ p.s. 作者患有嚴重的懶癌，所以可能很多內容會以~~（偷工減�
 p.s. 正在練習拼音，錯字勿怪
 p.s. 最新作品『呆呆神射手』請大家多多支持
 
-![](/assets/Simple Layer.jpg)
+![](/assets/Simple Layer 169.jpg)
 
 # 大綱介紹
 

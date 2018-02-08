@@ -7,15 +7,15 @@
 ## Infrastructure
 
 * [架構介紹](infrastructure/overview.md)
-* [Data 服務](infrastructure/setup-database.md)
-* [API 服務](infrastructure/setup-cloud-code.md)
-* [Notification 服務](infrastructure/setup-notification.md)
-* [Job 服務](infrastructure/setup-job.md)
-* [Email 服務](infrastructure/setup-email.md)
-* [SMS 服務](infrastructure/setup-sms.md)
-* [Hosting 服務](infrastructure/setup-hosting.md)
-* [Realtime 服務](infrastructure/setup-realtime.md)
-* [Information 服務](infrastructure/setup-time.md)
+* [Data 服務](infrastructure/service-data.md)
+* [API 服務](infrastructure/service-api.md)
+* [Notification 服務](infrastructure/service-notification.md)
+* [Job 服務](infrastructure/service-job.md)
+* [Email 服務](infrastructure/service-email.md)
+* [SMS 服務](infrastructure/service-sms.md)
+* [Hosting 服務](infrastructure/service-hosting.md)
+* [Realtime 服務](infrastructure/service-realtime.md)
+* [Information 服務](infrastructure/service-information.md)
 
 ## Self-Hosted Parse
 

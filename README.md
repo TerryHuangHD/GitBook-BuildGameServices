@@ -12,7 +12,7 @@ p.s. 最新作品『呆呆神射手』請大家多多支持
 # 大綱介紹
 
 * Infrastructure
-  * 介紹常見的 BaaS 服務設定以及架設（如：Parse, Firebase），整合其他外部服務（如： Notification, Email, SMS, Time...），構建 Game Services 所需的底層架構
+  * 介紹常見的 BaaS 服務設定以及架設（如：Parse, Firebase...），整合其他外部服務（如： Notification, Email, SMS, Time...），構建 Game Services 所需的底層架構
 * Game Services
   * 介紹常見的遊戲服務，實作上的各種形式，可能遇到的各種挑戰或考量。比如：Account, Invitation, Achievement, Leaderboard, Queue & Pairing, Turned-Based Multiplayer, Real-time Multiplayer, Saved Games, Event & Quest & Challenges
 

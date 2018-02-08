@@ -25,10 +25,6 @@
   Job 服務，主要提供伺服端能依排程進行動作的能力，依照任務複雜度，可能會有不同的實作方法。在 Game Services 中，通常用來做定時的伺服器資料更新，比如：每日排行榜更新...等等
 
 * #### Email 服務
-
-  > Parse Server 選用: mailgun
-  
-  > Cloud Code 選用: AWS SES
   
   Email 在小產品中是常見的 Account System 的驗證方式，在 Parse Service 中也整合了這樣的驗證方式
 

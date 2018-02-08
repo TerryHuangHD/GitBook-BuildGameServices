@@ -14,7 +14,7 @@
 * [Email 服務](infrastructure/setup-email.md)
 * [SMS 服務](infrastructure/setup-sms.md)
 * [Hosting 服務](infrastructure/setup-hosting.md)
-* Realtime 服務
+* [Realtime 服務](infrastructure/setup-realtime.md)
 * [Information 服務](infrastructure/setup-time.md)
 
 ## Self-Hosted Parse

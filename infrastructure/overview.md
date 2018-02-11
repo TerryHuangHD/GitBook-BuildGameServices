@@ -1,6 +1,6 @@
 # 基礎服務架構介紹
 
-![](/assets/Infrastructure.jpg "Infrastructure")
+![](/assets/Infrastructure2.jpg "Infrastructure")
 
 ### Game Services 可能需要哪些基礎服務？
 

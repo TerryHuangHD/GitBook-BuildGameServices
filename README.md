@@ -2,7 +2,7 @@
 
 # 簡介
 
-這個系列的名字為**「Backend of Indie Game: 自建獨立遊戲服務」**，是 LiRise Games 在開發**『呆呆夥伴』**系列遊戲時，後端開發的心得筆記；我們這次的開發過程中，嘗試在使用有限資源的狀況下，**用簡易方法來的「自建遊戲服務」，提供跨平台的「遊戲體驗」**。希望我們的經驗能對其他開發者有所幫助。後續內容將會依序介紹，各式遊戲相關的 BaaS 和其他外部服務，接著會在此基礎架構下，介紹各種常見的 Game Services 的設計與心得
+**「Backend of Indie Game: 自建獨立遊戲服務」**，是 LiRise Games 在開發**『呆呆夥伴』**系列遊戲時，後端開發的心得筆記；我們這次的開發過程中，嘗試在使用有限資源的狀況下，**用簡單的方法來「自建遊戲服務」，提供跨平台的「遊戲體驗」**。希望我們的經驗能對其他開發者有所幫助。後續內容將會依序介紹，各式遊戲相關的 BaaS 和其他外部服務，接著會在此基礎架構下，介紹各種常見的 Game Services 的設計與心得
 
 > 作者患有嚴重的懶癌，如果發現偷工減料，歡迎靠邀作者。最新作品『呆呆神射手』請大家多多支持
 
@@ -11,7 +11,7 @@
 # 大綱介紹
 
 * Infrastructure
-  * 介紹常見的 BaaS 服務設定以及架設（Parse, Firebase...），整合其他外部服務（Notification, Email, SMS, Time...），構建 Game Services 所需的底層架構
+  * 介紹常見的 BaaS 服務架設、設定（Parse, Firebase...），整合其他外部服務（Notification, Email, SMS, Time...），構建 Game Services 所需的底層架構
 * Game Services
   * 介紹常見的遊戲服務，實作上的各種形式，可能遇到的各種挑戰或考量（Account, Invitation, Achievement, Leaderboard, Queue & Pairing, Turned-Based Multiplayer, Real-time Multiplayer, Saved Games, Event & Quest & Challenges）
 

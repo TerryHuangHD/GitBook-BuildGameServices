@@ -1,9 +1,18 @@
 # Data 服務
 
 ### 資料模型
+
+* Parse   
+ * 以 Class 為基礎，每個 Class 有設定的資料格式
+* Firebase Realtime
+ * 以節點為基礎，可將整個資料節點視為一 JSON 檔案
+* Firebase Firestone
+ * 以 Collection 為基礎，每個 Collection 可裝載多個 Document，每個 Document 實體中也可包含 Collection
+
 | Parse | Firebase Realtime | Firebase Firestone |
-| -- | -- | -- |
-| 以 Collection 為基礎，每個 Collection 有設定的資料格式 | 以節點為基礎，資料的 Root 為單一節點 |  |
+| --- | --- | --- |
+| 以 Class 為基礎，每個 Class 有設定的資料格式 | 以節點為基礎，可將整個資料節點視為一 JSON 檔案 | 以 Collection 為基礎，每個 Collection 可裝載多個 Document，每個 Document 實體中也可包含 Collection |
+| | | |
 
 ### 資料格式類型
 ### 資料查詢、索引

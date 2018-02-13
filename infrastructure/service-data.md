@@ -1,6 +1,6 @@
 # Data 服務
 
-常見的 BaaS 中的資料服務有: Parse, Firebase Realtime Database, Firebase Cloud Firestore，我們把他們從「資料模型」、「資料格式類型」、「資料查詢、索引」、「資料原子性操作」、「資料可靠性、拓展性」、「權限控制」、「限制」...等等各方面進行比較，方便在設計各種功能時，能找到最適合的資料服務
+常見的 BaaS 中的資料服務有: Parse, Firebase Realtime Database, Firebase Cloud Firestore，我們把他們從「資料模型」、「資料格式類型」、「資料查詢與索引」、「資料原子性操作」、「資料可靠性與拓展性」、「權限控制」、「限制」...等等各方面進行比較，方便在設計各種功能時，能找到最適合的資料服務
 
 ### 資料模型
 
@@ -26,7 +26,7 @@
 | Relation | | |
 |  | Null | Null |
 
-### 資料查詢、索引
+### 資料查詢與索引
 
 | | Parse | Realtime Database | Cloud Firestore |
 | --- | --- | --- | --- |
@@ -42,6 +42,21 @@
 | --- | --- | --- |
 | 僅支援 Number, Array 的增減操作 | 針對整個資料庫特定節點執行 Transaction | 可 Batch 多個寫入指令來執行 Transaction |
 
-### 資料可靠性、拓展性
+### 資料可靠性與拓展性
+
+| Parse | Realtime Database | Cloud Firestore |
+| --- | --- | --- |
+| 取決於資料庫可靠性 | 可用於「上線服務」的成熟產品 | 還在 Beta 中 |
+|  | 資料有區域可用性 | 具有全球化的可靠性與拓展能力 |
+|  | 超過上限時須手動 Shard（100k同時連線，1k次寫入/秒）  | 自動化拓展 |
+
 ### 權限控制
+
+| Parse | Realtime Database | Cloud Firestore |
+| --- | --- | --- |
+
+
 ### 限制
+
+| Parse | Realtime Database | Cloud Firestore |
+| --- | --- | --- |

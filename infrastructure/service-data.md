@@ -16,8 +16,8 @@
 | String | String | String |
 | Number | Long, Double | Number |
 | Boolean | Boolean | Boolean |
-| JSON Object | Map &lt; String, Object &gt; | Object |
-| JSON Array | List &lt; Object &gt; | Array |
+| Object | Map &lt; String, Object &gt; | Object |
+| Array | List &lt; Object &gt; | Array |
 | DateTime | | Timestamp |
 | GeoPoint | | Geopoint |
 | Polygon | | |

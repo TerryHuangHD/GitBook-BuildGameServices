@@ -14,7 +14,7 @@
 | Parse | Realtime Database | Cloud Firestore |
 | --- | --- | --- |
 | String | String | String |
-| Number | Long, Double | Number |
+| Number | Number | Number |
 | Boolean | Boolean | Boolean |
 | Object | Map &lt; String, Object &gt; | Object |
 | Array | List &lt; Object &gt; | Array |
@@ -27,6 +27,10 @@
 |  | Null | Null |
 
 ### 資料查詢、索引
+
+| Parse | Realtime Database | Cloud Firestore |
+| --- | --- | --- |
+
 ### 資料寫入、原子性操作
 ### 資料可靠性、拓展性
 ### 權限控制

@@ -40,7 +40,7 @@
 
 | Parse | Realtime Database | Cloud Firestore |
 | --- | --- | --- |
-| 僅支援 Number, Array 的增減操作 | 針對特定節點下執行 Transaction | 可附合多個寫入指令來執行 Transaction |
+| 僅支援 Number, Array 的增減操作 | 針對整個資料庫特定節點執行 Transaction | 可 Batch 多個寫入指令來執行 Transaction |
 
 ### 資料可靠性、拓展性
 ### 權限控制

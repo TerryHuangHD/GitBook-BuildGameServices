@@ -54,7 +54,7 @@
 
 | Parse | Realtime Database | Cloud Firestore |
 | --- | --- | --- |
-| 支援 class-level permissions，與 access control lists。可針對整個 Class 或特定 Object 進行權限的控管 | 僅能透過 Database Rules 來規範可存取的使用者 | 可透過 Security Rules 規範使用者端權限，透過 IAM 規範伺服器端權限 |
+| 支援 Class-Level Permissions 與 Access Control Lists，可分別針對整個 Class 或特定 Object 進行權限控管 | 僅能透過 Database Rules 來規範可存取的使用者或資料驗證 | 可透過 Security Rules 與 Identity and Access Management 控管使用者端與伺服器端權限 |
 
 
 ### 限制

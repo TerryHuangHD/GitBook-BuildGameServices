@@ -61,7 +61,15 @@
 
 | Parse | Realtime Database | Cloud Firestore |
 | --- | --- | --- |
-| | --- | 寫入限制 2.5 MiB/秒/資料庫  |
-| | --- | 同時連線數 100,000/資料庫（Beta 限制）  |
+| | 同時連線數 100,000/資料庫 | 寫入限制 2.5 MiB/秒/資料庫  |
+| | 同時監聽回應數 100,000/資料庫 | 同時連線數 100,000/資料庫（Beta 限制） |
+| | 單一 Cloud Function 寫入數量 1000 | Subcollection 深度 100 |
+| | 事件驅動寫入大小 1 MB | 文件大小 1 MiB |
+| | 傳送至 Cloud Function 資料 10 MB/秒 | 單一欄位大小 1 MiB - 89 bytes |
+| | 單一回應文件大小 256 MB | API Request 大小 10 MiB |
+| | Query 執行時間限制 15 分鐘 | 單一文件寫入 1/秒 |
+| | 單一寫入資料庫大小 SDK 16 MB, REST 256 MB | 單一 Collection 中寫入文件數量 500/秒 |
+| | Simultaneous Write 64 MB/分鐘  | Transaction Commit 寫入文件數量 500 |
+| | | Transaction 執行時間限制 270秒 |
 
-* 不列舉 naming 限制
+* 不列舉 naming, index 限制

@@ -7,7 +7,7 @@
 | Parse | Realtime Database | Cloud Firestore |
 | --- | --- | --- |
 | 以多個 Class 為基礎，每個 Class 為 Object（資料）的集合 | 以節點為基礎，母節點即為一個 JSON 結構 | 以多個 Collection 為基礎，每個 Collection 為 Document（資料）的集合 |
-| 可預先定義 Class 的結構格式，也可透過資料直接新增欄位，經定義後的結構即具有約束性 | Schemaless，任意節點與資料皆沒有約束性  | 無法預先定義 Collection 資料格式，即使在同一個 Collection 中的 Document 亦沒有相互約束性 |
+| 可預先定義 Class 的結構格式，也可透過資料直接新增欄位，經定義後的結構即具有約束性 | Schemaless，任意節點與資料皆沒有約束性（可透過設定 Database Rules 來驗證資料）  | 無法預先定義 Collection 資料格式，即使在同一個 Collection 中的 Document 亦沒有相互約束性 |
 
 ### 資料格式類型
 
@@ -54,6 +54,7 @@
 
 | Parse | Realtime Database | Cloud Firestore |
 | --- | --- | --- |
+| 支援 class-level permissions，與 access control lists。可針對整個 Class 或特定 Object 進行權限的控管 | 僅能透過 Database Rules 來規範可存取的使用者 | 可透過 Security Rules 規範使用者端權限，透過 IAM 規範伺服器端權限 |
 
 
 ### 限制

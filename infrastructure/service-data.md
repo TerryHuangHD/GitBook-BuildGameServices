@@ -22,8 +22,8 @@
 | GeoPoint | | Geopoint |
 | Polygon | | |
 | File | | |
-| Pointer to another Parse Object | | Reference |
-| Relation to another Parse Class | | |
+| Pointer | | Reference |
+| Relation | | |
 |  | Null | Null |
 
 ### 資料查詢、索引

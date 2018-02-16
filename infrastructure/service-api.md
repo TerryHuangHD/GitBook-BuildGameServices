@@ -1,6 +1,6 @@
 # API 服務
 
-在 Parse 與 Firebase 的平台中，分別有 Cloud Code 與 Cloud Functions 的工具，用來擴充後端伺服器能力。
+在 Parse 與 Firebase 的平台中，分別有 Cloud Code 與 Cloud Functions 的工具，用來擴充後端伺服器能力。我們把他們從「部署與偵錯」、「支援功能」...等等各方面進行比較
 
 ### 部署與偵錯
 

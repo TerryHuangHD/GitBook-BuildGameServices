@@ -14,8 +14,8 @@
 
 |  | Cloud Code | Cloud Functions |
 | --- | --- | --- |
-|  |  |  |
-
+| 常用 Trigger | BeforeSave<br>AfterSave<br>BeforeDelete<br>AfterDelete | onCreate<br>onUpdate<br>onDelete<br>onWrite |
+| 其他 Trigger | | |
 
 
 * 環境設定

@@ -14,10 +14,13 @@
 
 |  | Cloud Code | Cloud Functions |
 | --- | --- | --- |
-| 常用 Trigger | BeforeSave<br>AfterSave<br>BeforeDelete<br>AfterDelete | onCreate<br>onUpdate<br>onDelete<br>onWrite |
-| 其他 Trigger | | |
+| Data Trigger | BeforeSave<br>AfterSave<br>BeforeDelete<br>AfterDelete | onCreate<br>onUpdate<br>onDelete<br>onWrite |
+| Find Trigger | BeforeFind | X |
+| Authentication Trigger | 可透過監聽 User Class 來達成 | onCreate<br>onDelete |
+| Analytics Trigger | X | Google Analytics event |
+| Crashlytics Trigger | X | onNewDetected<br>onRegressed<br>onVelocityAlert |
+| Storage Trigger | X | upload, update, delete 檔案或是資料夾 |
+| Pub/Sub Trigger | X | onPublish |
+| HTTP Trigger | O | O |
+| External | Webhook | X |
 
-
-* 環境設定
-* 編輯與部屬
-* Hint: Dashboard Test

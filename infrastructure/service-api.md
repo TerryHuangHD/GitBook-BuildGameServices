@@ -1,6 +1,6 @@
 # API 服務
 
-在 Parse 與 Firebase 的平台中，分別有 Cloud Code 與 Cloud Functions 的工具，用來擴充後端伺服器能力。我們接著把他們從「部署與偵錯」、「支援功能」...等等各方面進行簡單的比較
+在 Parse 與 Firebase 的平台中，分別有 Cloud Code 與 Cloud Functions 的工具，用來擴充後端伺服器能力。我們接著把他們從「部署與偵錯」、「支援功能」...等等各方面進行簡單的比較。
 
 ### 部署與偵錯
 
@@ -23,7 +23,7 @@
 | HTTP Trigger | O | O |
 | External | Webhook | X |
 
-### 範例：在 Parse 服務中架構簡易的 Deploy 機制
+### 範例：在 Parse 服務中架構簡易的 Cloud Code 部署機制
 
 1. 申請建立一個 Git private repository
 
@@ -35,6 +35,71 @@
 
 3. 透過 Git 把將 Cloud Code deploy 到 Parse Server
 
-4. 建立 Script 檔案
+  * 登入 Parse Server 主機，移到 Parse 資料夾
+  * 將 repository 直接部署至 cloud 資料夾（記得將 Git 位址改成您的位置）
+  ```
+  sudo git clone https://USER@bitbucket.org/USER/REPOSITORY.git cloud
+  ```
+  
+  * 重啟 Parse 服務
+  ```
+  sudo service PARSE restart
+  ```
+4. 建立 Script 檔案可重複此部署命令
 
+  * 編輯檔案，進入編輯模式
+  ```
+  sudo nano DEPLOY.sh
+  ```
+
+  * 加入 前往 Cloud Code Folder 指令
+  ```
+  cd /XXX/XXX/PARSE/cloud
+  ```
+
+  * 加入 cloud code pull 指令（記得將 Git 位址改成您的位置，並加上密碼）
+  ```
+  sudo git pull https://USER:PASSWORD@bitbucket.org/USER/REPOSITORY.git master
+  ```
+
+  * 加入 Parse 服務重開指令
+  ```
+  sudo service PARSE restart
+  ```
+
+  * 編輯完成後按下［control］+［x］離開，然後輸入［y］再鍵入［enter］確定寫入到原檔案
+
+  * 賦予 script 執行權限
+  ```
+  sudo chmod 755 DEPLOY.sh
+  ```
+
+  * 此時透過執行此 script 便可以自動 pull 更新 Cloud Code 並重啟服務來作動
 5. 建立一個端口來觸發此 Script
+
+  * 編輯 PARSE 的 express app
+  ```
+  sudo nano PARSE/app.js
+  ```
+
+  * 把端口設定加入對應位置（宣告出 express 之後）
+  ```
+  app.use('/deploy', function(req, res){
+        var exec = require('child_process').exec;
+        var cmd = 'DEPLOY.sh';
+        exec(cmd, function(error, stdout, stderr) {
+        });
+    res.send('DEPLOY');
+  });
+  ```
+  * 編輯完成後按下［control］+［x］離開，然後輸入［y］再鍵入［enter］確定寫入到原檔案
+
+  * 重啟服務
+  ```
+  sudo service PARSE restart
+  ```
+  
+  * 此時便可透過網頁端口來觸發伺服器端的更新與作動
+  ```
+  https://parseServer.ddns.net/deploy
+  ```

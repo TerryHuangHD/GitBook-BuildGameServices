@@ -43,12 +43,3 @@
 Terry Huang \(@kmshiori\) ，業餘電動玩家，Overwatch 打不上 3000，求大神帶 \(BattleNet: kmshiori\#3943)。絕地求生吃雞和吃肯德基一樣簡單，歡迎~~（加入戰隊）~~一起遊戲 \(Steam: kmshiori@gmail.com)。或是加個好友認識一下 \(FB: kmshiori@gmail.com)
 
 LiRise Games 是位於台南的 Indie Game Studio，隨時都在徵人中，歡迎對於遊戲開發、企劃、行銷有興趣的人來聊聊，或是直接與我們聯繫 \([service@lirise.com](mailto:service@lirise.com)\)
-
-# 書中尚不包含的內容
-
-* CI/CD
-* DevOps
-* Docker/k8s
-* SQL/AP Sharding
-* Database/Server HA
-* ~~黃金屋，顏如玉~~

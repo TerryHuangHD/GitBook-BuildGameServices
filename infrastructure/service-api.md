@@ -23,3 +23,18 @@
 | HTTP Trigger | O | O |
 | External | Webhook | X |
 
+### 範例：在 Parse 服務中架構簡易的 Deploy 機制
+
+1. 申請建立一個 Git private repository
+
+  ![](/assets/bitbucket private repository.png)
+  
+  > 需要免費 private repository，可以考慮  Bitbucket
+
+2. 在 Development 環境開發，並將 Cloud Code Commit 到此 repository
+
+3. 透過 Git 把將 Cloud Code deploy 到 Parse Server
+
+4. 建立 Script 檔案
+
+5. 建立一個端口來觸發此 Script

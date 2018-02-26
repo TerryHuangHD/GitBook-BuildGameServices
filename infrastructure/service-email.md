@@ -1,12 +1,12 @@
-# Setup: Email
+# TODO: Email 服務
 
-### Menu
+Email 在小產品中是常見的 Account System 的驗證方式，在 Parse 與 Firebase 中整合了這樣的驗證方式；也常設計為輔助的通知系統
 
-* Service Provider
-* Parse Adaprer Setting
-* Advanced:Custom API
+### 目錄
 
-> Parse Server 選用: mailgun
-> Cloud Code 選用: AWS SES
+* 常見服務商
+* 範例：在 Parse Cloud Code 中使用 AWS SES 服務寄送 Email
 
-目前 Parse Server 將 Email 服務整合在帳號系統的認證環節中使用，可選用簡易的 AWS SES 服務。如果還有更大量的批次寄送或是更進階的行銷需求，也可考慮更專業、便於管理的電郵服務，比如 mailgun
+### TODO
+* Parse Email Verification 設定
+* Firebase Authentication Email Verification 設定

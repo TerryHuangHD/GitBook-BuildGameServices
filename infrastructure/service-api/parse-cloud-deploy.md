@@ -11,6 +11,7 @@
 ### 透過 Git 把將 Cloud Code 部署到 Parse Server
 
   * 登入 Parse Server 主機，移到 Parse 資料夾
+  
   * 將 repository 直接部署至 cloud 資料夾（記得將 Git 位址改成您的位置）
   ```
   sudo git clone https://USER@GIT_SERVER/REPOSITORY.git cloud

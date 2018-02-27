@@ -1,10 +1,10 @@
 # Information 服務
 
 > 資訊服務為良好的使用體驗提供了基礎。產品中常見的資訊有
-* Config: 設定資訊服務
-* Connectivity: 連線資訊服務
-* Time: 時間資訊服務
-* Location: 地點資訊服務
+* Config（設定資訊服務）
+* Connectivity（連線資訊服務）
+* Time（時間資訊服務）
+* Location（地點資訊服務）
 
 「設定資訊服務」提高了使用者端或雲端，取得變動性設定資訊的便利性。目前在 Parse & Firebase 中皆有提供，以下將會詳細介紹 Parse Config 與 Firebase Remote Config 服務
 

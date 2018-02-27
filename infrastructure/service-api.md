@@ -8,6 +8,7 @@
 
 * [部署與偵錯](#deploy)
 * [支援功能](#function)
+* [在 Parse 服務架構簡易的 Cloud Code 部署機制](parse-cloud-deploy.md)
 
 ### 部署與偵錯 {#deploy}
 

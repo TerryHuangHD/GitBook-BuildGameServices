@@ -7,8 +7,6 @@
 * [設定 Android FCM](#android)
 * [設定 iOS APNs](#ios)
 
-> TODO: 本機端推送，Firebase 推送服務設定與測試
-
 ### 設定 Android FCM {#android}
 
 ### 設定 iOS APNs {#ios}

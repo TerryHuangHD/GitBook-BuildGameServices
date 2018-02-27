@@ -1,0 +1,1 @@
+# 在 Parse 服務中設定 Mailgun 為 Mail Adapter

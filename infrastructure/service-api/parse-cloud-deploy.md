@@ -1,4 +1,4 @@
-# 在 Parse 服務中架構簡易的 Cloud Code 部署機制
+# 在 Parse 服務架構簡易的 Cloud Code 部署機制
 
 ### 申請建立一個 Git private repository
 

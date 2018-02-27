@@ -9,7 +9,7 @@
 * [架構介紹](infrastructure/overview.md)
 * [Data 服務](infrastructure/service-data.md)
 * [API 服務](infrastructure/service-api.md)
-  * [在 Parse 服務中架構簡易的 Cloud Code 部署機制](infrastructure/service-api/parse-cloud-deploy.md)
+  * [在 Parse 服務架構簡易的 Cloud Code 部署機制](infrastructure/service-api/parse-cloud-deploy.md)
 * [Notification 服務](infrastructure/service-notification.md)
 * [Job 服務](infrastructure/service-job.md)
 * [Email 服務](infrastructure/service-email.md)

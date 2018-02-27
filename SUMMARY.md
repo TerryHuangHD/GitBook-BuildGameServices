@@ -13,6 +13,8 @@
 * [Notification 服務](infrastructure/service-notification.md)
   * [Parse 推送服務設定與測試](infrastructure/service-notification/parse-push-notification.md)
   * [Parse 推送服務 Segmentation](infrastructure/service-notification/parse-push-notification-segmentation.md)
+  * [Android 本機端推送 - 使用 Alarm Manager](infrastructure/service-notification/android-notification-local.md)
+  * iOS Notification Local
 * [Job 服務](infrastructure/service-job.md)
   * [在 Parse 上透過 Cron 配置簡易的 Scheduler](infrastructure/service-job/parse-cron-job.md)
 * [Email 服務](infrastructure/service-email.md)

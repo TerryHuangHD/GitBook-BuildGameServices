@@ -22,6 +22,12 @@
 * [Hosting 服務](infrastructure/service-hosting.md)
 * [Realtime 服務](infrastructure/service-realtime.md)
 * [Information 服務](infrastructure/service-information.md)
+  * [Parse Config 與 Firebase Remote Config 服務](infrastructure/service-information/parse-config-and-firebase-remote-config.md)
+  * [Android & iOS Network Connectivity](infrastructure/service-information/android-and-ios-network-connectivity.md)
+  * [透過 Firebase Realtime Database 監聽 Server Connectivity](infrastructure/service-information/firebase-realtime-database-server-connectivity.md)
+  * [透過 Express 提供 Time 服務](infrastructure/service-information/express-time-service.md)
+  * [透過 Firebase Realtime Database 提供 Time 服務](infrastructure/service-information/firebase-realtime-database-time-service.md)
+  * [透過 ip 取得概略地理位置資訊](infrastructure/service-information/ip-to-location.md)
 
 ## Self-Hosted Parse
 

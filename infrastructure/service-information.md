@@ -10,7 +10,9 @@
 
 ### 目錄
 
-* Parse 與 Firebase 的 Config 服務
+* Parse Config 服務
+* Firebase Remote Config 服務
+
 * 使用者端 Network Connectivity
 * 透過 Firebase 監聽 Server Connectivity
 * Time: 確保使用者端準確、同步的時間

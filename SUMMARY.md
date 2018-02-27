@@ -12,6 +12,7 @@
   * [在 Parse 服務架構簡易的 Cloud Code 部署機制](infrastructure/service-api/parse-cloud-deploy.md)
 * [Notification 服務](infrastructure/service-notification.md)
   * [Parse 推送服務設定與測試](infrastructure/service-notification/parse-push-notification.md)
+  * [Parse 推送服務 Segmentation](infrastructure/service-notification/parse-push-notification-segmentation.md)
 * [Job 服務](infrastructure/service-job.md)
 * [Email 服務](infrastructure/service-email.md)
 * [SMS 服務](infrastructure/service-sms.md)

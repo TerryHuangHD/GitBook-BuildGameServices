@@ -6,6 +6,6 @@
 
 ### 目錄
 
-* 監聽 Parse：使用 Live Query
+* Parse Live Query 設定與介紹
 * 監聽 Firebase Realtime Database
 * 監聽 Firebase Cloud Firestore

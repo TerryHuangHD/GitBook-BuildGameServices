@@ -18,6 +18,8 @@
 * [Job 服務](infrastructure/service-job.md)
   * [在 Parse 上透過 Cron 配置簡易的 Scheduler](infrastructure/service-job/parse-cron-job.md)
 * [Email 服務](infrastructure/service-email.md)
+  * [在 Parse 服務中設定 Mailgun 為 Mail Adapter](infrastructure/service-email/parse-mail-adapter.md)
+  * [在 Parse Cloud Code 中使用 Mailgun 服務寄送 Email](infrastructure/service-email/parse-mail-cloud-code.md)
 * [SMS 服務](infrastructure/service-sms.md)
 * [Hosting 服務](infrastructure/service-hosting.md)
 * [Realtime 服務](infrastructure/service-realtime.md)

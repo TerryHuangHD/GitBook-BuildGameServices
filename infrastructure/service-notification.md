@@ -4,7 +4,14 @@
 
 ### 目錄
 
-* 設定 Android FCM Setup
-* 設定 iOS APN Setup
-* TODO: 本機端推送
-* TODO: Firebase 推送服務設定與測試
+* [設定 Android FCM Setup](#android)
+* [設定 iOS APN Setup](#ios)
+
+> TODO: 本機端推送，Firebase 推送服務設定與測試
+
+### 設定 Android FCM Setup {#android}
+
+### 設定 iOS APN Setup {#ios}
+
+
+

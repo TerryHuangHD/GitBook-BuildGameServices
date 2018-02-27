@@ -8,5 +8,5 @@
 
 * Parse Job Function 設定
 * Parse Job 透過 Dashboard 檢視與測試
-* [範例：在 Parse 上透過 Cron 配置簡易的 Scheduler](service-job/parse-cron-job.md)
+* [主題：在 Parse 上透過 Cron 配置簡易的 Scheduler](service-job/parse-cron-job.md)
 

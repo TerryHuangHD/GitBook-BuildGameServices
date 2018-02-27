@@ -26,11 +26,11 @@
 
 * #### Email 服務
   
-  Email 在小產品中是常見的 Account System 的驗證方式，在 Parse Service 中整合了這樣的驗證方式；也常設計為輔助的通知系統
+  Email 在小產品中是常見的 Account System 的驗證方式，在 Parse Service, Firebase Authentication 中提供了這樣的驗證方式；也常設計為輔助的通知系統
 
 * #### SMS 服務
 
-  SMS 也是在小產品中是常見的 Account System 的驗證方式，這樣的驗證方法在大部分國家，比 Email 更具有**「實名性質」**，在 Firebase 中整合了這樣的驗證方式
+  SMS 也是在小產品中是常見的 Account System 的驗證方式，這樣的驗證方法在大部分國家，比 Email 更具有**「實名性質」**，在 Firebase Authentication 中提供了這樣的驗證方式
 
 * #### Hosting 服務
   

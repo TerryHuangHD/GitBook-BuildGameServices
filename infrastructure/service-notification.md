@@ -8,12 +8,12 @@ Game Services 中，設計得當的 Notification 能有效的增加 retention，
 
 ### 目錄
 
-* Android FCM Setup
-* iOS APN Setup
+* 設定 Android FCM Setup
+* 設定 iOS APN Setup
 * Parse 推送服務設定與測試
 * Advanced: Target Segmentation
 * Android 本機端推送
 * iOS 本機端推送
 
-### TODO
+### 待續
 * Firebase 推送服務設定與測試

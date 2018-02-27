@@ -6,7 +6,5 @@
 
 * 設定 Android FCM Setup
 * 設定 iOS APN Setup
-
-### TODO
-* 本機端推送
-* Firebase 推送服務設定與測試
+* TODO: 本機端推送
+* TODO: Firebase 推送服務設定與測試

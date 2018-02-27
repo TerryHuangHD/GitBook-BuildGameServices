@@ -23,6 +23,7 @@
 * [SMS 服務](infrastructure/service-sms.md)
   * [在 Parse Cloud Code 中使用 Twilio 服務寄送 SMS](infrastructure/service-sms/parse-sms-cloud-code.md)
 * [Hosting 服務](infrastructure/service-hosting.md)
+  * [透過 Express 直接在 Parse Server 提供 Hosting 服務](infrastructure/service-hosting/parse-express-hosting.md)
 * [Realtime 服務](infrastructure/service-realtime.md)
 * [Information 服務](infrastructure/service-information.md)
   * [Parse Config 與 Firebase Remote Config 服務](infrastructure/service-information/parse-config-and-firebase-remote-config.md)

@@ -10,9 +10,9 @@
 ### 目錄
 
 * [設定 Android FCM Client](#android-client)
-* [設定 Android FCM Server](#android-server)
+* [取得 Android FCM 外部推送所需資訊](#android-server)
 * [設定 iOS APNs Client](#ios-client)
-* [設定 iOS APNs Server](#ios-server)
+* [取得 iOS APNs 外部推送所需資訊](#ios-server)
 * [主題：Parse 推送服務設定與測試](service-notification/parse-push-notification.md)
 * [主題：Parse 推送服務 Segmentation](service-notification/parse-push-notification-segmentation.md)
 * [主題：Android 本機端推送](service-notification/android-notification-local.md)
@@ -35,6 +35,7 @@
 ![](/assets/android fcm setup android app file.png)
 
 * 接續直接進行 Firebase 以及 FCM 所需的設定，在 root-level build.gradle 加入
+
 ```
 buildscript {
         // ...
@@ -55,6 +56,7 @@ allprojects {
 ```
 
 * 在 app-level build.gradle 加入 Dependency
+
 ```
 dependencies {
         // Add
@@ -65,7 +67,8 @@ dependencies {
 apply plugin: 'com.google.gms.google-services'
 ```
 
-* 在 AndroidManifest.xml 新增兩個 Service，名叫 MyFirebaseInstanceIDService 與 MyFirebaseMessagingService，分別處理 FCM 註冊的 Token 更新，以及處理 FCM 收到的訊息，
+* 在 AndroidManifest.xml 新增兩個 Service，名叫 MyFirebaseInstanceIDService 與 MyFirebaseMessagingService，分別處理 FCM 註冊的 Token 更新，以及處理 FCM 收到的訊息
+
 ```
 <service
         android:name=".MyFirebaseMessagingService">
@@ -82,6 +85,7 @@ apply plugin: 'com.google.gms.google-services'
 ```
 
 * 新增 MyFirebaseInstanceIDService.java 檔案，處理 FCM 註冊的 Token 更新
+
 ```
 @Override
 public void onTokenRefresh() {
@@ -92,6 +96,7 @@ public void onTokenRefresh() {
 > [按我可參考完整範例](https://github.com/firebase/quickstart-android/blob/master/messaging/app/src/main/java/com/google/firebase/quickstart/fcm/MyFirebaseInstanceIDService.java)
 
 * 新增 MyFirebaseMessagingService.java 檔案，處理 FCM 收到的訊息
+
 ```    
 @Override
 public void onMessageReceived(RemoteMessage remoteMessage) {
@@ -100,15 +105,57 @@ public void onMessageReceived(RemoteMessage remoteMessage) {
 ```
 > [按我可參考完整範例](https://github.com/firebase/quickstart-android/blob/master/messaging/app/src/main/java/com/google/firebase/quickstart/fcm/MyFirebaseMessagingService.java)
 
-* 接下來，便可透過取得的 token，在 Firebase 中進行 push 的測試
+* 接下來，便可透過取得的 token，在 Firebase 中進行訊息推送的測試
 
 ![](/assets/firebase fcm console android.png)
 
-### 設定 Android FCM Server {#android-server}
+### 取得 Android FCM 外部推送所需資訊 {#android-server}
+
+* 首先先前往 Firebase Console 並選擇您的專案
+
+> https://console.firebase.google.com/
+
+* 然後選取左上方設定圖樣，選擇專案設定
+
+![](/assets/android fcm server setting.png)
+
+* 然後選取 CLOUD MESSAGING 頁籤，便可獲得 **Sender ID** 以及**伺服器金鑰**
+
+![](/assets/android fcm server setting cloud message.png)
+
+* 之後將會使用獲得的資訊來設定外部推送伺服器
 
 ### 設定 iOS APNs Client {#ios-client}
 
-### 設定 iOS APNs Server {#ios-server}
+* 開啟專案，在專案設定中啟用 Push Notification
+
+![](/assets/ios apn client app setting.png)
+
+* 嘗試註冊遠端通知
+
+```
+- (void)applicationDidFinishLaunching:(UIApplication *)app {
+        // Register for remote notifications.
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+}
+```
+
+* 實作函式來監聽註冊的結果
+
+- (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)devToken {
+        // 註冊成功，取得 token
+        // token 需傳送到伺服器端紀錄，伺服器透過 token 推送訊息到這個裝置
+        NSString * deviceTokenString = [[[[deviceToken description]
+                stringByReplacingOccurrencesOfString: @"<" withString: @""]
+                stringByReplacingOccurrencesOfString: @">" withString: @""]
+                stringByReplacingOccurrencesOfString: @" " withString: @""];
+}
+ 
+- (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *)err {
+        // 註冊失敗
+}
+
+### 取得 iOS APNs 外部推送所需資訊 {#ios-server}
 
 * 須先建立 Certificate Signing Request 檔案，稍後會用在申請 push notification 憑證中使用。首先，開啟 Keychain Access，在選單中選擇 Certificate Assistant > Request a Certificate From a Certificate Authority
 
@@ -118,7 +165,7 @@ public void onMessageReceived(RemoteMessage remoteMessage) {
 
 ![](/assets/ios apn keychain access create.png)
 
-* 接下來前往 Apple Developer Center 網站註冊一個 iOS App ID（已經有 App ID 則跳過此步驟）
+* 接下來前往 Apple Developer Center 網站註冊一個 iOS App ID（如果已經有 App ID 則跳過此步驟）
  * 填入 Bundle ID
  * 勾選 Push Notifications
 

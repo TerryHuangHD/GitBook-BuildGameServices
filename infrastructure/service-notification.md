@@ -162,7 +162,7 @@ public void onMessageReceived(RemoteMessage remoteMessage) {
 
 ![](/assets/ios apn keychain access create.png)
 
-* 接下來前往 Apple Developer Center 網站註冊一個 iOS App ID，填入您想要的 Bundle ID，勾選 Push Notifications。（如果已經有 App ID 則跳過此步驟）
+* 接下來前往 Apple Developer Center 網站註冊一個 iOS App ID，填入您想要的 Bundle ID，勾選 Push Notifications（如果已經有 App ID 則跳過此步驟）
 > https://developer.apple.com/account/ios/identifier/bundle/create
 
 ![](/assets/ios apn app id.png)

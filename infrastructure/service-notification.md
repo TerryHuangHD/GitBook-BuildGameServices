@@ -126,7 +126,7 @@ public void onMessageReceived(RemoteMessage remoteMessage) {
 
 ![](/assets/ios apn select app.png)
 
-* 前往 Push Notification 區塊，分別針對 Development 以及 Production 都 Create Certificate，完成後會分別獲得 aps_development.cer 以及 aps.cer
+* 前往 Push Notification 區塊，分別針對 Development 以及 Production 都 Create Certificate，完成後會分別獲得 aps_development.cer 以及 aps.cer。至此便完成了 Apple Developer Center 上的所需設定
 
 ![](/assets/ios apn push configure edit.png)
 

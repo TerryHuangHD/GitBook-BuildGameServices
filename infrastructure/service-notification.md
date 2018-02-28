@@ -73,6 +73,8 @@ apply plugin: 'com.google.gms.google-services'
             <action android:name="com.google.firebase.MESSAGING_EVENT"/>
         </intent-filter>
 </service>
+```
+```
 <service
         android:name=".MyFirebaseInstanceIDService">
         <intent-filter>
@@ -127,7 +129,7 @@ public void onMessageReceived(RemoteMessage remoteMessage) {
 
 * 嘗試註冊遠端通知
 ```
-- (void)applicationDidFinishLaunching:(UIApplication *)app {
+(void)applicationDidFinishLaunching:(UIApplication *)app {
         // 註冊遠端推送服務
         [[UIApplication sharedApplication] registerForRemoteNotifications];
 }
@@ -135,7 +137,7 @@ public void onMessageReceived(RemoteMessage remoteMessage) {
 
 * 實作函式來監聽註冊的結果
 ```
-- (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)devToken {
+(void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)devToken {
         NSString * token = [[[[deviceToken description]
                 stringByReplacingOccurrencesOfString: @"<" withString: @""]
                 stringByReplacingOccurrencesOfString: @">" withString: @""]
@@ -143,8 +145,9 @@ public void onMessageReceived(RemoteMessage remoteMessage) {
         // 註冊成功，取得 token
         // token 需傳送到伺服器端紀錄，伺服器透過 token 推送訊息到這個裝置
 }
- 
-- (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *)err {
+```
+```
+(void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *)err {
         // 註冊失敗
 }
 ```

@@ -35,7 +35,6 @@
 ![](/assets/android fcm setup android app file.png)
 
 * 接續直接進行 Firebase 以及 FCM 所需的設定，在 root-level build.gradle 加入
-
 ```
 buildscript {
         // ...
@@ -56,7 +55,6 @@ allprojects {
 ```
 
 * 在 app-level build.gradle 加入 Dependency
-
 ```
 dependencies {
         // Add
@@ -68,7 +66,6 @@ apply plugin: 'com.google.gms.google-services'
 ```
 
 * 在 AndroidManifest.xml 新增兩個 Service，名叫 MyFirebaseInstanceIDService 與 MyFirebaseMessagingService，分別處理 FCM 註冊的 Token 更新，以及處理 FCM 收到的訊息
-
 ```
 <service
         android:name=".MyFirebaseMessagingService">
@@ -85,7 +82,6 @@ apply plugin: 'com.google.gms.google-services'
 ```
 
 * 新增 MyFirebaseInstanceIDService.java 檔案，處理 FCM 註冊的 Token 更新
-
 ```
 @Override
 public void onTokenRefresh() {
@@ -96,7 +92,6 @@ public void onTokenRefresh() {
 > [按我可參考完整範例](https://github.com/firebase/quickstart-android/blob/master/messaging/app/src/main/java/com/google/firebase/quickstart/fcm/MyFirebaseInstanceIDService.java)
 
 * 新增 MyFirebaseMessagingService.java 檔案，處理 FCM 收到的訊息
-
 ```    
 @Override
 public void onMessageReceived(RemoteMessage remoteMessage) {
@@ -112,7 +107,6 @@ public void onMessageReceived(RemoteMessage remoteMessage) {
 ### 取得 Android FCM 外部推送所需資訊 {#android-server}
 
 * 首先先前往 Firebase Console 並選擇您的專案
-
 > https://console.firebase.google.com/
 
 * 然後選取左上方設定圖樣，選擇專案設定
@@ -132,7 +126,6 @@ public void onMessageReceived(RemoteMessage remoteMessage) {
 ![](/assets/ios apn client app setting.png)
 
 * 嘗試註冊遠端通知
-
 ```
 - (void)applicationDidFinishLaunching:(UIApplication *)app {
         // 註冊遠端推送服務
@@ -141,7 +134,6 @@ public void onMessageReceived(RemoteMessage remoteMessage) {
 ```
 
 * 實作函式來監聽註冊的結果
-
 ```
 - (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)devToken {
         NSString * token = [[[[deviceToken description]
@@ -157,7 +149,7 @@ public void onMessageReceived(RemoteMessage remoteMessage) {
 }
 ```
 
-* 至此便完成了 client 端設定。未來的章節將會介紹，將 token 送至伺服器保存，讓伺服器透過這個 token 傳送通知至此裝置。
+* 至此便完成了 client 端設定。未來的章節將會介紹，將 token 送至伺服器保存，讓伺服器透過這個 token 傳送通知至此裝置
 
 ### 取得 iOS APNs 外部推送所需資訊 {#ios-server}
 

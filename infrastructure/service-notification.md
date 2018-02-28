@@ -84,10 +84,9 @@ public void onMessageReceived(RemoteMessage remoteMessage) {
 ```
 > [按我可參考完整範例](https://github.com/firebase/quickstart-android/blob/master/messaging/app/src/main/java/com/google/firebase/quickstart/fcm/MyFirebaseMessagingService.java)
 
-6. 此時，便完成了基本得設定。接下來，可以透過以下程式片段或是 MyFirebaseInstanceIDService 中獲得的更新 Token 來讓伺服器端進行廣播
-```
-FirebaseInstanceId.getInstance().getToken();
-```
+6. 接下來，便可透過取得的 token，在 Firebase 中進行 push 的測試
+
+![](/assets/firebase fcm console android.png)
 
 ### 設定 iOS APNs {#ios}
 

@@ -104,5 +104,24 @@ public void onMessageReceived(RemoteMessage remoteMessage) {
 
 ### 設定 iOS APNs Client {#ios}
 
+* 須先建立 Certificate Signing Request 檔案，稍後會用在申請 push notification 憑證中使用。首先，開啟 Keychain Access，在選單中選擇 Certificate Assistant > Request a Certificate From a Certificate Authority
 
+![](/assets/ios apn keychain access.png)
 
+* 接著填入 Email 以及名稱，然後選擇 Save to disk。便會產生 .certSigningRequest 作為後續的使用
+
+![](/assets/ios apn keychain access create.png)
+
+* 接下來前往 Apple Developer Center 網站註冊一個 iOS App ID（已經有 App ID 則跳過此步驟）
+ * 填入 Bundle ID
+ * 勾選 Push Notifications
+
+> https://developer.apple.com/account/ios/identifier/bundle/create
+
+![](/assets/ios apn app id.png)
+
+![](/assets/ios apn app services.png)
+
+* 選擇建立完成的 App，將 Prefix(Team ID) 以及 Bundle ID 記錄下來
+
+![](/assets/ios apn select app.png)

@@ -189,7 +189,7 @@ public void onMessageReceived(RemoteMessage remoteMessage) {
 
 * 回到本機端，雙擊 **aps_development.cer** 以及 **aps.cer** 將憑證安裝到電腦中
 
-* 開啟 Keychain Access（可能安裝憑證時已經自動打開了），左方選擇 Certificates，右方可以方便找到剛剛安裝的兩個 Push Service 憑證，一個是 Development 另一個是正式環境。分別點右鍵，並選擇 Export，即可分別獲得 development.p12 以及 production.p12 兩個檔案
+* 開啟 Keychain Access（可能安裝憑證時已經自動打開了），左方選擇 Certificates，右方可以方便找到剛剛安裝的兩個 Push Service 憑證，一個是 Development 另一個是正式環境。分別點右鍵，並選擇 Export，即可分別儲存成 development.p12 以及 production.p12 兩個檔案
 
 ![](/assets/ios apn push cert install.png)
 

@@ -130,6 +130,13 @@ public void onMessageReceived(RemoteMessage remoteMessage) {
 ```
 (void)applicationDidFinishLaunching:(UIApplication *)app {
         // 註冊遠端推送服務
+        UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
+                        UIUserNotificationTypeBadge |
+                        UIUserNotificationTypeSound);
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings 
+                        settingsForTypes:userNotificationTypes
+                         categories:nil];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
         [[UIApplication sharedApplication] registerForRemoteNotifications];
 }
 ```

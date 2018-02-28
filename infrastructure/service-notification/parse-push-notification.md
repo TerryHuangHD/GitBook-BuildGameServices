@@ -30,6 +30,60 @@ var server = new ParseServer({
 });
 ```
 
+另外 iOS 也支援 token-based authentication 推送
+
+```
+ios: {
+  token: {
+    key: '/path/to/AuthKey_XXXXX.p8',    // p8 憑證檔案位置
+    keyId: '',                           // Key Id
+    teamId: ''                           // Team ID
+  },
+  topic: 'com.domain.appname',           // Bundle Identifier
+  production: false                      // 正式或開發環境設定
+}
+```
+
 ### 將 token 存放至 Installation
 
+您必須將 Android 以及 iOS 取得的 token，儲存至 Parse 伺服器上的 Installation 資料表，之後才能透過平台來推送
+
+* 透過 Android SDK
+
+```
+// Application Class
+public void onCreate() {
+  // ...
+  ParseInstallation.getCurrentInstallation().saveInBackground();
+}
+```
+
+* 透過 iOS SDK
+
+```
+(void)application:(UIApplication *)application
+  didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+  // ...
+  PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+  [currentInstallation setDeviceTokenFromData:deviceToken];
+  [currentInstallation saveInBackground];
+}
+```
+
+* 透過 Rest 手動新增 Installation
+
+|  | Android | iOS |
+| --- | --- | --- |
+| GCMSenderId | Sender ID | X |
+| deviceToken | token | token |
+| appIdentifier | Bundle ID | Bundle ID |
+| deviceType | android | ios |
+| pushType | gcm | X |
+
 ### 使用 Dashboard 進行推送
+
+在 Parse Dashboard 中可進行手動的 Push Notification，並看到部分的推送數據
+
+![](/assets/parsh push notification dashboard.png)
+
+![](/assets/parsh push notification dashboard status.png)

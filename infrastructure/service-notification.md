@@ -18,7 +18,21 @@
 
 ### 設定 Android FCM Client {#android}
 
-1. 在 root-level build.gradle 加入
+* 由於 FCM 為 Firebase 服務之一，所以須先建立 Firebase 專案
+
+> https://console.firebase.google.com/
+
+![](/assets/android fcm create project.png)
+
+* 加入 Android 應用程式
+
+![](/assets/android fcm create android app.png)
+
+* 接續提示的步驟，下載並將 google-services.json 拉進專案
+
+![](/assets/android fcm setup android app file.png)
+
+* 接續直接進行 Firebase 以及 FCM 所需的設定，在 root-level build.gradle 加入
 ```
 buildscript {
         // ...
@@ -38,18 +52,18 @@ allprojects {
 }
 ```
 
-2. 在 app-level build.gradle 加入 Dependency
+* 在 app-level build.gradle 加入 Dependency
 ```
 dependencies {
-        // Add Dependency
+        // Add
         compile 'com.google.firebase:firebase-core:11.8.0'
         compile 'com.google.firebase:firebase-messaging:11.8.0'
 }
-// ADD THIS AT THE BOTTOM
+// Add at bottom
 apply plugin: 'com.google.gms.google-services'
 ```
 
-3. 在 AndroidManifest.xml 新增兩個 Service，名叫 MyFirebaseInstanceIDService 與 MyFirebaseMessagingService，分別處理 FCM 註冊的 Token 更新，以及處理 FCM 收到的訊息，
+* 在 AndroidManifest.xml 新增兩個 Service，名叫 MyFirebaseInstanceIDService 與 MyFirebaseMessagingService，分別處理 FCM 註冊的 Token 更新，以及處理 FCM 收到的訊息，
 ```
 <service
         android:name=".MyFirebaseMessagingService">
@@ -65,7 +79,7 @@ apply plugin: 'com.google.gms.google-services'
 </service>
 ```
 
-4. 新增 MyFirebaseInstanceIDService.java 檔案，處理 FCM 註冊的 Token 更新
+* 新增 MyFirebaseInstanceIDService.java 檔案，處理 FCM 註冊的 Token 更新
 ```
 @Override
 public void onTokenRefresh() {
@@ -75,7 +89,7 @@ public void onTokenRefresh() {
 ```
 > [按我可參考完整範例](https://github.com/firebase/quickstart-android/blob/master/messaging/app/src/main/java/com/google/firebase/quickstart/fcm/MyFirebaseInstanceIDService.java)
 
-5. 新增 MyFirebaseMessagingService.java 檔案，處理 FCM 收到的訊息
+* 新增 MyFirebaseMessagingService.java 檔案，處理 FCM 收到的訊息
 ```    
 @Override
 public void onMessageReceived(RemoteMessage remoteMessage) {

@@ -18,6 +18,49 @@
 
 ### 設定 Android FCM {#android}
 
+1. 在 app-level build.gradle 加入 Dependency
+```
+dependencies {
+        compile 'com.google.firebase:firebase-messaging:11.8.0'
+}
+```
+
+2. 在 AndroidManifest.xml 新增兩個 Service，名叫 MyFirebaseInstanceIDService 與 MyFirebaseMessagingService，分別處理 FCM 註冊的 Token 更新，以及處理 FCM 收到的訊息，
+```
+<service
+        android:name=".MyFirebaseMessagingService">
+        <intent-filter>
+            <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+        </intent-filter>
+</service>
+<service
+        android:name=".MyFirebaseInstanceIDService">
+        <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+</service>
+```
+
+3. 新增 MyFirebaseInstanceIDService.java 檔案，處理 FCM 註冊的 Token 更新
+```
+@Override
+public void onTokenRefresh() {
+        String refreshedToken = FirebaseInstanceId.getInstance().getToken();
+        // refreshedToken 就是伺服器 push 時所需要的 Token
+}
+```
+> [按我可參考完整範例](https://github.com/firebase/quickstart-android/blob/master/messaging/app/src/main/java/com/google/firebase/quickstart/fcm/MyFirebaseInstanceIDService.java)
+
+4. 新增 MyFirebaseMessagingService.java 檔案，處理 FCM 收到的訊息
+```    
+@Override
+public void onMessageReceived(RemoteMessage remoteMessage) {
+        // 將 remoteMessage 內容產生成為 Notification，或是觸發其他邏輯
+}
+```
+> [按我可參考完整範例](https://github.com/firebase/quickstart-android/blob/master/messaging/app/src/main/java/com/google/firebase/quickstart/fcm/MyFirebaseMessagingService.java)
+
+
 ### 設定 iOS APNs {#ios}
 
 

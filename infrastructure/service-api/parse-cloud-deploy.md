@@ -63,10 +63,10 @@
   * 把端口設定加入對應位置（app 為 express instance）
   ```
   app.use('/deploy', function(req, res) {
-    var exec = require('child_process').exec;
-    var cmd = 'DEPLOY.sh';
-    exec(cmd, function(error, stdout, stderr) {});
-    res.send('DEPLOY');
+      var exec = require('child_process').exec;
+      var cmd = 'DEPLOY.sh';
+      exec(cmd, function(error, stdout, stderr) {});
+      res.send('DEPLOY');
   });
   ```
   * 編輯完成後按下［control］+［x］離開，然後輸入［y］再鍵入［enter］確定寫入到原檔案

@@ -18,14 +18,38 @@
 
 ### 設定 Android FCM {#android}
 
-1. 在 app-level build.gradle 加入 Dependency
+1. 在 root-level build.gradle 加入
 ```
-dependencies {
-        compile 'com.google.firebase:firebase-messaging:11.8.0'
+buildscript {
+        // ...
+        dependencies {
+                // Add
+                classpath 'com.google.gms:google-services:3.2.0' // google-services plugin
+        }
+}
+allprojects {
+        // ...
+        repositories {
+                // Add
+                maven {
+                        url "https://maven.google.com" // Google's Maven repository
+                }
+        }
 }
 ```
 
-2. 在 AndroidManifest.xml 新增兩個 Service，名叫 MyFirebaseInstanceIDService 與 MyFirebaseMessagingService，分別處理 FCM 註冊的 Token 更新，以及處理 FCM 收到的訊息，
+2. 在 app-level build.gradle 加入 Dependency
+```
+dependencies {
+        // Add Dependency
+        compile 'com.google.firebase:firebase-core:11.8.0'
+        compile 'com.google.firebase:firebase-messaging:11.8.0'
+}
+// ADD THIS AT THE BOTTOM
+apply plugin: 'com.google.gms.google-services'
+```
+
+3. 在 AndroidManifest.xml 新增兩個 Service，名叫 MyFirebaseInstanceIDService 與 MyFirebaseMessagingService，分別處理 FCM 註冊的 Token 更新，以及處理 FCM 收到的訊息，
 ```
 <service
         android:name=".MyFirebaseMessagingService">
@@ -41,7 +65,7 @@ dependencies {
 </service>
 ```
 
-3. 新增 MyFirebaseInstanceIDService.java 檔案，處理 FCM 註冊的 Token 更新
+4. 新增 MyFirebaseInstanceIDService.java 檔案，處理 FCM 註冊的 Token 更新
 ```
 @Override
 public void onTokenRefresh() {
@@ -51,7 +75,7 @@ public void onTokenRefresh() {
 ```
 > [按我可參考完整範例](https://github.com/firebase/quickstart-android/blob/master/messaging/app/src/main/java/com/google/firebase/quickstart/fcm/MyFirebaseInstanceIDService.java)
 
-4. 新增 MyFirebaseMessagingService.java 檔案，處理 FCM 收到的訊息
+5. 新增 MyFirebaseMessagingService.java 檔案，處理 FCM 收到的訊息
 ```    
 @Override
 public void onMessageReceived(RemoteMessage remoteMessage) {

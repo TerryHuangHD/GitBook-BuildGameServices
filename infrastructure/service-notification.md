@@ -14,8 +14,9 @@
 * [設定 iOS APNs Client](#ios-client)
 * [取得 iOS APNs 外部推送所需資訊](#ios-server)
 * [主題：Parse 推送服務設定與測試](service-notification/parse-push-notification.md)
-* [主題：Android 本機端推送](service-notification/android-notification-local.md)
-* [主題：iOS 本機端推送](service-notification/ios-notification-local.md)
+* TODO: Parse Push Notification Custom Fragmentation
+* TODO: Android 本機端推送
+* TODO: iOS 本機端推送
 
 ### 設定 Android FCM Client {#android-client}
 

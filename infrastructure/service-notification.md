@@ -69,8 +69,8 @@ apply plugin: 'com.google.gms.google-services'
 ```
 @Override
 public void onTokenRefresh() {
-        String refreshedToken = FirebaseInstanceId.getInstance().getToken();
-        // refreshedToken 就是伺服器 push 時所需要的 Token
+        String token = FirebaseInstanceId.getInstance().getToken();
+        // token 需傳送到伺服器端紀錄，伺服器透過此 token 推送訊息到此裝置
 }
 ```
 > [按我可參考完整範例](https://github.com/firebase/quickstart-android/blob/master/messaging/app/src/main/java/com/google/firebase/quickstart/fcm/MyFirebaseInstanceIDService.java)

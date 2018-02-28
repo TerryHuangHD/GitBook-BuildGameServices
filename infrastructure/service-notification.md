@@ -9,14 +9,16 @@
 
 ### 目錄
 
-* [設定 Android FCM Client](#android)
-* [設定 iOS APNs Client](#ios)
+* [設定 Android FCM Client](#android-client)
+* [設定 Android FCM Server](#android-server)
+* [設定 iOS APNs Client](#ios-client)
+* [設定 iOS APNs Server](#ios-server)
 * [主題：Parse 推送服務設定與測試](service-notification/parse-push-notification.md)
 * [主題：Parse 推送服務 Segmentation](service-notification/parse-push-notification-segmentation.md)
 * [主題：Android 本機端推送](service-notification/android-notification-local.md)
 * [主題：iOS 本機端推送](service-notification/ios-notification-local.md)
 
-### 設定 Android FCM Client {#android}
+### 設定 Android FCM Client {#android-client}
 
 * 由於 FCM 為 Firebase 服務之一，所以須先建立 Firebase 專案
 
@@ -102,7 +104,11 @@ public void onMessageReceived(RemoteMessage remoteMessage) {
 
 ![](/assets/firebase fcm console android.png)
 
-### 設定 iOS APNs Client {#ios}
+### 設定 Android FCM Server {#android-server}
+
+### 設定 iOS APNs Client {#ios-client}
+
+### 設定 iOS APNs Server {#ios-server}
 
 * 須先建立 Certificate Signing Request 檔案，稍後會用在申請 push notification 憑證中使用。首先，開啟 Keychain Access，在選單中選擇 Certificate Assistant > Request a Certificate From a Certificate Authority
 
@@ -122,11 +128,10 @@ public void onMessageReceived(RemoteMessage remoteMessage) {
 
 ![](/assets/ios apn app services.png)
 
-* 選擇建立完成的 App，將 Prefix(Team ID) 以及 Bundle ID 記錄下來，然後點擊 Edit 進入編輯
+* 選擇建立完成的 App，然後點擊 Edit 進入編輯
 
 ![](/assets/ios apn select app.png)
 
-* 前往 Push Notification 區塊，分別針對 Development 以及 Production 都 Create Certificate，完成後會分別獲得 aps_development.cer 以及 aps.cer。至此便完成了 Apple Developer Center 上的所需設定
+* 前往 Push Notification 區塊，分別針對 Development 以及 Production 都 Create Certificate 並上傳一開始建立的 .certSigningRequest 檔案。完成後會分別獲得 aps_development.cer 以及 aps.cer。至此便完成了 Apple Developer Center 上的所需設定
 
 ![](/assets/ios apn push configure edit.png)
-

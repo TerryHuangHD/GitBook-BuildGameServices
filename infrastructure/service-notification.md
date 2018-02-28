@@ -142,19 +142,22 @@ public void onMessageReceived(RemoteMessage remoteMessage) {
 
 * 實作函式來監聽註冊的結果
 
+```
 - (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)devToken {
-        // 註冊成功，取得 token
-
         NSString * token = [[[[deviceToken description]
                 stringByReplacingOccurrencesOfString: @"<" withString: @""]
                 stringByReplacingOccurrencesOfString: @">" withString: @""]
                 stringByReplacingOccurrencesOfString: @" " withString: @""];
+        // 註冊成功，取得 token
         // token 需傳送到伺服器端紀錄，伺服器透過 token 推送訊息到這個裝置
 }
  
 - (void)application:(UIApplication *)app didFailToRegisterForRemoteNotificationsWithError:(NSError *)err {
         // 註冊失敗
 }
+```
+
+
 
 ### 取得 iOS APNs 外部推送所需資訊 {#ios-server}
 

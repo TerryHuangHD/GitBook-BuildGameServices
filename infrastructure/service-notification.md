@@ -122,6 +122,11 @@ public void onMessageReceived(RemoteMessage remoteMessage) {
 
 ![](/assets/ios apn app services.png)
 
-* 選擇建立完成的 App，將 Prefix(Team ID) 以及 Bundle ID 記錄下來
+* 選擇建立完成的 App，將 Prefix(Team ID) 以及 Bundle ID 記錄下來，然後點擊 Edit 進入編輯
 
 ![](/assets/ios apn select app.png)
+
+* 前往 Push Notification 區塊，分別針對 Development 以及 Production 都 Create Certificate，完成後會分別獲得 aps_development.cer 以及 aps.cer
+
+![](/assets/ios apn push configure edit.png)
+

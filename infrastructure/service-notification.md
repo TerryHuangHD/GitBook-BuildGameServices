@@ -20,7 +20,6 @@
 ### 設定 Android FCM Client {#android-client}
 
 * 由於 FCM 為 Firebase 服務之一，所以須先建立 Firebase 專案
-
 > https://console.firebase.google.com/
 
 ![](/assets/android fcm create project.png)
@@ -96,7 +95,7 @@ public void onTokenRefresh() {
 ```    
 @Override
 public void onMessageReceived(RemoteMessage remoteMessage) {
-        // 將 remoteMessage 內容產生成為 Notification，或是觸發其他邏輯
+        // 將 remoteMessage 內容產生成為 Notification 或是觸發其他邏輯
 }
 ```
 > [按我可參考完整範例](https://github.com/firebase/quickstart-android/blob/master/messaging/app/src/main/java/com/google/firebase/quickstart/fcm/MyFirebaseMessagingService.java)
@@ -166,7 +165,6 @@ public void onMessageReceived(RemoteMessage remoteMessage) {
 * 接下來前往 Apple Developer Center 網站註冊一個 iOS App ID（如果已經有 App ID 則跳過此步驟）
  * 填入 Bundle ID
  * 勾選 Push Notifications
-
 > https://developer.apple.com/account/ios/identifier/bundle/create
 
 ![](/assets/ios apn app id.png)

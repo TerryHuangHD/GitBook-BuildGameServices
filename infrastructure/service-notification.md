@@ -105,7 +105,7 @@ public void onMessageReceived(RemoteMessage remoteMessage) {
 ```
 > [按我可參考完整範例](https://github.com/firebase/quickstart-android/blob/master/messaging/app/src/main/java/com/google/firebase/quickstart/fcm/MyFirebaseMessagingService.java)
 
-* 接下來，便可透過取得的 token，在 Firebase 中進行訊息推送的測試
+* 至此便完成了 client 端設定。未來的章節將會介紹，將 token 送至伺服器保存，讓伺服器透過這個 token 傳送通知至此裝置。（已可透過 Firebase Console 中進行訊息推送的測試）
 
 ![](/assets/firebase fcm console android.png)
 
@@ -123,7 +123,7 @@ public void onMessageReceived(RemoteMessage remoteMessage) {
 
 ![](/assets/android fcm server setting cloud message.png)
 
-* 之後將會使用獲得的資訊來設定外部推送伺服器
+* 之後將會使用 **Sender ID** 以及**伺服器金鑰** 來設定外部推送伺服器
 
 ### 設定 iOS APNs Client {#ios-client}
 
@@ -135,7 +135,7 @@ public void onMessageReceived(RemoteMessage remoteMessage) {
 
 ```
 - (void)applicationDidFinishLaunching:(UIApplication *)app {
-        // Register for remote notifications.
+        // 註冊遠端推送服務
         [[UIApplication sharedApplication] registerForRemoteNotifications];
 }
 ```
@@ -157,7 +157,7 @@ public void onMessageReceived(RemoteMessage remoteMessage) {
 }
 ```
 
-
+* 至此便完成了 client 端設定。未來的章節將會介紹，將 token 送至伺服器保存，讓伺服器透過這個 token 傳送通知至此裝置。
 
 ### 取得 iOS APNs 外部推送所需資訊 {#ios-server}
 
@@ -183,6 +183,14 @@ public void onMessageReceived(RemoteMessage remoteMessage) {
 
 ![](/assets/ios apn select app.png)
 
-* 前往 Push Notification 區塊，分別針對 Development 以及 Production 都 Create Certificate 並上傳一開始建立的 .certSigningRequest 檔案。完成後會分別獲得 aps_development.cer 以及 aps.cer。至此便完成了 Apple Developer Center 上的所需設定
+* 前往 Push Notification 區塊，分別針對 Development 以及 Production 都 Create Certificate 並上傳一開始建立的 .certSigningRequest 檔案。完成後會分別獲得 **aps_development.cer** 以及 **aps.cer**
 
 ![](/assets/ios apn push configure edit.png)
+
+* 回到本機端，雙擊 **aps_development.cer** 以及 **aps.cer** 將憑證安裝到電腦中
+
+* 開啟 Keychain Access（可能安裝憑證時已經自動打開了），左方選擇 Certificates，右方可以方便找到剛剛安裝的兩個 Push Service 憑證，一個是 Development 另一個是正式環境。分別點右鍵，並選擇 Export，即可分別獲得 development.p12 以及 production.p12 兩個檔案
+
+![](/assets/ios apn push cert install.png)
+
+* 之後將會使用 **development.p12** 以及 **production.p12** 這兩個檔案來設定外部推送伺服器

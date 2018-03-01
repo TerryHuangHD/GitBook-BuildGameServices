@@ -8,7 +8,7 @@
 
 * [Parse Cloud Job 設定](#parse-job)
 * [Parse Cloud Job 檢視、執行](#parse-job-dashboard)
-* [主題：在 Parse 上透過 Cron 配置簡易的 Scheduler](service-job/parse-cron-job.md)
+* [主題：在 Parse 上透過 Cron 配置常用的 Scheduler](service-job/parse-cron-job.md)
 
 ### Parse Cloud Job 設定 {#parse-job}
 

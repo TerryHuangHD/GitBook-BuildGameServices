@@ -1,1 +1,1 @@
-# 在 Parse 上透過 Cron 配置簡易的 Scheduler
+# 在 Parse 上透過 Cron 配置常用的 Scheduler

@@ -40,7 +40,10 @@ Parse.Cloud.job("myJob", function(request, status) {
 * Cloud Job 僅能透過 REST API 來呼叫執行，並且必須使用 Master Key
 
 ```
-curl -X POST -H 'X-Parse-Application-Id: appId' -H 'X-Parse-Master-Key: masterKey' https://my-parse-server.com/parse/jobs/myJob
+curl -X POST 
+  -H 'X-Parse-Application-Id: appId' 
+  -H 'X-Parse-Master-Key: masterKey' 
+  https://my-parse-server.com/parse/jobs/myJob
 ```
 
 * 如果您的 Dashboard 有設定 Master Key，您也可以透過 Dashboard 介面來進行檢視、執行，還能看見 Job 的執行狀態與紀錄

@@ -6,13 +6,13 @@
 
 ### 目錄
 
-* [Parse Cloud Job 設定](#parse-job)
+* [Parse Cloud Job 定義](#parse-job)
 * [Parse Cloud Job 檢視、執行](#parse-job-dashboard)
 * [主題：在 Parse 上透過 Cron 配置常用的 Scheduler](service-job/parse-cron-job.md)
 
-### Parse Cloud Job 設定 {#parse-job}
+### Parse Cloud Job 定義 {#parse-job}
 
-Cloud Job 定義在 Parse Cloud Code 中，以 Parse.Cloud.job 來實作內容
+Cloud Job 實作在 Parse Cloud Code 中，以 Parse.Cloud.job 來定義內容
 
 ```
 Parse.Cloud.job("myJob", function(request, status) {

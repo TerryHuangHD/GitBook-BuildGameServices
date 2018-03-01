@@ -10,9 +10,9 @@
   * 加入 REST API 呼叫 Cloud Job
   ```
   curl -X POST
-    -H 'X-Parse-Application-Id: appId'
-    -H 'X-Parse-Master-Key: masterKey'
-    https://my-parse-server.com/parse/jobs/myDailyJob
+      -H 'X-Parse-Application-Id: appId'
+      -H 'X-Parse-Master-Key: masterKey'
+      https://my-parse-server.com/parse/jobs/myDailyJob
   ```
   
   * 編輯完成後按下［control］+［x］離開，然後輸入［y］再鍵入［enter］確定寫入到原檔案

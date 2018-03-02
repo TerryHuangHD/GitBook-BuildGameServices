@@ -22,7 +22,16 @@
 
 * 移除成就：將成就 IS_DELETE 設定為 True 即可。不直接刪除，可避免部分資料相依性造成的錯誤
 
-* 取得成就清單：
+* 取得成就清單：將**目前程式端支援**以及**未被刪除**的成就取出
+
+```
+curl -X GET \
+  -H "X-Parse-Application-Id: ${APPLICATION_ID}" \
+  -H "X-Parse-REST-API-Key: ${REST_API_KEY}" \
+  -G \
+  --data-urlencode 'where={"VERSION":{"$lte":${SUPPORT_VERSION}},"IS_DELETE":false}' \
+  https://YOUR.PARSE-SERVER.HERE/parse/classes/Achievement
+```
 
 ### Achievement 紀錄資料
 

@@ -14,7 +14,7 @@
 | VERSION |  Number | 成就的版本 <br> 用來過濾舊版本程式不支援的成就 <br> 也可方便新成就的開發與測試 | 1 |
 | IS_DELETE | Bool | 是否已經刪除 | False |
 
-> 在這範例中，我們將多國語系的支援，實作在使用者端的字典檔案中，雲端僅存放鍵值。並透過版本控管來避免顯示尚未支援的成就
+> 在這設計中，我們將多國語系的支援，實作在使用者端的字典檔案中，雲端僅存放鍵值。並透過版本控管來避免顯示尚未支援的成就
 
 * 新增成就：新增一筆成就的資料表，並將 VERSION 設定為下一個版本。然後於程式端，新增多國語系的描述，以及實作其邏輯上的對應（比如：何時會觸發更新、完成成就進度）
 
@@ -37,10 +37,13 @@ curl -X GET \
 
 |  欄位 | 類型 | 解釋 | 範例 |
 | --- | --- | --- | --- |
+| objectId | String | 此紀錄物件 ID | ${OBJECT ID} |
 | USER | String <br> Pointer -> User | 玩家 ID | user_id_terry |
 | ACHIEVEMENT | String <br> Pointer -> ACHIEVEMENT | 成就 ID | achievement_hunt_master |
 | AMOUNT |Number | 成就已經完成的數量 | 1 |
 | IS_FINISH | Bool | 成就是否已經完成 | False |
+
+> 在這設計中，將**完成的數量**與**是否完成**分開儲存，可避免成就設定被更改造成的錯誤判讀
 
 * 取得成就紀錄清單
 
@@ -55,6 +58,24 @@ curl -X GET \
   
 * 更新成就進度
 
+```
+curl -X PUT \
+  -H "X-Parse-Application-Id: ${APPLICATION_ID}" \
+  -H "X-Parse-REST-API-Key: ${REST_API_KEY}" \
+  -H "Content-Type: application/json" \
+  -d '{"AMOUNT":${VALUE}}' \
+  https://YOUR.PARSE-SERVER.HERE/parse/classes/AchievementRecord
+/${OBJECT ID}
+```
+
 * 完成成就
 
-* 重置成就
+```
+curl -X PUT \
+  -H "X-Parse-Application-Id: ${APPLICATION_ID}" \
+  -H "X-Parse-REST-API-Key: ${REST_API_KEY}" \
+  -H "Content-Type: application/json" \
+  -d '{"AMOUNT":${VALUE},"IS_FINISH":true}' \
+  https://YOUR.PARSE-SERVER.HERE/parse/classes/AchievementRecord
+/${OBJECT ID}
+```

@@ -1,4 +1,4 @@
-# 在 Parse 上設計成就系統的資料表
+# 在 Parse 上設計簡易的成就系統
 
 ### Achievement 設定資料
 

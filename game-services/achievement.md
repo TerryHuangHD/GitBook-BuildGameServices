@@ -7,7 +7,7 @@
 * [常見類型](#type)
 * [基本結構](#data)
 * [成就狀態](#status)
-* [主題：在 Parse 上設計成就系統的資料表](achievement/parse-achievement-system.md)
+* [主題：在 Parse 上設計簡易的成就系統](achievement/parse-achievement-system.md)
 
 ### 常見類型 {#type}
 

@@ -4,7 +4,7 @@
 
 |  欄位 | 類型 | 解釋 | 範例 |
 | --- | --- | --- | --- |
-| ID |  String | 辨識用 ID | achievement_hunt_master |
+| ID |  String | 成就 ID，供辨識使用 | achievement_hunt_master |
 | NAME |  String | 顯示的名稱 | achievement_hunt_master_name <br> 多國語系鍵值，可於使用者端轉譯 <br> 獵龍大師 |
 | DESCRIPTION |  String | 顯示的描述 | achievement_hunt_master_description <br> 多國語系鍵值，可於使用者端轉譯 <br> 完成獵殺龍類 10 隻 |
 | ICON |  File | 圖示 | < File Object > |
@@ -33,11 +33,26 @@ curl -X GET \
   https://YOUR.PARSE-SERVER.HERE/parse/classes/Achievement
 ```
 
-### Achievement 紀錄表設計
+### AchievementRecord 紀錄表設計
 
 |  欄位 | 類型 | 解釋 | 範例 |
 | --- | --- | --- | --- |
+| USER | String <br> Pointer -> User | 玩家 ID | user_id_terry |
+| ACHIEVEMENT | String <br> Pointer -> ACHIEVEMENT | 成就 ID | achievement_hunt_master |
+| AMOUNT |Number | 成就已經完成的數量 | 1 |
+| IS_FINISH | Bool | 成就是否已經完成 | False |
 
+* 取得成就紀錄清單
+
+```
+curl -X GET \
+  -H "X-Parse-Application-Id: ${APPLICATION_ID}" \
+  -H "X-Parse-REST-API-Key: ${REST_API_KEY}" \
+  -G \
+  --data-urlencode 'where={"USER":${USER_ID}}' \
+  https://YOUR.PARSE-SERVER.HERE/parse/classes/AchievementRecord
+```
+  
 * 更新成就進度
 
 * 完成成就

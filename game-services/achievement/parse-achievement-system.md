@@ -1,6 +1,6 @@
 # 在 Parse 上設計簡易的成就系統
 
-### Achievement 資料表設計
+### Achievement 成就資料表設計
 
 |  欄位 | 類型 | 解釋 | 範例 |
 | --- | --- | --- | --- |
@@ -33,7 +33,7 @@ curl -X GET \
   https://YOUR.PARSE-SERVER.HERE/parse/classes/Achievement
 ```
 
-### AchievementRecord 紀錄表設計
+### AchievementRecord 成就紀錄表設計
 
 |  欄位 | 類型 | 解釋 | 範例 |
 | --- | --- | --- | --- |

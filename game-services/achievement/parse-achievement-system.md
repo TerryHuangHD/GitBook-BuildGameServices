@@ -8,6 +8,8 @@
 | NAME |  String | 顯示的名稱 | 獵龍大師 |
 | DESCRIPTION |  String | 顯示的描述 |  完成獵殺龍類 10 隻 |
 | ICON |  File | 圖示 | < File Object > |
+| IS_HIDDEN | Bool | 是否是隱藏式成就 | False |
+| IS_INCREMENTAL | Bool | 是否是累進式成就 | True |
 | ORDER |  Number | 成就顯示的順序 | 1 |
 | VERSION |  Number | 成就的版本 | 1 |
 

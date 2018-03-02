@@ -10,5 +10,11 @@ Hosting 服務，可依照檔案變動性分為「動態檔案託管」與「靜
 
 ### 目錄
 
-* Parse File Adapter Setting
-* [範例：透過 Express 直接在 Parse Server 提供 Hosting 服務](service-hosting/parse-express-hosting.md)
+* [Parse File Adapter 設定](#adapter)
+* [透過 Express 直接在 Parse Server 提供 Hosting 服務](#host)
+
+### Parse File Adapter 設定 {#adapter}
+
+
+### 透過 Express 直接在 Parse Server 提供 Hosting 服務 {#host}
+

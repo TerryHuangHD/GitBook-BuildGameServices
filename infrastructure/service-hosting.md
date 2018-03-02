@@ -15,6 +15,78 @@ Hosting 服務，可依照檔案變動性分為「動態檔案託管」與「靜
 
 ### Parse File Adapter 設定 {#adapter}
 
+* MongoDB GridStore：若您使用 MongoDB 作為 Parse 資料庫，您可以不用而外的設定，便可以用 MongoDB GridStore 作為檔案伺服
+
+* Google Cloud Storage：使用 Google Cloud Storage 來存放檔案，請使用 [parse-server-gcs-adapter](https://github.com/parse-community/parse-server-gcs-adapter)
+
+```
+{
+  "appId": 'my_app_id',
+  "masterKey": 'my_master_key',
+  // ...
+  "filesAdapter": {
+    "module": "@parse/gcs-files-adapter",
+    "options": {
+      "projectId": "projectId",
+      "keyFilename": "path/to/keyfile",
+      "bucket": "my_bucket",
+      // optional:
+      "bucketPrefix": '', // default value
+      "directAccess": false // default value
+    } 
+  }
+}
+```
+
+* Amazon S3：使用 Amazon S3 來存放檔案，請使用  [parse-server-s3-adapter](https://github.com/parse-community/parse-server-s3-adapter)
+
+```
+{
+  "appId": 'my_app_id',
+  "masterKey": 'my_master_key',
+  // ...
+  "filesAdapter": {
+    "module": "@parse/s3-files-adapter",
+    "options": {
+      "bucket": "my_bucket",
+      // optional:
+      "region": 'us-east-1', // default value
+      "bucketPrefix": '', // default value
+      "directAccess": false, // default value
+      "baseUrl": null, // default value
+      "baseUrlDirect": false, // default value
+      "signatureVersion": 'v4', // default value
+      "globalCacheControl": null, // default value. Or 'public, max-age=86400' for 24 hrs Cache-Control
+      "ServerSideEncryption": 'AES256|aws:kms' //AES256 or aws:kms, or if you do not pass this, encryption won't be done
+    }
+  }
+}
+```
+
+* File Adapter：使用 Parse 主機端的空間來存放檔案，請使用  [parse-server-fs-adapter](https://github.com/parse-community/parse-server-fs-adapter)
+
+```
+{
+  "appId": 'my_app_id',
+  "masterKey": 'my_master_key',
+  // ...
+  "filesAdapter": {
+    "module": "@parse/fs-files-adapter",
+    "options": {
+      "filesSubDirectory": "my/files/folder" // optional
+    } 
+  }
+}
+```
 
 ### 透過 Express 直接在 Parse Server 提供 Hosting 服務 {#host}
 
+可在掛載 parse 的 express 中以 express.static 掛載靜態檔案，比如以下範例，將 /public route 至 public 資料夾
+
+```
+var app = express();
+// ...
+app.use('/public', express.static('public'));
+```
+
+除此之外，也可參考 [主題：在 Parse 服務架構簡易的 Cloud Code 部署機制](service-api/parse-cloud-deploy.md) 的方法，實作一個簡易 Deploy 的架構

@@ -23,7 +23,7 @@
 | --- | --- |
 | Mailgun | 10k / month <br> 須完成 domain 綁定 |
 | Amazon SES | 62k / month <br> 須從 EC2 中託管的應用程式傳送 |
-| SendGrid | 40,000 前 30 日 <br> 之後 100 / day |
+| SendGrid | 40,000 前 30 日 <br> 之後 100 / day <br> 需綁定信用卡選擇試用後消費計畫 |
 | SendinBlue | 600 / day |
 
 以下提供價格計算機，以及不同量級的服務價格（美金），僅供參考
@@ -67,6 +67,7 @@
 
 * 建議新增自己的網域來完成 Custom Domain 設定，未完成設定的帳號會有以下的幾個限制
     * 每日僅可傳送 300 封 Email
+    * 僅能寄送給授權的授信人
     * 無法以您的 Mail 位址寄出
     * 寄出的 Mail 會帶有 Mailgun 預設訊息
 

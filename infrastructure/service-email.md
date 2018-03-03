@@ -8,7 +8,16 @@
 
 ### 目錄
 
-* 常見 Email 服務商
-* 申請 Mailgun 服務
+* [常見 Email 服務商](#service-provider)
+* [申請 Mailgun 服務](#mailgun)
 * [設定 Parse Mail 服務](#adapter)
 * [在 Parse Cloud Code 中使用 Mailgun 服務寄送 Email](#cloudcode)
+
+### 常見 Email 服務商 {#service-provider}
+
+### 申請 Mailgun 服務 {#mailgun}
+
+### 設定 Parse Mail 服務 {#adapter}
+
+### 在 Parse Cloud Code 中使用 Mailgun 服務寄送 Email {#cloudcode}
+

@@ -55,11 +55,17 @@
 
 ![](/assets/mail mailgun apply form.png)
 
-* 完成註冊之後，收驗證信完成驗證，您已經可以開始使用
+* 完成註冊之後，您已經可以開始使用
 
 ![](/assets/mail mailgun apply finish.png)
 
-* 但是尚未完成 Custom Domai 設定的帳號會有以下的幾個限制
+* 您可以在 Domain 中看見您目前擁有的寄信設定，包含 Domain 與 API Key
+
+> https://app.mailgun.com/app/domains
+
+![](/assets/mail mailgun domain detail.png)
+
+* 建議新增自己的網域來完成 Custom Domain 設定，未完成設定的帳號會有以下的幾個限制
     * 每日僅可傳送 300 封 Email
     * 無法以您的 Mail 位址寄出
     * 寄出的 Mail 會帶有 Mailgun 預設訊息

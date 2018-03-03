@@ -59,13 +59,10 @@
 
 ![](/assets/mail mailgun apply finish.png)
 
-* 但是這時候的帳號有幾個限制：
+* 但是尚未完成 Custom Domai 設定的帳號會有以下的幾個限制
     * 每日僅可傳送 300 封 Email
     * 無法以您的 Mail 位址寄出
     * 寄出的 Mail 會帶有 Mailgun 預設訊息
-
-* 以下將會開始介紹將新增 custom domain 到 Gmail 的辦法
-
 
 ### 設定 Parse Mail 服務 {#adapter}
 

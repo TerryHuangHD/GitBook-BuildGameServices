@@ -15,6 +15,34 @@
 
 ### 常見 Email 服務商 {#service-provider}
 
+> 注意：服務商可能隨時調整服務內容
+
+常見的 Mail 服務商中，有部分提供了定期免費額度，可供小型產品試用，以下提供參考
+
+|  | Free | 
+| --- | --- |
+| Mailgun | 10k / month |
+| Amazon SES | 62k / month <br> 須從 EC2 中託管的應用程式傳送 |
+| SendGrid | 40k / month |
+| SendinBlue | 600 / day |
+
+以下提供價格計算機，以及不同量級的服務價格（美金），僅供參考
+* [Mailgun 價格計算機](https://www.mailgun.com/pricing-2)
+* [Amazon SES 價格介紹](https://aws.amazon.com/tw/ses/pricing/)，[價格計算機](https://calculator.s3.amazonaws.com/index.html)
+* [Mandrill 價格介紹](https://www.mandrill.com/pricing/)
+* [Postmark 價格介紹](https://postmarkapp.com/pricing)
+* [SendGrid 價格介紹](https://sendgrid.com/pricing/)
+* [SendinBlue 價格介紹](https://www.sendinblue.com/pricing/)
+
+|  | 40k | 250k | 1000k |
+| --- | --- | --- | --- |
+| Mailgun | $15 | $120 | $421.50 |
+| Amazon SES | $4 | $25 | $100 |
+| Mandrill | $40 | $200 | $720 |
+| Postmark | $30 | $250 | $750 |
+| SendGrid | $9.95 | $199.95 | $534.95 |
+| SendinBlue | $7.37 | $137  | $445 (free dedicated IP) |
+
 ### 申請 Mailgun 服務 {#mailgun}
 
 ### 設定 Parse Mail 服務 {#adapter}

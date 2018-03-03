@@ -16,7 +16,6 @@
   * [在 Parse 上透過 Cron 配置常用的 Scheduler](infrastructure/service-job/parse-cron-job.md)
 * [Email 服務](infrastructure/service-email.md)
 * [SMS 服務](infrastructure/service-sms.md)
-  * [在 Parse Cloud Code 中使用 Twilio 服務寄送 SMS](infrastructure/service-sms/parse-sms-cloud-code.md)
 * [Hosting 服務](infrastructure/service-hosting.md)
 * [Realtime 服務](infrastructure/service-realtime.md)
 * [Information 服務](infrastructure/service-information.md)

@@ -8,6 +8,10 @@
 
 ### 目錄
 
-* 常見 SMS 服務商
-* 申請 Twilio 服務
-* [範例：在 Parse Cloud Code 中使用 Twilio 服務寄送 SMS](service-sms/parse-sms-cloud-code.md)
+* [常見 SMS 服務商](#service-provider)
+* [申請 Twilio 服務](#twilio)
+* [在 Parse Cloud Code 中使用 Twilio 服務寄送 SMS](#cloudcode)
+
+### 常見 SMS 服務商 {#service-provider}
+### 申請 Twilio 服務 {#twilio}
+### 在 Parse Cloud Code 中使用 Twilio 服務寄送 SMS {#cloudcode}

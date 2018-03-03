@@ -10,5 +10,5 @@
 
 * 常見 Email 服務商
 * 申請 Mailgun 服務
-* [範例：在 Parse 服務中設定 Mailgun 為 Mail Adapter](service-email/parse-mail-adapter.md)
-* [範例：在 Parse Cloud Code 中使用 Mailgun 服務寄送 Email](service-email/parse-mail-cloud-code.md)
+* [設定 Parse Mail 服務](#adapter)
+* [在 Parse Cloud Code 中使用 Mailgun 服務寄送 Email](#cloudcode)

@@ -21,7 +21,7 @@
 
 |  | Free | 
 | --- | --- |
-| Mailgun | 10k / month |
+| Mailgun | 10k / month <br> 須完成 domain 綁定 |
 | Amazon SES | 62k / month <br> 須從 EC2 中託管的應用程式傳送 |
 | SendGrid | 40,000 前 30 日 <br> 之後 100 / day |
 | SendinBlue | 600 / day |
@@ -44,6 +44,28 @@
 | SendinBlue | $25 | $173(350k)  | $603(3000k with free dedicated IP) |
 
 ### 申請 Mailgun 服務 {#mailgun}
+
+* 前往 Mailgun 網站
+
+> https://www.mailgun.com/
+
+![](/assets/mail mailgun apply.png)
+
+* 選擇 SignUp 填以下表格來進行註冊
+
+![](/assets/mail mailgun apply form.png)
+
+* 完成註冊之後，收驗證信完成驗證，您已經可以開始使用
+
+![](/assets/mail mailgun apply finish.png)
+
+* 但是這時候的帳號有幾個限制：
+    * 每日僅可傳送 300 封 Email
+    * 無法以您的 Mail 位址寄出
+    * 寄出的 Mail 會帶有 Mailgun 預設訊息
+
+* 以下將會開始介紹將新增 custom domain 到 Gmail 的辦法
+
 
 ### 設定 Parse Mail 服務 {#adapter}
 

@@ -45,7 +45,21 @@
 
 ### 申請 Amazon SES 服務 {#ses}
 
+* 申請 Amazon 帳號，並前往 SES 服務頁面
+
+> [Amazon SES: Email Addresses](https://console.aws.amazon.com/ses/home?region=us-east-1#verified-senders-email:)
+
+![](/assets/email ses management console.png)
+
+* 完成新增 Email 後，將為寄送驗證信到您的信箱
+
+![](/assets/email ses management console finish add.png)
+
 ### 設定 Parse Mail 服務 {#adapter}
 
 ### 在 Parse Cloud Code 中使用 Amazon SES 服務寄送 Email {#cloudcode}
 
+```
+ar ses = require('node-ses')
+var client = ses.createClient({ key: 'KEY', secret: 'SWCRETE', amazon: 'https://email.us-west-2.amazonaws.com' })
+```

@@ -61,4 +61,24 @@
 
 > https://www.twilio.com/console/billing/upgrade
 
+* 可在 General Setting 中查詢自己的 **ACCOUNT SID** 以及 **AUTH TOKEN** 作為 API 呼叫使用
+
+> https://www.twilio.com/console/project/settings
+
+![](/assets/sms twilio setting.png)
+
 ### 在 Parse Cloud Code 中使用 Twilio 服務寄送 SMS {#cloudcode}
+
+在 Parse Cloud Code 中，以 httpRequest 呼叫 Twilio REST API 即可
+
+```
+Parse.Cloud.httpRequest({
+    method: 'POST',
+    url: 'https://${ACCOUNT SID}:${AUTH TOKEN}@api.twilio.com/2010-04-01/Accounts/${ACCOUNT SID}/Messages.json',
+    body: {
+        Body:"",        // 簡訊內容
+        From:"",        // 簡訊寄件者，您的 Twilio Phone Number，比如：+12512200730
+        To:""           // 簡訊寄送對像，比如：+886912345678
+    }
+})
+```

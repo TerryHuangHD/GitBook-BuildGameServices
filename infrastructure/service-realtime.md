@@ -6,52 +6,21 @@
 
 ### 目錄
 
-* [Parse Live Query 介紹與 Server 設定](#parse-live-query)
-* [Parse Live Query Android Client 設定](#parse-live-query-android)
-* [Parse Live Query iOS Client 設定](#parse-live-query-ios)
+* [Parse Live Query 介紹](#parse-live-query)
 * [監聽 Firebase Realtime Database](#firebase-realtime)
 * [監聽 Firebase Cloud Firestore](#firebase-firestore)
+* [主題：Parse Live Query 設定](service-realtime/parse-live-query-setup.md)
 
 ### Parse Live Query 介紹 {#parse-live-query}
 
 Parse Query 是 Parse 的關鍵功能之一。它允許使用者指定某些條件來取得想要的資料。但是，Parse Query 僅支持 Pull Mode，不適用於需要 realtime 服務的程式。因此 Parse 推出了 Parse LiveQuery，能夠讓您直接訂閱原本的 Parse Query，一旦訂閱之後，當 Parse Query 的匹配成果出現變動，服務器就會主通通知客戶端
 
-* 支援事件
-  * create: 新增了一個的 Parse Object 符合 Parse Query 條件
-  * enter: 原本存在的 Parse Object 經過更新之後 符合 Parse Query 條件
-  * update: 原本符合 Parse Query 條件的 Parse Object 更新後也符合 Parse Query 條件
-  * leave: 原本符合 Parse Query 條件的 Parse Object 更新後不符合 Parse Query 條件
-  * delete: 刪除了原本符合 Parse Query 條件的 Parse Object
-
-* 伺服器端設定變更
-
-```
-{
-  "appId": 'my_app_id',
-  "masterKey": 'my_master_key',
-  // ...
-  "liveQuery": {
-    "classNames": ['Test', 'TestAgain']  // Live Query 要支援的 Class
-  }
-}
-```
-
-* 除此之外，還需要把掛載 Parse 的 http(s)Server 拿來創建一個 Live Query Server
-
-```
-// 原本 Express
-let httpServer = require('http').createServer(app);
-httpServer.listen(port);
-
-// 新增 Live Query Server
-var parseLiveQueryServer = ParseServer.createLiveQueryServer(httpServer);
-```
-
-> LiveQuery 服務器的 ws protocol 會沿用 http(s)Server 監聽的主機名和端口。例如，如果 http(s)Sever 正在偵聽 localhost:8080，則 LiveQuery 服務器的 ws protocol 為 ws://localhost:8080/
-
-### Parse Live Query Android Client 設定 {#parse-live-query-android}
-
-### Parse Live Query iOS Client 設定 {#parse-live-query-ios}
+Parse LiveQuery 支援 Parse Query 針對以下事件的監聽
+* create: 新增了一個的 Parse Object 符合 Parse Query 條件
+* enter: 原本存在的 Parse Object 經過更新之後 符合 Parse Query 條件
+* update: 原本符合 Parse Query 條件的 Parse Object 更新後也符合 Parse Query 條件
+* leave: 原本符合 Parse Query 條件的 Parse Object 更新後不符合 Parse Query 條件
+* delete: 刪除了原本符合 Parse Query 條件的 Parse Object
 
 ### 監聽 Firebase Realtime Database {#firebase-realtime}
 

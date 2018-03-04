@@ -69,7 +69,7 @@
 
 ### 在 Parse Cloud Code 中使用 Twilio 服務寄送 SMS {#cloudcode}
 
-在 Parse Cloud Code 中，以 httpRequest 呼叫 Twilio REST API 即可
+在 Parse Cloud Code 中，以 httpRequest 呼叫 Twilio REST API 即可。更詳細的 Twilio API 可[參考此文件](https://www.twilio.com/docs/api/messaging/message)
 
 ```
 Parse.Cloud.httpRequest({

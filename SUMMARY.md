@@ -18,7 +18,7 @@
 * [SMS 服務](infrastructure/service-sms.md)
 * [Hosting 服務](infrastructure/service-hosting.md)
 * [Realtime 服務](infrastructure/service-realtime.md)
-  * parse live query config
+  * [Parse Live Query Setup](infrastructure/service-realtime/parse-live-query-setup.md)
 * [Information 服務](infrastructure/service-information.md)
   * [Parse Config 與 Firebase Remote Config 服務](infrastructure/service-information/parse-config-and-firebase-remote-config.md)
   * [Android & iOS Network Connectivity](infrastructure/service-information/android-and-ios-network-connectivity.md)

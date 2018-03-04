@@ -6,13 +6,13 @@
 
 ### 目錄
 
-* [Parse Live Query 介紹與 Server 設定](#parse-live-query-server)
+* [Parse Live Query 介紹與 Server 設定](#parse-live-query)
 * [Parse Live Query Android Client 設定](#parse-live-query-android)
 * [Parse Live Query iOS Client 設定](#parse-live-query-ios)
 * [監聽 Firebase Realtime Database](#firebase-realtime)
 * [監聽 Firebase Cloud Firestore](#firebase-firestore)
 
-### Parse Live Query 介紹與 Server 設定 {#parse-live-query-server}
+### Parse Live Query 介紹 {#parse-live-query}
 
 Parse Query 是 Parse 的關鍵功能之一。它允許使用者指定某些條件來取得想要的資料。但是，Parse Query 僅支持 Pull Mode，不適用於需要 realtime 服務的程式。因此 Parse 推出了 Parse LiveQuery，能夠讓您直接訂閱原本的 Parse Query，一旦訂閱之後，當 Parse Query 的匹配成果出現變動，服務器就會主通通知客戶端
 

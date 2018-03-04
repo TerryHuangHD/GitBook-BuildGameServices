@@ -71,6 +71,8 @@
 
 * 完成建立後，便可以獲得 **Access key ID** 以及 **Secret access key**，請妥善保存。此後將透過這兩個金鑰透過 API 來使用 SES 服務
 
+![](/assets/amazon iam add user password.png)
+
 ### 設定 Parse Mail 服務 {#adapter}
 
 ### 在 Parse Cloud Code 中使用 Amazon SES 服務寄送 Email {#cloudcode}

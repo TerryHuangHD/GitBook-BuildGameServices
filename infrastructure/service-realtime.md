@@ -7,7 +7,7 @@
 ### 目錄
 
 * [Parse Live Query 介紹](#parse-live-query)
-* [監聽 Firebase Realtime Database](#firebase-realtime)
+* [Firebase Realtime Database 介紹](#firebase-realtime)
 * [監聽 Firebase Cloud Firestore](#firebase-firestore)
 * [主題：Parse Live Query 設定](service-realtime/parse-live-query-setup.md)
 
@@ -22,6 +22,21 @@ Parse LiveQuery 支援 Parse Query 針對以下事件的監聽
 * leave: 原本符合 Parse Query 條件的 Parse Object 更新後不符合 Parse Query 條件
 * delete: 刪除了原本符合 Parse Query 條件的 Parse Object
 
-### 監聽 Firebase Realtime Database {#firebase-realtime}
+### Firebase Realtime Database 介紹 {#firebase-realtime}
+
+Firebase Realtime Database 是雲端 NoSQL 資料庫，資料以 JSON 格式存儲並，即時同步到每個連接的使用者端
+
+Firebase Realtime Database 可針對任意特定的 JSON 結點進行監聽。支援以下事件的監聽
+* onCreate: 當節點資料新增
+* onUpdate: 當節點資料以及其子結點資料更新
+* onDelete: 當節點資料刪除
+* onWrite: 當節點資料 onCreate, onUpdate, onWrite
+
+Firebase Realtime Database 使用者端支援語言平台
+* iOS
+* Android
+* Web(JavaScript)
+* C++
+* Unity
 
 ### 監聽 Firebase Cloud Firestore {#firebase-firestore}

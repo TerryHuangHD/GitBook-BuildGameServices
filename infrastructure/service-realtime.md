@@ -40,3 +40,21 @@ Firebase Realtime Database 使用者端支援語言平台
 * Unity
 
 ### 監聽 Firebase Cloud Firestore {#firebase-firestore}
+
+Cloud Firestore 是一款有彈性與可擴展性的資料庫，支援多種平台。跟 Firebase Realtime Database 一樣，支援即時的監聽資料。與 Realtime 不同的是 Cloud Firestore 將資料放於文件（Document）中，並將文件組織成一個個集合（Collection），文件還可以包含多樣的子結構與子集合
+
+> Firebase Cloud Firestore 目前（2018 Mar）依然是 beta 服務
+
+Firebase Cloud Firestore 可針對任意特定的文件進行監聽，每當文件變更時，便會取得 snapshot。除此之外也可針對 Query 進行多文件監聽，支援以下事件的監聽
+* added: 當監聽文件新增時
+* modified: 當監聽文件變更時
+* removed: 當監聽文件移除時
+
+Firebase Realtime Database 使用者端支援語言平台
+* iOS
+* Android
+* Web(JavaScript)
+* Node.js
+* Java
+* Python
+* Go

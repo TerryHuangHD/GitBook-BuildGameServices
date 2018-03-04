@@ -47,13 +47,29 @@
 
 * 申請 Amazon 帳號，並前往 SES 服務頁面
 
-> [Amazon SES: Email Addresses](https://console.aws.amazon.com/ses/home?region=us-east-1#verified-senders-email:)
+> [Amazon SES: Email Addresses](https://console.aws.amazon.com/ses/home?region=us-east-1#verified-senders-email:)，目前只有提供兩個地區的伺服器可供選擇: US West (Oregon), EU (Ireland)
 
 ![](/assets/email ses management console.png)
 
 * 完成新增 Email 後，將為寄送驗證信到您的信箱
 
 ![](/assets/email ses management console finish add.png)
+
+* 完成後便可在清單中看到 Email 的驗證狀態為 verified
+
+![](/assets/email ses after verification.png)
+
+* 接下來將建立透過 API 存取的身份，前往 Amazon IAM Console 並在 Users 頁面中選擇 Add user，您必須輸入姓名，以及勾選 Programmatic access
+
+> 前往 [Amazon IAM Console: Users](https://console.aws.amazon.com/iam/home#/users)
+
+![](/assets/amazon iam add user name.png)
+
+* 接下來，選擇權限，首先選擇 **Attach existing policies directly** 直接選用現成的權限政策，接著在 Filter 中填入 SES 來方便找到 **AmazonSESFullAccess**，勾選他代表此使用者將擁有 SES 服務的完整權限
+
+![](/assets/amazon iam add user permission.png)
+
+* 完成建立後，便可以獲得 **Access key ID** 以及 **Secret access key**，請妥善保存。此後將透過這兩個金鑰透過 API 來使用 SES 服務
 
 ### 設定 Parse Mail 服務 {#adapter}
 

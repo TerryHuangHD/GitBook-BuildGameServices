@@ -24,9 +24,9 @@
 
 | 服務 | 電信 | 收費 |
 | --- | --- |
-| Amazon SNS | 台灣大哥大 | $0.04612 |
-| Amazon SNS | 台灣之星、威寶 | $0.0438 |
-| Amazon SNS | 其他 | $0.06997 |
+| Amazon SNS（非廣告簡訊） | 台灣大哥大 | $0.04612 |
+| Amazon SNS（非廣告簡訊） | 台灣之星、威寶 | $0.0438 |
+| Amazon SNS（非廣告簡訊） | 其他 | $0.06997 |
 | Twilio | - | $0.0540 |
 | Plivo | 亞太電信 | $0.0380 |
 | Plivo | 中華電信 | $0.0360 |
@@ -34,5 +34,31 @@
 | Plivo | 其他 | $0.0350 |
 | Nexmo | - | $0.0533 |
 
+> 如果服務限於台灣，可參考在地服務商，如：[三竹簡訊](https://sms.mitake.com.tw/common/header/price.jsp)，可能在地的價格會更實惠
+
 ### 申請 Twilio 服務 {#twilio}
+
+* 前往 Twilio 網站申請帳號
+
+> https://www.twilio.com/try-twilio
+
+![](/assets/sms twilio signup.png)
+
+* 前往 Twilio Programmable SMS，取得一個 Twilio phone number
+
+> https://www.twilio.com/console/sms/getting-started/build
+
+![](/assets/sms twilio get number.png)
+
+* 完成取得號碼後，便可透過 Console 看到寄送 SMS 的範例。但是未升級成正式帳號之前，會有寄送的限制
+    * 只能寄送到[通過驗證的號碼](https://www.twilio.com/console/phone-numbers/verified)，並且僅能寄送至[特定範圍的國家](https://www.twilio.com/console/sms/settings/geo-permissions)
+    * 訊息會被標記上 Sent from a Twilio Trial Account"
+    * 只能申請一個 Twilio number
+
+![](/assets/sms twilio finish trial.png)
+
+* 如要使用在正式環境，需充值升級成正式版帳號
+
+> https://www.twilio.com/console/billing/upgrade
+
 ### 在 Parse Cloud Code 中使用 Twilio 服務寄送 SMS {#cloudcode}

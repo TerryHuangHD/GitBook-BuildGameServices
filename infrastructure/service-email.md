@@ -75,9 +75,59 @@
 
 ### 設定 Parse Mail 服務 {#adapter}
 
-### 在 Parse Cloud Code 中使用 Amazon SES 服務寄送 Email {#cloudcode}
+將 Amazon SES 服務設定到 Parse Server 中，您必須使用 **parse-server-amazon-ses-adapter** 套件，將此套件安裝後，在 Parse Config 中初設定 emailAdapter
+
+* 在 console 安裝 parse-server-amazon-ses-adapter
 
 ```
-ar ses = require('node-ses')
-var client = ses.createClient({ key: 'KEY', secret: 'SWCRETE', amazon: 'https://email.us-west-2.amazonaws.com' })
+sudo npm install parse-server-amazon-ses-adapter -S
+```
+
+* 在 Parse 的 Config 中設定 emailAdapter
+
+```
+var parse=new ParseServer({
+   //...
+   emailAdapter: {
+      module: "parse-server-amazon-ses-adapter",
+      options: {
+         from: "Your Name <noreply@yourdomain.com>",   // SES 服務中通過驗證的 Email
+         accessKeyId: "",          // 由 IAM 取得的 Access key ID
+         secretAccessKey: "",      // 由 IAM 取得的 Secret access key
+         region: "https://email.us-west-2.amazonaws.com"   // SES 服務端口
+      }
+   }
+});
+```
+
+| Region name | API (HTTPS) endpoint |
+| --- | ---|
+| US West (Oregon) | email.us-west-2.amazonaws.com |
+| EU (Ireland) | email.eu-west-1.amazonaws.com |
+
+### 在 Parse Cloud Code 中使用 Amazon SES 服務寄送 Email {#cloudcode}
+
+想在 Cloud Code 中簡易使用 SES 來寄送 Email，您必須使用 **node-ses** 套件
+
+* 在 console 安裝 node-ses
+
+```
+sudo npm install node-ses -S
+```
+* 在 Cloud Code 中，就可簡單的透過一小段程式碼來寄送郵件
+
+```
+var ses = require('node-ses')
+var client = ses.createClient({
+   key: '',         // 由 IAM 取得的 Access key ID
+   secret: '',      // 由 IAM 取得的 Secret access key
+   amazon: 'https://email.us-west-2.amazonaws.com' // SES 服務端口
+})
+client.sendEmail({
+  to: '',        // 發信對象 Email
+  from: '',      // SES 服務中通過驗證的 Email
+  subject: '',   // Email 標題
+  message: '',   // Email 內容
+  altText: ''    // 無法顯示 HTML 時的替代文字
+}, function (err, data, res) {})
 ```

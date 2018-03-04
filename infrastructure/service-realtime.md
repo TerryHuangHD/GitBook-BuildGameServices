@@ -14,6 +14,13 @@
 
 Parse Query 是 Parse 的關鍵功能之一。它允許使用者指定某些條件來取得想要的資料。但是，Parse Query 僅支持 Pull Mode，不適用於需要 realtime 服務的程式。因此 Parse 推出了 Parse LiveQuery，能夠讓您直接訂閱原本的 Parse Query，一旦訂閱之後，當 Parse Query 的匹配成果出現變動，服務器就會主通通知客戶端
 
+* 支援事件
+  * create: 新增了一個的 Parse Object 符合 Parse Query 條件
+  * enter: 原本存在的 Parse Object 經過更新之後 符合 Parse Query 條件
+  * update: 原本符合 Parse Query 條件的 Parse Object 更新後也符合 Parse Query 條件
+  * leave: 原本符合 Parse Query 條件的 Parse Object 更新後不符合 Parse Query 條件
+  * delete: 刪除了原本符合 Parse Query 條件的 Parse Object
+
 * 伺服器端設定變更
 
 ```
@@ -38,7 +45,7 @@ httpServer.listen(port);
 var parseLiveQueryServer = ParseServer.createLiveQueryServer(httpServer);
 ```
 
-LiveQuery 服務器的 ws protocol 會沿用 http(s)Server 監聽的主機名和端口。例如，如果 http(s)Sever 正在偵聽 localhost:8080，則 LiveQuery 服務器的 ws protocol 為 ws://localhost:8080/
+> LiveQuery 服務器的 ws protocol 會沿用 http(s)Server 監聽的主機名和端口。例如，如果 http(s)Sever 正在偵聽 localhost:8080，則 LiveQuery 服務器的 ws protocol 為 ws://localhost:8080/
 
 ### 監聽 Firebase Realtime Database {#firebase-realtime}
 

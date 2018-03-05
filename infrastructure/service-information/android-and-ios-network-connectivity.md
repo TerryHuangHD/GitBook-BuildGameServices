@@ -1,6 +1,6 @@
 # Android & iOS Network Connectivity
 
-### Android Client 網路狀態訊息
+### Android 確認網路狀態訊息
 
 * 透過 ConnectivityManager 確認是否有連上網路
 
@@ -18,7 +18,7 @@ boolean isConnected = activeNetwork != null && activeNetwork.isConnectedOrConnec
 boolean isWiFi = activeNetwork.getType() == ConnectivityManager.TYPE_WIFI;
 ```
 
-### iOS Client 網路狀態訊息
+### iOS 確認網路狀態訊息
 
 * 透過 iOS 官方 sample 提供的程式碼，將 Reachability 中 **Reachability.h** 與 **Reachability.m** 加入到自己的專案中
 
@@ -85,4 +85,51 @@ Reachability* reach = [Reachability reachabilityForInternetConnection];
         
     }
 }
+```
+
+## 透過 Firebase Realtime Database 監聽網路變化
+
+```
+// Android
+DatabaseReference connectedRef = FirebaseDatabase.getInstance().getReference(".info/connected");
+connectedRef.addValueEventListener(new ValueEventListener() {
+  @Override
+  public void onDataChange(DataSnapshot snapshot) {
+    boolean connected = snapshot.getValue(Boolean.class);
+    if (connected) {
+      System.out.println("connected");
+    } else {
+      System.out.println("not connected");
+    }
+  }
+
+  @Override
+  public void onCancelled(DatabaseError error) {
+    System.err.println("Listener was cancelled");
+  }
+});
+```
+
+```
+// iOS: Objective-c
+FIRDatabaseReference *connectedRef = [[FIRDatabase database] referenceWithPath:@".info/connected"];
+[connectedRef observeEventType:FIRDataEventTypeValue withBlock:^(FIRDataSnapshot *snapshot) {
+  if([snapshot.value boolValue]) {
+    NSLog(@"connected");
+  } else {
+    NSLog(@"not connected");
+  }
+}];
+```
+
+```
+// iOS: Swift
+let connectedRef = Database.database().reference(withPath: ".info/connected")
+connectedRef.observe(.value, with: { snapshot in
+  if snapshot.value as? Bool ?? false {
+    print("Connected")
+  } else {
+    print("Not connected")
+  }
+})
 ```

@@ -2,7 +2,7 @@
 
 ### Parse Config
 
-Parse Config 提供了在 Parse 上存儲 single configuration 來遠程配置應用程式的方法。可簡單的透過 Dashboard 來變更數值，也支援透過 REST API 來修改值
+Parse Config 提供了在 Parse 上存儲 single configuration 來遠程配置應用程式的方法。可簡單的透過 Dashboard 來變更數值，此外也支援透過 REST API 來修改數值，可便於開發管理者 App
 
 * 取得 Config
 

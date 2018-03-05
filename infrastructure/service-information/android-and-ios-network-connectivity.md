@@ -1,4 +1,4 @@
-# Android & iOS Network Connectivity
+# Connectivity 取得與監聽
 
 ### Android 透過 ConnectivityManager 確認網路狀態訊息
 

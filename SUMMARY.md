@@ -20,10 +20,10 @@
 * [Realtime 服務](infrastructure/service-realtime.md)
   * [Parse Live Query 設定](infrastructure/service-realtime/parse-live-query-setup.md)
 * [Information 服務](infrastructure/service-information.md)
-  * [Parse Config 與 Firebase Remote Config 服務](infrastructure/service-information/parse-config-and-firebase-remote-config.md)
+  * [Parse Config 與 Firebase Remote Config 服務介紹](infrastructure/service-information/parse-config-and-firebase-remote-config.md)
   * [Connectivity 取得與監聽](infrastructure/service-information/android-and-ios-network-connectivity.md)
   * [Time 服務介紹與實作方法](infrastructure/service-information/express-time-service.md)
-  * [透過 IP 取得概略地理位置資訊](infrastructure/service-information/ip-to-location.md)
+  * [IP 能獲得什麼資料](infrastructure/service-information/ip-to-location.md)
 
 ## Self-Hosted Parse
 

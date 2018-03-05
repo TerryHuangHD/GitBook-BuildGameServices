@@ -19,6 +19,5 @@
 * [主題：Parse Config 與 Firebase Remote Config 服務](service-information/parse-config-and-firebase-remote-config.md) 
 * [主題：Android & iOS Network Connectivity](service-information/android-and-ios-network-connectivity.md)
 * [主題：透過 Firebase Realtime Database 監聽 Server Connectivity](service-information/firebase-realtime-database-server-connectivity.md)
-* [主題：透過 Express 提供 Time 服務](service-information/express-time-service.md)
-* [主題：透過 Firebase Realtime Database 提供 Time 服務](service-information/firebase-realtime-database-time-service.md)
+* [主題：Time 服務介紹與實作方法](service-information/express-time-service.md)
 * [主題：透過 IP 取得概略地理位置資訊](service-information/ip-to-location.md)

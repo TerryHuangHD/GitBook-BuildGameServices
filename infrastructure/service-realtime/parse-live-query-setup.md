@@ -77,8 +77,10 @@ pod 'ParseLiveQuery'
 
 * 針對特定的 Query 進行 Subscribe
 
+```
 let myQuery = Message.query()!.where(....)
 let subscription: Subscription<Message> = Client.shared.subscribe(myQuery)
+```
 
 * 監聽所有事件
 

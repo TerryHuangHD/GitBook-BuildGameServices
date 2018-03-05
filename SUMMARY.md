@@ -47,11 +47,3 @@
 * [Saved Games](game-services/saved-games.md)
 * [Events & Quests & Challenges](game-services/events-and-quests-and-challenges.md)
 
-## 通用系統
-
-* [Time System](general-system/time-system.md)
-* [Security Tunnel](general-system/security.md)
-* [Counter System](general-system/counter-system.md)
-* [Tag System](general-system/tag-system.md)
-* [Storage System](general-system/storage-system.md)
-

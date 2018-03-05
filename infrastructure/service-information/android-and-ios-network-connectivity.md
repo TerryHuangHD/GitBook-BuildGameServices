@@ -1,6 +1,6 @@
 # Android & iOS Network Connectivity
 
-### Android
+### Android Client 網路狀態訊息
 
 * 透過 ConnectivityManager 確認是否有連上網路
 
@@ -18,7 +18,7 @@ boolean isConnected = activeNetwork != null && activeNetwork.isConnectedOrConnec
 boolean isWiFi = activeNetwork.getType() == ConnectivityManager.TYPE_WIFI;
 ```
 
-### iOS
+### iOS Client 網路狀態訊息
 
 * 透過 iOS 官方 sample 提供的程式碼，將 Reachability 中 **Reachability.h** 與 **Reachability.m** 加入到自己的專案中
 

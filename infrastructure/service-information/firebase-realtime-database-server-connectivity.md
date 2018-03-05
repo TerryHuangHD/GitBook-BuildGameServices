@@ -1,0 +1,1 @@
+# 透過 Firebase Realtime Database 監聽 Server Connectivity

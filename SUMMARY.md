@@ -31,7 +31,7 @@
 * [Invitation](game-services/invitation.md)
 * [Achievement 成就系統](game-services/achievement.md)
   * [在 Parse 上設計簡易的成就系統](game-services/achievement/parse-achievement-system.md)
-* [Leaderboard](game-services/leaderboard.md)
+* [Leaderboard 排行榜系統](game-services/leaderboard.md)
 * [Queue & Pairing](game-services/queue-and-pairing.md)
 * [Turn-based Multiplayer](game-services/turn-based-multiplayer.md)
 * [Real-time Multiplayer](game-services/real-time-multiplayer.md)
@@ -43,3 +43,4 @@
 * [Parse 服務架設](self-hosted-parse/self-hosted-parse.md)
 * [建立 Parse 資料庫服務](self-hosted-parse/create-db-service.md)
 * [建立 Parse 服務](self-hosted-parse/create-parse-service.md)
+

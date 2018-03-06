@@ -30,7 +30,6 @@
 * [Parse 服務架設](self-hosted-parse/self-hosted-parse.md)
 * [建立 Parse 資料庫服務](self-hosted-parse/create-db-service.md)
 * [建立 Parse 服務](self-hosted-parse/create-parse-service.md)
-* [Parse Server 設定](self-hosted-parse/parse-server-configuration.md)
 
 ## 遊戲服務
 

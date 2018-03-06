@@ -205,8 +205,8 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
  var ParseServer = require('parse-server').ParseServer;
  var api = new ParseServer({
   databaseURI: 'mongodb://PARSE_DB_USER:PARSE_DB_PASSWORD@0.0.0.0/PARSE_DB',
-  appId: 'myAppId',
-  masterKey: 'myMasterKey'
+  appId: 'myAppId',        // 輸入您想要的的 App ID
+  masterKey: 'myMasterKey' // 輸入您想要的 Master Key
  });
 
  var express = require('express');
@@ -229,6 +229,7 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
 
  * 編輯結束後按下［control］+［x］離開，然後輸入［y］再鍵入［enter］確定寫入到 app.js
 
+
 * 透過 npm 安裝常駐服務所需套件套件
 
  ```
@@ -243,7 +244,8 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
  sudo forever-service install PARSE
  ```
 
-* 至此，您已經完成了 Parse Server 的伺服器最基本設定。並已經包裝成服務，您可以透過以下指令來簡單的控制 Parse 服務
+* 至此，您已經完成了 Parse Server 的伺服器最基本設定。已經可以透過 各樣的 SDK 來連結您的 Parse Server
+。此外，Parse 服務已經包裝成服務，您可以透過以下指令來簡單的控制 Parse 服務
 
  > 啟動服務 - "sudo service PARSE start"
  >
@@ -254,6 +256,56 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
  > 重新啟動服務- -"sudo service PARSE restart"
 
 ### 建立並設定 Parse Dashboard 服務 {#parse-dashboard}
+
+如果您有多個 Application Server，您可以透過以上的方法建立一台獨立的伺服器來運行 Parse Dashboard 服務。如果您只有建立一台 Application Server，您可以直接將 dashboard 建立在同一台伺服器中，甚至也可以直接掛載在 Parse Server 的 Express 之中
+
+* 透過 npm 安裝 Parse Dashboard 所需套件套件
+
+ ```
+ sudo npm install parse-dashboard -g 
+ ```
+
+* 在 PARSE 資料夾中開始編輯 app.js，輸入以下指令進入編輯器
+ 
+ ```
+ sudo nano app.js
+ ```
+
+ * 在原本掛載 Parse 服務的 Express 後，再掛載一個 Dashboard 到 /dashboard 端口
+
+  ```
+  var express = require('express');
+ var app = express();
+ app.use('/parse', api); // 原本掛載的 Parse
+
+ // Dashboard
+ var ParseDashboard = require('parse-dashboard');
+ var dashboard = new ParseDashboard({
+  "apps": [ // Dashboard 中的 App 設定
+   {
+    "serverURL": "https://PARSE_SERVER/parse/",
+    "appId": "myAppId",
+    "masterKey": "myMasterKey",
+    "appName": "AppNAME"
+   }
+  ],
+  "users": [
+    {
+      "user":"", // 登入此 Dashboard 的帳號
+      "pass":""  // 登入此 Dashboard 的密碼
+    }
+  ]
+ });
+ app.use('/dashboard', dashboard);
+ ```
+ * 編輯結束後按下［control］+［x］離開，然後輸入［y］再鍵入［enter］確定寫入到 app.js
+ 
+
+* 重啟 PARSE 服務
+
+```
+sudo service PARSE status
+```
 
 ### 補充說明 {#supply}
 

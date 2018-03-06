@@ -6,6 +6,7 @@
 
 * [常見類型](#type)
 * [基本結構](#data)
+* [主題：在 Parse 上設計簡易的排行榜系統](leaderboard/parse-leaderboard-system.md)
 
 ### 常見類型或特性 {#type}
 

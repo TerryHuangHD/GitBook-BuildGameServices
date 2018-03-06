@@ -275,31 +275,31 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
 
   ```
   var express = require('express');
- var app = express();
- app.use('/parse', api); // 原本掛載的 Parse
+  var app = express();
+  app.use('/parse', api); // 原本掛載的 Parse
 
- // Dashboard
- var ParseDashboard = require('parse-dashboard');
- var dashboard = new ParseDashboard({
-  "apps": [ // Dashboard 中的 App 設定
-   {
-    "serverURL": "https://PARSE_SERVER/parse/",
-    "appId": "myAppId",
-    "masterKey": "myMasterKey",
-    "appName": "AppNAME"
-   }
-  ],
-  "users": [
+  // Dashboard
+  var ParseDashboard = require('parse-dashboard');
+  var dashboard = new ParseDashboard({
+   "apps": [ // Dashboard 中的 App 設定
     {
-      "user":"", // 登入此 Dashboard 的帳號
-      "pass":""  // 登入此 Dashboard 的密碼
+     "serverURL": "https://PARSE_SERVER/parse/",
+     "appId": "myAppId",
+     "masterKey": "myMasterKey",
+     "appName": "AppNAME"
     }
-  ]
- });
- app.use('/dashboard', dashboard);
- ```
+   ],
+   "users": [
+     {
+       "user":"", // 登入此 Dashboard 的帳號
+       "pass":""  // 登入此 Dashboard 的密碼
+     }
+   ]
+  });
+  app.use('/dashboard', dashboard);
+  ```
  * 編輯結束後按下［control］+［x］離開，然後輸入［y］再鍵入［enter］確定寫入到 app.js
- 
+
 
 * 重啟 PARSE 服務
 

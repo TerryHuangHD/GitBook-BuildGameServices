@@ -25,12 +25,6 @@
   * [Time 服務介紹與實作方法](infrastructure/service-information/express-time-service.md)
   * [IP 能獲得什麼資料](infrastructure/service-information/ip-to-location.md)
 
-## Self-Hosted Parse
-
-* [Parse 服務架設](self-hosted-parse/self-hosted-parse.md)
-* [建立 Parse 資料庫服務](self-hosted-parse/create-db-service.md)
-* [建立 Parse 服務](self-hosted-parse/create-parse-service.md)
-
 ## 遊戲服務
 
 * [Account](game-services/account.md)
@@ -44,3 +38,8 @@
 * [Saved Games](game-services/saved-games.md)
 * [Events & Quests & Challenges](game-services/events-and-quests-and-challenges.md)
 
+## 附錄 Self-Hosted Parse
+
+* [Parse 服務架設](self-hosted-parse/self-hosted-parse.md)
+* [建立 Parse 資料庫服務](self-hosted-parse/create-db-service.md)
+* [建立 Parse 服務](self-hosted-parse/create-parse-service.md)

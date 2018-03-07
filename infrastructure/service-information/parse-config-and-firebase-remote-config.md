@@ -39,7 +39,7 @@ curl -X PUT \
 
 ### Firebase Remote Config
 
-Firebase Remote Config 是一個雲端資料服務，可讓您動態的啟用功能、改變數值，不需要使用者重新下載應用程式。Firebase Remote Config 支援針對不同群體提供不同的數值，用來幫助應用進行 A/B 測試
+Firebase Remote Config 是一個雲端資料服務，可讓您動態的啟用功能、改變數值，不需要使用者重新下載應用程式。Firebase Remote Config 支援 **針對不同群體條件提供不同的數值**，用來幫助應用進行 A/B 測試
 
 * 支援的群體目標條件
 

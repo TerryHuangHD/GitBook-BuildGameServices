@@ -23,7 +23,7 @@
   * [Parse Config 與 Firebase Remote Config 服務介紹](infrastructure/service-information/parse-config-and-firebase-remote-config.md)
   * [Connectivity 取得與監聽](infrastructure/service-information/android-and-ios-network-connectivity.md)
   * [Time 服務介紹與實作方法](infrastructure/service-information/express-time-service.md)
-  * [IP 能獲得什麼資料](infrastructure/service-information/ip-to-location.md)
+  * [IP 資料庫能獲得什麼資料](infrastructure/service-information/ip-to-location.md)
 
 ## 遊戲服務
 

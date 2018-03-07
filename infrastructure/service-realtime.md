@@ -15,29 +15,40 @@
 
 Parse Query 是 Parse 的關鍵功能之一。它允許使用者指定某些條件來取得想要的資料。但是，Parse Query 僅支持 Pull Mode，不適用於需要 realtime 服務的程式。因此 Parse 推出了 Parse LiveQuery，能夠讓您直接訂閱原本的 Parse Query，一旦訂閱之後，當 Parse Query 的匹配成果出現變動，服務器就會主通通知客戶端
 
-Parse LiveQuery 支援 Parse Query 針對以下事件的監聽
-* create: 新增了一個的 Parse Object 符合 Parse Query 條件
-* enter: 原本存在的 Parse Object 經過更新之後 符合 Parse Query 條件
-* update: 原本符合 Parse Query 條件的 Parse Object 更新後也符合 Parse Query 條件
-* leave: 原本符合 Parse Query 條件的 Parse Object 更新後不符合 Parse Query 條件
-* delete: 刪除了原本符合 Parse Query 條件的 Parse Object
+* Parse LiveQuery 支援 Parse Query 針對以下事件的監聽
+
+| 事件 | 說明 |
+| --- | --- |
+| create | 新增了一個的 Parse Object 符合 Parse Query 條件 |
+| enter | 原本存在的 Parse Object 經過更新之後 符合 Parse Query 條件 |
+| update | 原本符合 Parse Query 條件的 Parse Object 更新後也符合 Parse Query 條件 |
+| leave | 原本符合 Parse Query 條件的 Parse Object 更新後不符合 Parse Query 條件 |
+| delete | 刪除了原本符合 Parse Query 條件的 Parse Object |
+
+* Parse LiveQuery 使用者端支援語言平台
+    * iOS
+    * Android
+    * JavaScript
 
 ### Firebase Realtime Database 介紹 {#firebase-realtime}
 
 Firebase Realtime Database 是雲端 NoSQL 資料庫，資料以 JSON 格式存儲並，即時同步到每個連接的使用者端
 
-Firebase Realtime Database 可針對任意特定的 JSON 結點進行監聽。支援以下事件的監聽
-* onCreate: 當節點資料新增
-* onUpdate: 當節點資料以及其子結點資料更新
-* onDelete: 當節點資料刪除
-* onWrite: 當節點資料 onCreate, onUpdate, onWrite
+* Firebase Realtime Database 可針對任意特定的 JSON 結點進行監聽。支援以下事件的監聽
 
-Firebase Realtime Database 使用者端支援語言平台
-* iOS
-* Android
-* Web(JavaScript)
-* C++
-* Unity
+| 事件 | 說明 |
+| --- | --- |
+| onCreate | 當節點資料新增 |
+| onUpdate | 當節點資料以及其子結點資料更新 |
+| onDelete | 當節點資料刪除 |
+| onWrite | 當節點資料 onCreate, onUpdate, onWrite |
+
+* Firebase Realtime Database 使用者端支援語言平台
+    * iOS
+    * Android
+    * Web(JavaScript)
+    * C++
+    * Unity
 
 ### 監聽 Firebase Cloud Firestore {#firebase-firestore}
 
@@ -45,10 +56,13 @@ Cloud Firestore 是一款有彈性與可擴展性的資料庫，支援多種平�
 
 > Firebase Cloud Firestore 目前（2018 Mar）依然是 beta 服務
 
-Firebase Cloud Firestore 可針對任意特定的文件進行監聽，每當文件變更時，便會取得 snapshot。除此之外也可針對 Query 進行多文件監聽，支援以下事件的監聽
-* added: 當監聽文件新增時
-* modified: 當監聽文件變更時
-* removed: 當監聽文件移除時
+* Firebase Cloud Firestore 可針對任意特定的文件進行監聽，每當文件變更時，便會取得 snapshot。除此之外也可針對 Query 進行多文件監聽，支援以下事件的監聽
+
+| 事件 | 說明 |
+| --- | --- |
+| added | 當監聽文件新增時 |
+| modified | 當監聽文件變更時 |
+| removed | 當監聽文件移除時 |
 
 Firebase Realtime Database 使用者端支援語言平台
 * iOS

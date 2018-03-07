@@ -35,7 +35,7 @@ sudo crontab -e
 ```
 0 0 * * * /path/to/DAILY.sh
 ```
-> 更詳細的 crontab 說明[請參考此文件](http://linux.vbird.org/linux_basic/0430cron.php)
+> 更詳細的 crontab 說明[請參考此文件](http://linux.vbird.org/linux_basic/0430cron.php#crontab)
 
 * 編輯完成後按下［esc］進入命令模式，然後輸入 **:wq** 再鍵入［enter］確定寫入並離開
 

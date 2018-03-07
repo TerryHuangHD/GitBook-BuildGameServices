@@ -28,7 +28,6 @@
 ## 遊戲服務
 
 * [Account](game-services/account.md)
-* [Invitation](game-services/invitation.md)
 * [Achievement 成就系統](game-services/achievement.md)
   * [在 Parse 上設計簡易的成就系統](game-services/achievement/parse-achievement-system.md)
 * [Leaderboard 排行榜系統](game-services/leaderboard.md)
@@ -36,6 +35,7 @@
 * [Queue & Pairing](game-services/queue-and-pairing.md)
 * [Turn-based Multiplayer](game-services/turn-based-multiplayer.md)
 * [Real-time Multiplayer](game-services/real-time-multiplayer.md)
+* [Invitation](game-services/invitation.md)
 * [Saved Games](game-services/saved-games.md)
 * [Events & Quests & Challenges](game-services/events-and-quests-and-challenges.md)
 

@@ -40,3 +40,7 @@ curl -X GET \
 
 |  欄位 | 類型 | 解釋 | 範例 |
 | --- | --- | --- | --- |
+| objectId | String | 此紀錄物件 ID | ${OBJECT ID} |
+| USER | String <br> Pointer -> User | 玩家 ID | user_id_terry |
+| LEADERBOARD | String <br> Pointer -> Leaderboard | 排行榜 ID | leaderboard_hunt_master |
+| VALUE | Number | 排行數值 | 100 |

@@ -39,7 +39,7 @@ curl -X GET \
 | --- | --- | --- | --- |
 | objectId | String | 此紀錄物件 ID | ${OBJECT ID} |
 | USER | String <br> Pointer -> User | 玩家 ID | user_id_terry |
-| ACHIEVEMENT | String <br> Pointer -> ACHIEVEMENT | 成就 ID | achievement_hunt_master |
+| ACHIEVEMENT | String <br> Pointer -> Achievement | 成就 ID | achievement_hunt_master |
 | AMOUNT |Number | 成就已經完成的數量 | 1 |
 | IS_FINISH | Bool | 成就是否已經完成 | False |
 

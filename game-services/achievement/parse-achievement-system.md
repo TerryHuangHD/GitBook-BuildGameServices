@@ -9,7 +9,7 @@
 | DESCRIPTION |  String | 顯示的描述 | achievement_hunt_master_description <br> 多國語系鍵值，可於字串映射檔轉譯 <br> 完成獵殺龍類 10 隻 |
 | ICON |  File | 圖示 | < File Object > |
 | IS_HIDDEN | Bool | 是否是隱藏式成就 | False |
-| AMOUNT | Number | 成就所需數量 <br> 若 > 1 則為累進式成就 | 10 |
+| AMOUNT | Number | 成就所需數量 <br> 若 > 1 則為累進性成就 | 10 |
 | ORDER |  Number | 成就顯示的順序 | 1 |
 | APP_VERSION |  Number | 成就要求的程式版本 <br> 用來過濾舊版本程式不支援的成就 <br> 也方便開發、測試新的成就 | 1 |
 | IS_DELETE | Bool | 是否已經刪除 | False |
@@ -29,7 +29,8 @@ curl -X GET \
   -H "X-Parse-Application-Id: ${APPLICATION_ID}" \
   -H "X-Parse-REST-API-Key: ${REST_API_KEY}" \
   -G \
-  --data-urlencode 'order=ORDER&where={"APP_VERSION":{"$lte":${CURRENT_APP_VERSION}},"IS_DELETE":false}' \
+  --data-urlencode 'order=ORDER' \
+  --data-urlencode 'where={"APP_VERSION":{"$lte":${CURRENT_APP_VERSION}},"IS_DELETE":false}' \
   https://YOUR.PARSE-SERVER.HERE/parse/classes/Achievement
 ```
 
@@ -67,7 +68,7 @@ curl -X PUT \
   https://YOUR.PARSE-SERVER.HERE/parse/classes/AchievementRecord/${OBJECT ID}
 ```
 
-* 完成成就
+* 完成累進性成就
 
 ```
 curl -X PUT \
@@ -76,4 +77,15 @@ curl -X PUT \
   -H "Content-Type: application/json" \
   -d '{"AMOUNT":${VALUE},"IS_FINISH":true}' \
   https://YOUR.PARSE-SERVER.HERE/parse/classes/AchievementRecord/${OBJECT ID}
+```
+
+* 完成一次性成就
+
+```
+  curl -X POST \
+  -H "X-Parse-Application-Id: ${APPLICATION_ID}" \
+  -H "X-Parse-REST-API-Key: ${REST_API_KEY}" \
+  -H "Content-Type: application/json" \
+  -d '{"USER":${USER_ID},"ACHIEVEMENT":"achievement_hunt_master","AMOUNT":${VALUE},"IS_FINISH":true}' \
+  https://YOUR.PARSE-SERVER.HERE/parse/classes/AchievementRecord
 ```

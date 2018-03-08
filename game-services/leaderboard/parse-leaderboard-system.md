@@ -1,5 +1,7 @@
 # 在 Parse 上設計簡易的排行榜系統
 
+以下的案例是以 **公開排行榜** 來設計初始概念，並不夠在正視環境中使用。在務實上，由於排行榜的資料使用可能很不對稱，所以都會設計有預先計算以及快取的機制，來避免浪費大量的運算資源來 **重複讀取** 變動性不大的資訊
+
 ### Leaderboard 排行榜資料表設計
 
 |  欄位 | 類型 | 解釋 | 範例 |
@@ -32,7 +34,8 @@ curl -X GET \
   -H "X-Parse-Application-Id: ${APPLICATION_ID}" \
   -H "X-Parse-REST-API-Key: ${REST_API_KEY}" \
   -G \
-  --data-urlencode 'order=ORDER&where={"APP_VERSION":{"$lte":${CURRENT_APP_VERSION}},"IS_DELETE":false}' \
+  --data-urlencode 'order=ORDER' \
+  --data-urlencode 'where={"APP_VERSION":{"$lte":${CURRENT_APP_VERSION}},"IS_DELETE":false}' \
   https://YOUR.PARSE-SERVER.HERE/parse/classes/Leaderboard
 ```
 
@@ -45,3 +48,66 @@ curl -X GET \
 | LEADERBOARD | String <br> Pointer -> Leaderboard | 排行榜 ID | leaderboard_hunt_master |
 | VALUE | Number | 排行數值 | 100 |
 | TIME | Number <br> Date | 最新記錄創造時間 | ${UNIX_TIMESTAMP} |
+
+* 取得玩家在特定排行榜自己的紀錄
+
+```
+curl -X GET \
+  -H "X-Parse-Application-Id: ${APPLICATION_ID}" \
+  -H "X-Parse-REST-API-Key: ${REST_API_KEY}" \
+  -G \
+  --data-urlencode 'where={"USER":${USER_ID},"LEADERBOARD":${LEADERBOARD_ID}}' \
+  https://YOUR.PARSE-SERVER.HERE/parse/classes/LeaderboardRecord
+```
+
+* 取得玩家在特定公開排行榜自己的名次
+> DESCENDING 以 $gt 取得比自己大的數量, ASCENDING 以 $lt 取得比自己小的數量。如果是有重複性數值的排行榜，通常會另外設計一個欄位來實作雙重排序因子的計數
+
+```
+curl -X GET \
+  -H "X-Parse-Application-Id: ${APPLICATION_ID}" \
+  -H "X-Parse-REST-API-Key: ${REST_API_KEY}" \
+  -G \
+  --data-urlencode 'where={"LEADERBOARD":${LEADERBOARD_ID},"VALUE":{"$gt":${VALUE}}}' \
+  --data-urlencode 'count=1' \
+  --data-urlencode 'limit=0' \
+  https://YOUR.PARSE-SERVER.HERE/parse/classes/LeaderboardRecord
+
+```
+
+* 取得特定公開排行榜榜單
+> 以 -VALUE 或是 VALUE 來取得 DESCENDING 與 ASCENDING 的排序。limit 與 skip 可用來作 paging
+
+```
+curl -X GET \
+  -H "X-Parse-Application-Id: ${APPLICATION_ID}" \
+  -H "X-Parse-REST-API-Key: ${REST_API_KEY}" \
+  -G \
+  --data-urlencode 'where={"LEADERBOARD":${LEADERBOARD_ID}}' \
+  --data-urlencode 'order=-VALUE' \
+  --data-urlencode 'limit=30' \
+  --data-urlencode 'skip=0' \
+  https://YOUR.PARSE-SERVER.HERE/parse/classes/LeaderboardRecord
+```
+
+* 新增排行榜紀錄
+
+```
+  curl -X POST \
+  -H "X-Parse-Application-Id: ${APPLICATION_ID}" \
+  -H "X-Parse-REST-API-Key: ${REST_API_KEY}" \
+  -H "Content-Type: application/json" \
+  -d '{"USER":${USER_ID},"LEADERBOARD":"leaderboard_highest_score_name","VALUE":${VALUE},"TIME":${NOW}}' \
+  https://YOUR.PARSE-SERVER.HERE/parse/classes/LeaderboardRecord
+```
+
+* 更新排行榜紀錄
+
+```
+curl -X PUT \
+  -H "X-Parse-Application-Id: ${APPLICATION_ID}" \
+  -H "X-Parse-REST-API-Key: ${REST_API_KEY}" \
+  -H "Content-Type: application/json" \
+  -d '{"VALUE":${VALUE},"TIME":${NOW}}' \
+  https://YOUR.PARSE-SERVER.HERE/parse/classes/LeaderboardRecord/${OBJECT ID}
+```

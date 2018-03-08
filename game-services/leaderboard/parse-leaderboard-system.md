@@ -44,3 +44,4 @@ curl -X GET \
 | USER | String <br> Pointer -> User | 玩家 ID | user_id_terry |
 | LEADERBOARD | String <br> Pointer -> Leaderboard | 排行榜 ID | leaderboard_hunt_master |
 | VALUE | Number | 排行數值 | 100 |
+| TIME | Number <br> Date | 最新記錄創造時間 | ${UNIX_TIMESTAMP} |

@@ -7,6 +7,7 @@
 | ID |  String | 排行榜 ID，供辨識使用 | leaderboard_hunt_master |
 | NAME |  String | 顯示的名稱 | leaderboard_highest_score_name <br> 多國語系鍵值，可於字串映射檔轉譯 <br> 最高分榜 |
 | ICON |  File | 圖示 | < File Object > |
+| IS_PUBLIC | Bool | 是否為公開排行榜 | True |
 | DESCENDING | Bool | 排名方式以數值由大到小排列 | True |
 | LASTING | String | 統計時段 | DAILY, WEEKLY, ALL |
 | MAX_VALUE | Number | 合理數值上限 | 100000 |

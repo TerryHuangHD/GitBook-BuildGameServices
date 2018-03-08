@@ -7,7 +7,7 @@
 * [配對系統概述](#general)
 * [常見類型](#type)
 * [配對狀態](#status)
-* [主題：在 Parse 上設計簡易的成就系統](achievement/parse-achievement-system.md)
+* [主題：透過 Firebase Realtime Database 實作 Dispatcherless 自動配對機制](queue-and-pairing/pairing-realtime-dispatcherless.md)
 
 ### 配對系統概述 {#general}
 

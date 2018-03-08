@@ -1,0 +1,1 @@
+# 透過 Firebase Realtime Database 實作 Dispatcherless 自動配對機制

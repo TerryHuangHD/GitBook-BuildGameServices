@@ -31,13 +31,9 @@
   * [在 Parse 上設計簡易的成就系統](game-services/achievement/parse-achievement-system.md)
 * [Leaderboard 排行榜系統](game-services/leaderboard.md)
   * [在 Parse 上設計簡易的公開排行榜系統](game-services/leaderboard/parse-leaderboard-system.md)
-* [Queue & Pairing](game-services/queue-and-pairing.md)
+* [Pairing 配對系統](game-services/queue-and-pairing.md)
 * [Turn-based Multiplayer](game-services/turn-based-multiplayer.md)
 * [Real-time Multiplayer](game-services/real-time-multiplayer.md)
-* [Account](game-services/account.md)
-* [Invitation](game-services/invitation.md)
-* [Saved Games](game-services/saved-games.md)
-* [Events & Quests & Challenges](game-services/events-and-quests-and-challenges.md)
 
 ## 附錄 Self-Hosted Parse
 

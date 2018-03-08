@@ -1,6 +1,6 @@
 # 在 Parse 上設計簡易的排行榜系統
 
-### Leaderboard 成就資料表設計
+### Leaderboard 排行榜資料表設計
 
 |  欄位 | 類型 | 解釋 | 範例 |
 | --- | --- | --- | --- |
@@ -18,3 +18,25 @@
 | IS_DELETE | Bool | 是否已經刪除 | False |
 
 > 多國語系的支援，可以透過本機端或是快取雲端字串映射來轉譯
+
+* 新增排行榜：新增一筆排行榜的資料表，並將 APP_VERSION 設定為下一個 APP 版本編號。然後於新增多國語系的字串映射檔描述，以及結算時候的對應邏輯
+
+* 修改排行榜：以此設計而言，可簡單的透過雲端資料的變更，可動態修改的欄位有：圖樣、合理數值、顯示順序...等等
+
+* 移除排行榜：將排行榜 IS_DELETE 設定為 True 即可。不直接刪除，可避免部分資料相依性造成的錯誤
+
+* 取得排行榜清單：將 **目前程式端支援** 以及 **未被刪除** 的排行榜取出，**依照順序排列**
+
+```
+curl -X GET \
+  -H "X-Parse-Application-Id: ${APPLICATION_ID}" \
+  -H "X-Parse-REST-API-Key: ${REST_API_KEY}" \
+  -G \
+  --data-urlencode 'order=ORDER&where={"APP_VERSION":{"$lte":${CURRENT_APP_VERSION}},"IS_DELETE":false}' \
+  https://YOUR.PARSE-SERVER.HERE/parse/classes/Leaderboard
+```
+
+### LeaderboardRecord 排行榜紀錄表設計
+
+|  欄位 | 類型 | 解釋 | 範例 |
+| --- | --- | --- | --- |

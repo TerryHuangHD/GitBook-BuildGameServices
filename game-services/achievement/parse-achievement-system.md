@@ -64,8 +64,7 @@ curl -X PUT \
   -H "X-Parse-REST-API-Key: ${REST_API_KEY}" \
   -H "Content-Type: application/json" \
   -d '{"AMOUNT":${VALUE}}' \
-  https://YOUR.PARSE-SERVER.HERE/parse/classes/AchievementRecord
-/${OBJECT ID}
+  https://YOUR.PARSE-SERVER.HERE/parse/classes/AchievementRecord/${objectId}
 ```
 
 * 完成成就
@@ -76,6 +75,5 @@ curl -X PUT \
   -H "X-Parse-REST-API-Key: ${REST_API_KEY}" \
   -H "Content-Type: application/json" \
   -d '{"AMOUNT":${VALUE},"IS_FINISH":true}' \
-  https://YOUR.PARSE-SERVER.HERE/parse/classes/AchievementRecord
-/${OBJECT ID}
+  https://YOUR.PARSE-SERVER.HERE/parse/classes/AchievementRecord/${objectId}
 ```

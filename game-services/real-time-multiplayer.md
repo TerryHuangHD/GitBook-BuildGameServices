@@ -7,7 +7,7 @@
 * [訊息通道](#message)
 * [訊息通道使用](#usage)
 * [遊戲情境](#general)
-* [主題：在 Firebase Realtime Database 上設計簡易的即時多人遊戲系統](queue-and-pairing/pairing-realtime-dispatcherless.md)
+* [主題：在 Firebase Realtime Database 上設計簡易的即時多人遊戲系統](real-time-multiplayer/realtime-firebase-system.md)
 
 ### 訊息通道 {#message}
 

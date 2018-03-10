@@ -34,7 +34,9 @@
 * [Pairing 配對系統](game-services/queue-and-pairing.md)
   * [在 Firebase Realtime Database 實作 Dispatcherless 自動配對機制](game-services/queue-and-pairing/pairing-realtime-dispatcherless.md)
 * [Turn-based Multiplayer 回合制多人遊戲](game-services/turn-based-multiplayer.md)
+  * [在 Parse 上設計簡易的回合制多人遊戲系統](game-services/turn-based-multiplayer/turn-based-parse-system.md)
 * [Real-time Multiplayer 即時多人遊戲](game-services/real-time-multiplayer.md)
+  * [在 Firebase Realtime Database 上設計簡易的即時多人遊戲系統](game-services/real-time-multiplayer/realtime-firebase-system.md)
 
 ## 附錄 Self-Hosted Parse
 

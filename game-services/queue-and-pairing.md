@@ -7,7 +7,7 @@
 * [常見類型](#type)
 * [玩家配對狀態](#status)
 * [配對系統情境](#general)
-* [主題：透過 Firebase Realtime Database 實作 Dispatcherless 自動配對機制](queue-and-pairing/pairing-realtime-dispatcherless.md)
+* [主題：在 Firebase Realtime Database 實作 Dispatcherless 自動配對機制](queue-and-pairing/pairing-realtime-dispatcherless.md)
 
 ### 常見類型 {#type}
 

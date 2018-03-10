@@ -36,7 +36,7 @@
 * [Turn-based Multiplayer 回合制多人遊戲](game-services/turn-based-multiplayer.md)
   * [簡易的回合制多人遊戲系統 - 透過 Parse](game-services/turn-based-multiplayer/turn-based-parse-system.md)
 * [Real-time Multiplayer 即時多人遊戲](game-services/real-time-multiplayer.md)
-  * [設計簡易的即時多人可靠性傳輸通道 - 透過 Firebase Realtime Database](game-services/real-time-multiplayer/realtime-firebase-system.md)
+  * [設計簡易的即時多人遊戲傳輸通道 - 透過 Firebase Realtime Database](game-services/real-time-multiplayer/realtime-firebase-system.md)
 
 ## 附錄 Self-Hosted Parse
 

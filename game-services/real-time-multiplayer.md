@@ -7,7 +7,7 @@
 * [訊息通道](#message)
 * [訊息通道使用](#usage)
 * [遊戲情境](#general)
-* [主題：設計簡易的即時多人可靠性傳輸通道 - 透過 Firebase Realtime Database](real-time-multiplayer/realtime-firebase-system.md)
+* [主題：設計簡易的即時多人遊戲傳輸通道 - 透過 Firebase Realtime Database](real-time-multiplayer/realtime-firebase-system.md)
 
 ### 訊息通道 {#message}
 

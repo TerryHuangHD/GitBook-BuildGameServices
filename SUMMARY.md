@@ -33,8 +33,8 @@
   * [在 Parse 上設計簡易的公開排行榜系統](game-services/leaderboard/parse-leaderboard-system.md)
 * [Pairing 配對系統](game-services/queue-and-pairing.md)
   * [透過 Firebase Realtime Database 實作 Dispatcherless 自動配對機制](game-services/queue-and-pairing/pairing-realtime-dispatcherless.md)
-* [Turn-based Multiplayer](game-services/turn-based-multiplayer.md)
-* [Real-time Multiplayer](game-services/real-time-multiplayer.md)
+* [Turn-based Multiplayer 回合制多人遊戲](game-services/turn-based-multiplayer.md)
+* [Real-time Multiplayer 即時多人遊戲](game-services/real-time-multiplayer.md)
 
 ## 附錄 Self-Hosted Parse
 

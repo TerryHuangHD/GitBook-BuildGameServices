@@ -7,7 +7,7 @@
 * [常見類型](#type)
 * [成就狀態](#status)
 * [成就系統情境](#general)
-* [主題：在 Parse 上設計簡易的成就系統](achievement/parse-achievement-system.md)
+* [主題：設計簡易的成就系統 - 透過 Parse](achievement/parse-achievement-system.md)
 
 ### 常見類型 {#type}
 

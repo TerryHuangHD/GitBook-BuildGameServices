@@ -6,7 +6,7 @@
 
 * [常見類型或特性](#type)
 * [排行榜系統情境](#general)
-* [主題：在 Parse 上設計簡易的公開排行榜系統](leaderboard/parse-leaderboard-system.md)
+* [主題：設計簡易的公開排行榜系統 - 透過 Parse](leaderboard/parse-leaderboard-system.md)
 
 ### 常見類型或特性 {#type}
 

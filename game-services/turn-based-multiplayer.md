@@ -7,7 +7,7 @@
 * [遊戲資訊](#data)
 * [遊戲狀態](#status)
 * [遊戲情境](#general)
-* [主題：在 Parse 上設計簡易的回合制多人遊戲系統](turn-based-multiplayer/turn-based-parse-system.md)
+* [主題：簡易的回合制多人遊戲系統 - 透過 Parse](turn-based-multiplayer/turn-based-parse-system.md)
 
 ### 遊戲資訊 {#type}
 

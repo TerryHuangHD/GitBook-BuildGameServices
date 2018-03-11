@@ -10,9 +10,44 @@
 
 * 玩家透過 push 傳送命令資料
 
+```
+FIRDatabaseReference* ref = [[[FIRDatabase database] reference] child:@"Game/UUID GAME ID/Action"];
+NSString *key = [ref childByAutoId].key;
+NSDictionary *action = @{
+                       @"UserID": @"USER ID A",
+                       @"Action": "Hit",
+                       @"Value": 50,
+                       @"Time": [FIRServerValue timestamp]};
+NSDictionary *childUpdates = @{[@"/" stringByAppendingString:key]: action};
+[_ref updateChildValues:childUpdates];
+```
+
 * 起始玩家，透過監聽 onChildAdded，取得命令序列
 
+```
+FIRDatabaseReference* ref = [[[FIRDatabase database] reference] child:@"Game/UUID GAME ID/Action"];
+FIRDatabaseHandle handle = [ref observeEventType:FIRDataEventTypeChildAdded
+                                       withBlock:^(FIRDataSnapshot* _Nonnull snapshot) {
+                                           if (snapshot.value != [NSNull null]) {
+                                               // 監聽 ChildAdded
+                                           }
+                                       }];
+```
+
 * 觀眾、重播系統，可取得節點 SnapShot 重建遊戲歷程
+
+```
+FIRDatabaseReference* ref = [[[FIRDatabase database] reference] child:@"Game/UUID GAME ID/Action"];
+[ref observeSingleEventOfType:FIRDataEventTypeValue
+                    withBlock:^(FIRDataSnapshot* _Nonnull snapshot) {
+                        if (snapshot.value != [NSNull null]) {
+                            // 取得 Action Sanpshot
+                        }
+                    }
+              withCancelBlock:^(NSError* _Nonnull error){
+                  // 失敗
+              }];
+```
 
 ### 不可靠性通道：嘗試設計公頻聊天系統
 
@@ -22,6 +57,27 @@
 | --- | --- | 
 | Game ID / Chat / Public / | UserID: 玩家 ID，用於辨識 <br> Name: 玩家姓名 <br> Image: 玩家圖片 <br> Message: 玩家聊天內容 <br> Time: 發言時間  <br> ... |
 
-* 透過 REST API 來進行發言的一次性嘗試
+* 透過 REST API 或是 SDK（不開啟 Offline Capabilities）來進行發言嘗試
+
+```
+FIRDatabaseReference* ref = [[[FIRDatabase database] reference] child:@"Game/UUID GAME ID/Chat/Public"];
+NSDictionary* message = @{
+    @"UserID" : @"USER ID A",
+    @"Name" : @"USER NAME",
+    @"Image" : @"IMAGE URL",
+    @"Time" : [FIRServerValue timestamp]
+};
+[_ref updateChildValues:message];
+```
 
 * 玩家顯示介面綁定監聽 onUpdate
+
+```
+FIRDatabaseReference* ref = [[[FIRDatabase database] reference] child:@"Game/UUID GAME ID/Chat/Public"];
+FIRDatabaseHandle handle = [ref observeEventType:FIRDataEventTypeChildChanged
+                                       withBlock:^(FIRDataSnapshot* _Nonnull snapshot) {
+                                           if (snapshot.value != [NSNull null]) {
+                                               // 監聽最新聊天訊息
+                                           }
+                                       }];
+```

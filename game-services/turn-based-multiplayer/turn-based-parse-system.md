@@ -55,7 +55,36 @@ curl -X GET \
   https://YOUR.PARSE-SERVER.HERE/parse/classes/TurnBasedGame
 ```
 
-* 當局玩家 **更新遊戲資料**，送出 **換手** 命令
+* 當局玩家進行該局遊戲，遊戲換手
 
-* 當局玩家完成遊戲後，將 **更新遊戲資料**，送出 **完成遊戲** 命令
+```
+curl -X PUT \
+  -H "X-Parse-Application-Id: ${APPLICATION_ID}" \
+  -H "X-Parse-REST-API-Key: ${REST_API_KEY}" \
+  -H "Content-Type: application/json" \
+  -d '{"GameData":${GAME DATA},"CurrentPlayer": ${USER_ID_NEXT},"NextDeadline":${TIMESTAMP_NEXT}}' \
+  https://YOUR.PARSE-SERVER.HERE/parse/classes/TurnBasedGame/${GAME ID}
+```
 
+* 當局玩家進行該局遊戲，賽局完成
+
+```
+curl -X PUT \
+  -H "X-Parse-Application-Id: ${APPLICATION_ID}" \
+  -H "X-Parse-REST-API-Key: ${REST_API_KEY}" \
+  -H "Content-Type: application/json" \
+  -d '{"GameData":${GAME DATA},"GameStatus": "Finish"}' \
+  https://YOUR.PARSE-SERVER.HERE/parse/classes/TurnBasedGame/${GAME ID}
+```
+
+* 當局玩家完成遊戲後更新後，由 Cloud Code 監聽 afterSave 送出 **換手** 或是 **完成遊戲** 通知
+
+```
+Parse.Cloud.afterSave("TurnBasedGame", function (request) {
+  if (request.object.get("GameStatus") === "Active"){
+    // 發送通知：換手
+  } else if (request.object.get("GameStatus") === "Finish"){
+    // 發送通知：完成遊戲
+  }
+})
+```

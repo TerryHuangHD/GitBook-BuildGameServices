@@ -22,22 +22,26 @@ curl -X POST \
 https://YOUR.PARSE-SERVER.HERE/parse/classes/TurnBasedGame
 ```
 
-* 透過系統推送 **換手** 通知
+* 透過 Cloud Code 系統推送 **換手** 通知給特定玩家
+
+> 可在 Installation 與 User 中互相綁定資料，用來作 Target Segmentation
 
 ```
-curl -X PUT \
-  -H "X-Parse-Application-Id: ${APPLICATION_ID}" \
-  -H "X-Parse-REST-API-Key: ${REST_API_KEY}" \
-  -H "Content-Type: application/json" \
-  -d '{
-        "channels": [  // Optional
-          "TURN"
-        ],
-        "data": {
-          "alert": "Your turn"
-        }
-      }' \
-  https://YOUR.PARSE-SERVER.HERE/parse/installations/${TARGET INSTALLATION ID}
+var query = new Parse.Query(Parse.Installation)
+query.equalTo('user', {'__type': 'Pointer', 'className': 'User', 'objectId': ${USER ID}})
+Parse.Push.send({
+  where: query,
+  data: {
+    alert: 'TURN'
+  }
+}, { useMasterKey: true }).then(
+  function () {
+    response.success()
+  },
+  function (error) {
+    response.error(error)
+  }
+)
 ```
 
 * 任意玩家可隨時取得最新 **遊戲資料表**

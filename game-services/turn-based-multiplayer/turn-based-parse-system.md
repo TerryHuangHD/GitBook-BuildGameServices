@@ -13,7 +13,32 @@
 
 * **配對系統** 建立遊戲資料表
 
+```
+curl -X POST \
+-H "X-Parse-Application-Id: ${APPLICATION_ID}" \
+-H "X-Parse-REST-API-Key: ${REST_API_KEY}" \
+-H "Content-Type: application/json" \
+-d '{"Participants":[${USER_OBJ_A}...],"CurrentPlayer": ${USER_ID_A},"NextDeadline":${TIMESTAMP},"GameData":${DATA_OBJ},"GameStatus":"Active"}' \
+https://YOUR.PARSE-SERVER.HERE/parse/classes/TurnBasedGame
+```
+
 * 透過系統推送 **換手** 通知
+
+```
+curl -X PUT \
+  -H "X-Parse-Application-Id: ${APPLICATION_ID}" \
+  -H "X-Parse-REST-API-Key: ${REST_API_KEY}" \
+  -H "Content-Type: application/json" \
+  -d '{
+        "channels": [  // Optional
+          "TURN"
+        ],
+        "data": {
+          "alert": "Your turn"
+        }
+      }' \
+  https://YOUR.PARSE-SERVER.HERE/parse/installations/${TARGET INSTALLATION ID}
+```
 
 * 任意玩家可隨時取得最新 **遊戲資料表**
 

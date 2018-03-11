@@ -4,7 +4,7 @@
 
 | 欄位 | 類型 | 解釋 | 範例 |
 | --- | --- | --- | --- |
-| ID | String | 遊戲 ID，供辨識使用 | ${GAME ID} |
+| objectId | String | 遊戲 ID，供辨識使用 | ${GAME ID} |
 | Participants | Array | 玩家清單 | [${USER ID},...] |
 | CurrentPlayer | String | 當前回合玩家 | ${USER ID} |
 | NextDeadline | Number | 當前回合玩家的期限 | ${UNIX TIMESTAMP} |
@@ -45,6 +45,15 @@ Parse.Push.send({
 ```
 
 * 任意玩家可隨時取得最新 **遊戲資料表**
+
+```
+curl -X GET \
+  -H "X-Parse-Application-Id: ${APPLICATION_ID}" \
+  -H "X-Parse-REST-API-Key: ${REST_API_KEY}" \
+  -G \
+  --data-urlencode 'where={"objectId": ${GAME ID}}' \
+  https://YOUR.PARSE-SERVER.HERE/parse/classes/TurnBasedGame
+```
 
 * 當局玩家 **更新遊戲資料**，送出 **換手** 命令
 

@@ -1,10 +1,6 @@
 # Table of contents
 
-* [Introduction](README.md)
-
-## 總覽
-
-* [簡介](overview/jian-jie.md)
+* [簡介](README.md)
 
 ## 基礎服務
 

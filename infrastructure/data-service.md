@@ -11,6 +11,8 @@
 | 以多個 Class 為基礎，每個 Class 為 Object（資料）的集合 | 以節點為基礎，母節點即為一個 JSON 結構 | 以多個 Collection 為基礎，每個 Collection 為 Document（資料）的集合 |
 | 可預先定義 Class 的結構格式，也可透過資料直接新增欄位，經定義後的結構即具有約束性 | Schemaless，任意節點與資料皆沒有約束性（可透過設定 Database Rules 來驗證資料） | 無法預先定義 Collection 資料格式，即使在同一個 Collection 中的 Document 亦沒有相互約束性 |
 
+* Parse 的 Data Model 最類似傳統的 RDBMS，如果您有相關的使用經驗，應該沒有太大的轉移成本
+
 ## 資料格式類型 {#type}
 
 | Parse | Realtime Database | Cloud Firestore |
@@ -27,6 +29,12 @@
 | Pointer |  | Reference |
 | Relation |  |  |
 |  | Null | Null |
+
+* 三個資料服務，都能夠完整對應 JSON 格式
+* 地理位置 GeoPoint，僅在 Parse 以及 Cloud Firestore 支援
+* 指標資料 Pointer, Reference，僅在 Parse 以及 Cloud Firestore 支援
+* 檔案指標 File，僅在 Parse 支援。其餘服務可搭配 Cloud Storage 自行設計資料格式
+* 多邊形資料 Polygon，僅在 Parse 支援
 
 ## 資料查詢與索引 {#index}
 

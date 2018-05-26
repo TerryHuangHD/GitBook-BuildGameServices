@@ -4,12 +4,6 @@
 
 在 Parse 與 Firebase 的平台中，分別有 Cloud Code 與 Cloud Functions 的工具，用來擴充後端伺服器能力。我們接著把他們從「部署與偵錯」、「支援功能」...等等各方面進行簡單的比較。並會在後來的範例中，展示一個簡單的 Parse Cloud Code 部署方法。
 
-## 目錄
-
-* [部署與偵錯](./#deploy)
-* [支援功能](./#function)
-* [主題：在 Parse 服務架構簡易的 Cloud Code 部署機制](zai-parse-fu-wu-jia-gou-jian-yi-de-cloud-code-bu-shu-ji-zhi.md)
-
 ## 部署與偵錯 {#deploy}
 
 | Cloud Code | Cloud Functions |

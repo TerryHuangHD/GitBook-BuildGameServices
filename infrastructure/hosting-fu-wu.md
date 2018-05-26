@@ -136,5 +136,5 @@ var app = express();
 app.use('/public', express.static('public'));
 ```
 
-除此之外，也可參考 [主題：在 Parse 服務架構簡易的 Cloud Code 部署機制](api-fu-wu/zai-parse-fu-wu-jia-gou-jian-yi-de-cloud-code-bu-shu-ji-zhi.md) 的方法，實作一個簡易部署的架構
+除此之外，也可參考 [主題：在 Parse 服務架構簡易的 Cloud Code 部署機制](api-service/zai-parse-fu-wu-jia-gou-jian-yi-de-cloud-code-bu-shu-ji-zhi.md) 的方法，實作一個簡易部署的架構
 

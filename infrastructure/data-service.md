@@ -4,16 +4,6 @@
 
 常見的 BaaS 服務中，在建立或申請好服務的同時，通常就帶有 Data 服務。我們接著把 Parse, Firebase Realtime Database, Firebase Cloud Firestore 資料服務從「資料模型」、「資料格式類型」、「資料查詢與索引」、「資料原子性操作」、「資料可靠性與拓展性」、「權限控制」、「使用性限制」...等等各方面進行比較，方便在設計各種功能時，能簡易的找到適合的選項
 
-## 目錄
-
-* [資料模型](data-fu-wu.md#model)
-* [資料格式類型](data-fu-wu.md#type)
-* [資料查詢與索引](data-fu-wu.md#index)
-* [資料原子性操作](data-fu-wu.md#atom)
-* [資料可靠性與拓展性](data-fu-wu.md#reliable)
-* [權限控制](data-fu-wu.md#permission)
-* [使用性限制](data-fu-wu.md#limit)
-
 ## 資料模型 {#model}
 
 | Parse | Realtime Database | Cloud Firestore |

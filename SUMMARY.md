@@ -5,9 +5,9 @@
 ## 基礎服務
 
 * [架構介紹](infrastructure/jia-gou-jie-shao.md)
-* [Data 服務](infrastructure/data-fu-wu.md)
-* [API 服務](infrastructure/api-fu-wu/README.md)
-  * [在 Parse 服務架構簡易的 Cloud Code 部署機制](infrastructure/api-fu-wu/zai-parse-fu-wu-jia-gou-jian-yi-de-cloud-code-bu-shu-ji-zhi.md)
+* [Data 服務](infrastructure/data-service.md)
+* [API 服務](infrastructure/api-service/README.md)
+  * [在 Parse 服務架構簡易的 Cloud Code 部署機制](infrastructure/api-service/zai-parse-fu-wu-jia-gou-jian-yi-de-cloud-code-bu-shu-ji-zhi.md)
 * [Notification 服務](infrastructure/notification-fu-wu/README.md)
   * [Parse 推送服務設定與測試](infrastructure/notification-fu-wu/parse-tui-song-fu-wu-she-ding-yu-ce-shi.md)
 * [Job 服務](infrastructure/job-fu-wu/README.md)

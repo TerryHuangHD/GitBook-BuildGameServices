@@ -10,7 +10,7 @@
 * [Parse Cloud Job 檢視、執行](./#parse-job-dashboard)
 * [主題：在 Parse 上透過 Cron 配置常用的 Scheduler](zai-parse-shang-tou-guo-cron-pei-zhi-chang-yong-de-scheduler.md)
 
-## Parse Cloud Job 定義 {#parse-job}
+## Parse Cloud Job 定義 <a id="parse-job"></a>
 
 Cloud Job 實作在 Parse Cloud Code 中，以 Parse.Cloud.job 來定義內容
 
@@ -35,7 +35,7 @@ Parse.Cloud.job("myJob", function(request, status) {
 });
 ```
 
-## Parse Cloud Job 檢視、執行 {#parse-job-dashboard}
+## Parse Cloud Job 檢視、執行 <a id="parse-job-dashboard"></a>
 
 * Cloud Job 僅能透過 REST API 來呼叫執行，並且必須使用 Master Key
 

@@ -10,7 +10,7 @@
 * [其他設定](jian-li-parse-zi-liao-ku-fu-wu.md#other)
 * [補充說明](jian-li-parse-zi-liao-ku-fu-wu.md#supply)
 
-## 概述說明 {#intro}
+## 概述說明 <a id="intro"></a>
 
 Parse Service 在常見的配置上，包含**「資料庫服務」**用以存放資料，**「Parse 伺服器」**作為服務端口，**「Parse Dashboard」**提供簡單的管理之用。在這次的範例中，將會演示建立以 [Google Cloud Platform（下稱 GCP）](https://cloud.google.com/)的 Compute Engine「虛擬機」為基礎的方式，逐步架設 Parse 所需的**「資料庫服務」**
 
@@ -18,7 +18,7 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
 >
 > **大部分的 IaaS 服務商，通常都有提供免費試用計畫**，比如：[GCP 免費項目](https://cloud.google.com/free/), [AWS 免費方案](https://aws.amazon.com/tw/free/)
 
-## 建立虛擬機 {#db-vm}
+## 建立虛擬機 <a id="db-vm"></a>
 
 * 在 [GCP 的 Compute Engine](https://console.cloud.google.com/compute) 控制介面中，點擊「建立」，新增 VM Instance
 
@@ -41,7 +41,7 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
 
 ![](../.gitbook/assets/sql-instance-crate.png)
 
-## 建立資料庫服務 {#db-service}
+## 建立資料庫服務 <a id="db-service"></a>
 
 目前 Parse Server [支援 MongoDB 2.6.X, 3.0.X or 3.2.X](http://docs.parseplatform.org/parse-server/guide/#prerequisites)，這次演示選用 3.2 版來安裝。MongoDB 針對 LTS 版本的 Ubuntu 有長期的支援，如: 12.04 LTS \(precise\), 14.04 LTS \(trusty\), 16.04 LTS \(xenial\)。接下來透過以下命令在 SSH 安裝 MongoDB
 
@@ -87,7 +87,7 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
 
 * 至此，基本的 MongoDB 服務已經開始運作
 
-## 啟用資料庫身份驗證 {#db-service-enable-auth}
+## 啟用資料庫身份驗證 <a id="db-service-enable-auth"></a>
 
 剛建立起來的 MongoDB 服務，處於開放狀態，接下來將會演示，如何建立「管理者」並啟用「資料庫身份驗證」功能，來達到最基本的安全性
 
@@ -165,7 +165,7 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
 
 * 至此，資料庫服務擁有了最基本的安全性。對於正式上線產品的安全性通常會有更高的要求，將會在後面介紹
 
-## 建立並設定 Parse 資料庫 {#db-instance}
+## 建立並設定 Parse 資料庫 <a id="db-instance"></a>
 
 接下來將會在資料庫服務中，建立一個資料庫作為 Parse 服務使用，並創建一個使用者 用來存取此資料庫。
 
@@ -215,7 +215,7 @@ Parse Service 在常見的配置上，包含**「資料庫服務」**用以存�
 
 * 至此，Parse 所需使用的資料庫、使用者完成了基本的設定
 
-## 其他設定（選用） {#other}
+## 其他設定（選用） <a id="other"></a>
 
 MongoDB 建議在虛擬機上關閉 transparent\_hugepage 來提高機器效能，可在 init.d 中建立 script 讓每次虛擬機啟動時便關閉此功能
 
@@ -243,7 +243,7 @@ MongoDB 建議在虛擬機上關閉 transparent\_hugepage 來提高機器效能�
   sudo update-rc.d disable-transparent-hugepages defaults
   ```
 
-## 補充說明 {#supply}
+## 補充說明 <a id="supply"></a>
 
 * 在 Google Compute Engine 啟用的虛擬機，預設網路設定僅會開啟 ICMP, RDP, SSH 等基本的協定所需之端口，若需要 MongoDB\(port 27017\) 能夠公開透過外部連線，則需要特別新增防火牆設定
 

@@ -12,7 +12,7 @@
 * [申請 Twilio 服務](sms-fu-wu.md#twilio)
 * [在 Parse Cloud Code 中使用 Twilio 服務寄送 SMS](sms-fu-wu.md#cloudcode)
 
-## 常見 SMS 服務商 {#service-provider}
+## 常見 SMS 服務商 <a id="service-provider"></a>
 
 > 注意：製表日期 2018 Mar，服務商可能隨時調整服務內容
 
@@ -24,7 +24,7 @@
 * [Nexmo 價格介紹](https://www.nexmo.com/products/sms/pricing)
 
 | 服務 | 電信 | 收費 |
-| --- | --- |
+| :--- | :--- | :--- |
 | Amazon SNS（非廣告簡訊） | 台灣大哥大 | $0.04612 |
 | Amazon SNS（非廣告簡訊） | 台灣之星、威寶 | $0.0438 |
 | Amazon SNS（非廣告簡訊） | 其他 | $0.06997 |
@@ -37,7 +37,7 @@
 
 > 如果服務限於台灣，可參考在地服務商，如：[三竹簡訊](https://sms.mitake.com.tw/common/header/price.jsp)，可能在地的價格會更實惠
 
-## 申請 Twilio 服務 {#twilio}
+## 申請 Twilio 服務 <a id="twilio"></a>
 
 * 前往 Twilio 網站申請帳號
 
@@ -68,7 +68,7 @@
 
 ![](../.gitbook/assets/sms-twilio-setting.png)
 
-## 在 Parse Cloud Code 中使用 Twilio 服務寄送 SMS {#cloudcode}
+## 在 Parse Cloud Code 中使用 Twilio 服務寄送 SMS <a id="cloudcode"></a>
 
 在 Parse Cloud Code 中，以 httpRequest 呼叫 Twilio REST API 即可。更詳細的 Twilio API 可[參考此文件](https://www.twilio.com/docs/api/messaging/message)
 

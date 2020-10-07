@@ -13,14 +13,14 @@
 * [設定 Parse Mail 服務](email-fu-wu.md#adapter)
 * [在 Parse Cloud Code 中使用 Amazon SES 服務寄送 Email](email-fu-wu.md#cloudcode)
 
-## 常見 Email 服務商 {#service-provider}
+## 常見 Email 服務商 <a id="service-provider"></a>
 
 > 注意：製表日期 2018 Mar，服務商可能隨時調整服務內容
 
 常見的 Mail 服務商中，有部分提供了定期免費額度，可供小型產品試用，以下提供參考
 
 |  | Free |
-| --- | --- |
+| :--- | :--- |
 | Mailgun | 10k / month   須完成 domain 綁定 |
 | Amazon SES | 62k / month   須從 EC2 中託管的應用程式傳送 |
 | SendGrid | 40,000 前 30 日   之後 100 / day   需綁定信用卡選擇試用後消費計畫 |
@@ -36,7 +36,7 @@
 * [SendinBlue 價格介紹](https://www.sendinblue.com/pricing/)
 
 |  | 40k | 250k | 1000k |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | Mailgun | $15 | $165 | $515 |
 | Amazon SES | $4 | $25 | $100 |
 | Mandrill | $40 | $200 | $720 |
@@ -44,7 +44,7 @@
 | SendGrid | $9.95 | ~$200 | ~$500 |
 | SendinBlue | $25 | $173\(350k\) | $603\(3000k with free dedicated IP\) |
 
-## 申請 Amazon SES 服務 {#ses}
+## 申請 Amazon SES 服務 <a id="ses"></a>
 
 * 申請 Amazon 帳號，並前往 SES 服務頁面
 
@@ -74,7 +74,7 @@
 
 ![](../.gitbook/assets/amazon-iam-add-user-password.png)
 
-## 設定 Parse Mail 服務 {#adapter}
+## 設定 Parse Mail 服務 <a id="adapter"></a>
 
 將 Amazon SES 服務設定到 Parse Server 中，您必須使用 **parse-server-amazon-ses-adapter** 套件，將此套件安裝後，在 Parse Config 中初設定 emailAdapter
 
@@ -102,11 +102,11 @@ var parse=new ParseServer({
 ```
 
 | Region name | API \(HTTPS\) endpoint |
-| --- | --- |
+| :--- | :--- |
 | US West \(Oregon\) | email.us-west-2.amazonaws.com |
 | EU \(Ireland\) | email.eu-west-1.amazonaws.com |
 
-## 在 Parse Cloud Code 中使用 Amazon SES 服務寄送 Email {#cloudcode}
+## 在 Parse Cloud Code 中使用 Amazon SES 服務寄送 Email <a id="cloudcode"></a>
 
 想在 Cloud Code 中簡易使用 SES 來寄送 Email，您必須使用 **node-ses** 套件
 

@@ -13,7 +13,7 @@ Hosting 服務，可依照檔案變動性分為「動態檔案託管」與「靜
 * [設定 Parse 動態檔案服務](hosting-fu-wu.md#adapter)
 * [透過 Express 直接在 Parse Server 提供 Static Hosting 服務](hosting-fu-wu.md#host)
 
-## 設定 Parse 動態檔案服務 {#adapter}
+## 設定 Parse 動態檔案服務 <a id="adapter"></a>
 
 目前 Parse 動態檔案服務，官方支援以下三種類型，一種是將檔案存放至**資料庫**，如：MongoDB GridStore；另一種是把檔案存放至**外部檔案服務**，如：Google Cloud Storage, Amazon S3；另一種是將檔案直接存放在 **Parse 伺服器**。要使用 Parse 動態檔案服務 須先完成 filesAdapter 的設定
 
@@ -126,7 +126,7 @@ curl -X DELETE \
   https://YOUR.PARSE-SERVER.HERE/parse/files/...profile.png
 ```
 
-## 透過 Express 直接在 Parse Server 提供 Static Hosting 服務 {#host}
+## 透過 Express 直接在 Parse Server 提供 Static Hosting 服務 <a id="host"></a>
 
 可在掛載 parse 的 express 中以 express.static 掛載靜態檔案，比如以下範例，將 /public route 至 public 資料夾
 

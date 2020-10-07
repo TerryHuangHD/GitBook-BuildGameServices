@@ -3,7 +3,7 @@
 ## TurnBasedGame 資料表設計
 
 | 欄位 | 類型 | 解釋 | 範例 |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | objectId | String | 遊戲 ID，供辨識使用 | ${GAME ID} |
 | Participants | Array | 玩家清單 | \[${USER ID},...\] |
 | CurrentPlayer | String | 當前回合玩家 | ${USER ID} |

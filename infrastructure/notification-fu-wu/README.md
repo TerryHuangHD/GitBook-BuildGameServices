@@ -16,7 +16,7 @@
 * [取得 iOS APNs 外部推送所需資訊](./#ios-server)
 * [主題：Parse 推送服務設定與測試](parse-tui-song-fu-wu-she-ding-yu-ce-shi.md)
 
-## 設定 Android FCM Client {#android-client}
+## 設定 Android FCM Client <a id="android-client"></a>
 
 * 由於 FCM 為 Firebase 服務之一，所以須先建立 Firebase 專案
 
@@ -112,7 +112,7 @@
 
 ![](../../.gitbook/assets/firebase-fcm-console-android.png)
 
-## 取得 Android FCM 外部推送所需資訊 {#android-server}
+## 取得 Android FCM 外部推送所需資訊 <a id="android-server"></a>
 
 * 首先先前往 Firebase Console 並選擇您的專案
 
@@ -128,7 +128,7 @@
 
 * 之後將會使用 **Sender ID** 以及**伺服器金鑰** 來設定外部推送伺服器
 
-## 設定 iOS APNs Client {#ios-client}
+## 設定 iOS APNs Client <a id="ios-client"></a>
 
 * 開啟專案，在專案設定中啟用 Push Notification
 
@@ -171,7 +171,7 @@
 
 * 至此便完成了 client 端設定。未來的章節將會介紹，將 token 送至伺服器保存，讓伺服器透過這個 token 傳送通知至此裝置
 
-## 取得 iOS APNs 外部推送所需資訊 {#ios-server}
+## 取得 iOS APNs 外部推送所需資訊 <a id="ios-server"></a>
 
 * 須先建立 Certificate Signing Request 檔案，稍後會用在申請 push notification 憑證中使用。首先，開啟 Keychain Access，在選單中選擇 Certificate Assistant &gt; Request a Certificate From a Certificate Authority
 

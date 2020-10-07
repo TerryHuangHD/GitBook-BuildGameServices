@@ -5,7 +5,7 @@
 * 透過節點紀錄每一筆玩家邏輯動作，由玩家 **push** 每一筆動作資料，由伺服器端接收的順序為準，再返回各玩家的程式中作動
 
 | 根目錄 | 自動 | 資料 |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | Game ID / Action / | ${Auto} / | UserID: 玩家 ID，可用於辨識   Action: 動作   Value: 數值   Time: 動作時間   ... |
 
 * 玩家透過 push 傳送命令資料
@@ -54,7 +54,7 @@ FIRDatabaseReference* ref = [[[FIRDatabase database] reference] child:@"Game/UUI
 * 透過節點單一筆資料紀錄最新發言內容，透過監聽 **onUpdate** 事件來取得新的對話，由使用者端形成對話歷史。這樣的優點是，**不用特意儲存與刪除大量的聊天記錄**
 
 | 根目錄 | 資料 |
-| --- | --- |
+| :--- | :--- |
 | Game ID / Chat / Public / | UserID: 玩家 ID，用於辨識   Name: 玩家姓名   Image: 玩家圖片   Message: 玩家聊天內容   Time: 發言時間    ... |
 
 * 透過 REST API 或是 SDK（不開啟 Offline Capabilities）來進行發言嘗試

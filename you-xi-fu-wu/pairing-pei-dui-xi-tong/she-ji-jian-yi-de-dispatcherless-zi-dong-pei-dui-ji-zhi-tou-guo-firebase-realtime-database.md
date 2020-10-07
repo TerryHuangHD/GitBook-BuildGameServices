@@ -7,7 +7,7 @@
 * 透過 **子結點** 實作 **群組配對**，並將玩家屬性寫入排隊資料，配對邏輯可以進行 **屬性配對**
 
 | 根目錄 | 群組 | 資料 |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | Queue / | Group ID / | \[   Room ID: 已開啟的房間號碼   User\[ \]: 已經報名的玩家，及其屬性   Create: 房間創立時間   \] |
 
 * 玩家進行自動配對
@@ -74,7 +74,7 @@ FIRDatabaseReference* pair_ref = [[[FIRDatabase database] reference] child:@"Que
 * 透過 Player 來監聽整體的 **配對狀態**，滿員時即配對完成。Init 則是設計為開場預設資料，統一委由開局者或是關局者來寫入即可
 
 | 根目錄 | - | 資料 |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | Game ID / Player / | Player Id / | User   Image   ... // 遊戲中使用到的玩家基本資料 |
 | Game ID / Init / |  | RandomSeed   ... // 遊戲中共同設定資料 |
 

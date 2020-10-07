@@ -5,7 +5,7 @@
 ## Leaderboard 排行榜資料表設計
 
 | 欄位 | 類型 | 解釋 | 範例 |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | ID | String | 排行榜 ID，供辨識使用 | leaderboard\_hunt\_master |
 | NAME | String | 顯示的名稱 | leaderboard\_highest\_score\_name   多國語系鍵值，可於字串映射檔轉譯   最高分榜 |
 | ICON | File | 圖示 | &lt; File Object &gt; |
@@ -39,7 +39,7 @@ curl -X GET \
 ## LeaderboardRecord 排行榜紀錄表設計
 
 | 欄位 | 類型 | 解釋 | 範例 |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | objectId | String | 此紀錄物件 ID | ${OBJECT ID} |
 | USER | String   Pointer -&gt; User | 玩家 ID | user\_id\_terry |
 | LEADERBOARD | String   Pointer -&gt; Leaderboard | 排行榜 ID | leaderboard\_hunt\_master |

@@ -73,7 +73,7 @@ public void onCreate() {
 * 透過 Rest 手動新增 Installation
 
 |  | Android | iOS |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | GCMSenderId | Sender ID | X |
 | deviceToken | token | token |
 | appIdentifier | Bundle ID | Bundle ID |

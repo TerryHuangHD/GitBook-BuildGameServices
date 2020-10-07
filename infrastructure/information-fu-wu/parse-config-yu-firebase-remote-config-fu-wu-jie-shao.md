@@ -42,7 +42,7 @@ Firebase Remote Config 是一個雲端資料服務，可讓您動態的啟用功
 * 支援的群體目標條件
 
 | 條件類型 | 比較法 | Value |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | App | == | iOS: CFBundleIdentifier   Android: applicationId |
 | 版本 | 完全吻合   包含   不包含   regular expression |  |
 | OS 類型 | == | iOS   Android |

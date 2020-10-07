@@ -3,7 +3,7 @@
 ## Achievement 成就資料表設計
 
 | 欄位 | 類型 | 解釋 | 範例 |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | ID | String | 成就 ID，供辨識使用 | achievement\_hunt\_master |
 | NAME | String | 顯示的名稱 | achievement\_hunt\_master\_name   多國語系鍵值，可於字串映射檔轉譯   獵龍大師 |
 | DESCRIPTION | String | 顯示的描述 | achievement\_hunt\_master\_description   多國語系鍵值，可於字串映射檔轉譯   完成獵殺龍類 10 隻 |
@@ -34,7 +34,7 @@ curl -X GET \
 ## AchievementRecord 成就紀錄表設計
 
 | 欄位 | 類型 | 解釋 | 範例 |
-| --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | objectId | String | 此紀錄物件 ID | ${OBJECT ID} |
 | USER | String   Pointer -&gt; User | 玩家 ID | user\_id\_terry |
 | ACHIEVEMENT | String   Pointer -&gt; Achievement | 成就 ID | achievement\_hunt\_master |
